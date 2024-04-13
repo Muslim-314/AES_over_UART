@@ -48,7 +48,7 @@ mult_by_3 = np.array([0x00,0x03,0x06,0x05,0x0c,0x0f,0x0a,0x09,0x18,0x1b,0x1e,0x1
 def gulmult(a,b):
   """
   input:
-    a = (dtype = int) 8 bit number
+    a = (dtype = int) 8-bit number
     b = (dtype = int) 1 or 2 or 3
   output:
     return the product of a and b according to the galious finite field
@@ -63,7 +63,13 @@ def gulmult(a,b):
     print("Invalid multiplier")
 
 def mix_coloum(s):
-  s = np.transpose(s)
+  """
+  input: 
+      s: 4x4 state matrix-- output of shift rows
+  output:
+      s_prime: 4x4 matrix contains s mix-columned with constant state matrix
+  """
+    
   s_prime = np.zeros((4,4),dtype =int)
   for j in range(4):
     s_prime[0][j] = mult_by_2[s[0][j]] ^ mult_by_3[s[1][j]] ^ s[2][j]            ^ s[3][j]
