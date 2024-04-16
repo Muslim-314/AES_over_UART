@@ -1,3 +1,6 @@
+//Author: Syed Muhammad Muslim
+// 17-April-24
+
 module g_function(w,w_prime,current_round);
 	input [31:0] w;
 	input [3:0] current_round;
