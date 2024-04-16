@@ -1,0 +1,1126 @@
+Analysis & Synthesis report for AES_in_UART
+Wed Apr 17 00:39:41 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "g_function:g10"
+ 12. Port Connectivity Checks: "g_function:g9"
+ 13. Port Connectivity Checks: "g_function:g8"
+ 14. Port Connectivity Checks: "g_function:g7"
+ 15. Port Connectivity Checks: "g_function:g6"
+ 16. Port Connectivity Checks: "g_function:g5"
+ 17. Port Connectivity Checks: "g_function:g4"
+ 18. Port Connectivity Checks: "g_function:g3"
+ 19. Port Connectivity Checks: "g_function:g2"
+ 20. Port Connectivity Checks: "g_function:g1"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Apr 17 00:39:41 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; AES_in_UART                                 ;
+; Top-level Entity Name           ; key_generator                               ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 260                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; key_generator      ; AES_in_UART        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; sbox.v                           ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/Quartus/AES_in_UART/sbox.v          ;         ;
+; g_function.v                     ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/Quartus/AES_in_UART/g_function.v    ;         ;
+; key_generator.v                  ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 2610                   ;
+;                                             ;                        ;
+; Combinational ALUT usage for logic          ; 3241                   ;
+;     -- 7 input functions                    ; 85                     ;
+;     -- 6 input functions                    ; 1893                   ;
+;     -- 5 input functions                    ; 236                    ;
+;     -- 4 input functions                    ; 330                    ;
+;     -- <=3 input functions                  ; 697                    ;
+;                                             ;                        ;
+; Dedicated logic registers                   ; 0                      ;
+;                                             ;                        ;
+; I/O pins                                    ; 260                    ;
+;                                             ;                        ;
+; Total DSP Blocks                            ; 0                      ;
+;                                             ;                        ;
+; Maximum fan-out node                        ; current_round[0]~input ;
+; Maximum fan-out                             ; 385                    ;
+; Total fan-out                               ; 16672                  ;
+; Average fan-out                             ; 4.43                   ;
++---------------------------------------------+------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+---------------+--------------+
+; |key_generator             ; 3241 (1641)         ; 0 (0)                     ; 0                 ; 0          ; 260  ; 0            ; |key_generator                         ; key_generator ; work         ;
+;    |g_function:g10|        ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g10          ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g10|sbox:sb1 ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g10|sbox:sb2 ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g10|sbox:sb3 ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g10|sbox:sb4 ; sbox          ; work         ;
+;    |g_function:g1|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g1           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g1|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g1|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g1|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g1|sbox:sb4  ; sbox          ; work         ;
+;    |g_function:g2|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g2           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g2|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g2|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g2|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g2|sbox:sb4  ; sbox          ; work         ;
+;    |g_function:g3|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g3           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g3|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g3|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g3|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g3|sbox:sb4  ; sbox          ; work         ;
+;    |g_function:g4|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g4           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g4|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g4|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g4|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g4|sbox:sb4  ; sbox          ; work         ;
+;    |g_function:g5|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g5           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g5|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g5|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g5|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g5|sbox:sb4  ; sbox          ; work         ;
+;    |g_function:g6|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g6           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g6|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g6|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g6|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g6|sbox:sb4  ; sbox          ; work         ;
+;    |g_function:g7|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g7           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g7|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g7|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g7|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g7|sbox:sb4  ; sbox          ; work         ;
+;    |g_function:g8|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g8           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g8|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g8|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g8|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g8|sbox:sb4  ; sbox          ; work         ;
+;    |g_function:g9|         ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g9           ; g_function    ; work         ;
+;       |sbox:sb1|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g9|sbox:sb1  ; sbox          ; work         ;
+;       |sbox:sb2|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g9|sbox:sb2  ; sbox          ; work         ;
+;       |sbox:sb3|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g9|sbox:sb3  ; sbox          ; work         ;
+;       |sbox:sb4|           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |key_generator|g_function:g9|sbox:sb4  ; sbox          ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; key_out[0]$latch                                     ; Mux128              ; yes                    ;
+; key_out[1]$latch                                     ; Mux128              ; yes                    ;
+; key_out[2]$latch                                     ; Mux128              ; yes                    ;
+; key_out[3]$latch                                     ; Mux128              ; yes                    ;
+; key_out[4]$latch                                     ; Mux128              ; yes                    ;
+; key_out[5]$latch                                     ; Mux128              ; yes                    ;
+; key_out[6]$latch                                     ; Mux128              ; yes                    ;
+; key_out[7]$latch                                     ; Mux128              ; yes                    ;
+; key_out[8]$latch                                     ; Mux128              ; yes                    ;
+; key_out[9]$latch                                     ; Mux128              ; yes                    ;
+; key_out[10]$latch                                    ; Mux128              ; yes                    ;
+; key_out[11]$latch                                    ; Mux128              ; yes                    ;
+; key_out[12]$latch                                    ; Mux128              ; yes                    ;
+; key_out[13]$latch                                    ; Mux128              ; yes                    ;
+; key_out[14]$latch                                    ; Mux128              ; yes                    ;
+; key_out[15]$latch                                    ; Mux128              ; yes                    ;
+; key_out[16]$latch                                    ; Mux128              ; yes                    ;
+; key_out[17]$latch                                    ; Mux128              ; yes                    ;
+; key_out[18]$latch                                    ; Mux128              ; yes                    ;
+; key_out[19]$latch                                    ; Mux128              ; yes                    ;
+; key_out[20]$latch                                    ; Mux128              ; yes                    ;
+; key_out[21]$latch                                    ; Mux128              ; yes                    ;
+; key_out[22]$latch                                    ; Mux128              ; yes                    ;
+; key_out[23]$latch                                    ; Mux128              ; yes                    ;
+; key_out[24]$latch                                    ; Mux128              ; yes                    ;
+; key_out[25]$latch                                    ; Mux128              ; yes                    ;
+; key_out[26]$latch                                    ; Mux128              ; yes                    ;
+; key_out[27]$latch                                    ; Mux128              ; yes                    ;
+; key_out[28]$latch                                    ; Mux128              ; yes                    ;
+; key_out[29]$latch                                    ; Mux128              ; yes                    ;
+; key_out[30]$latch                                    ; Mux128              ; yes                    ;
+; key_out[31]$latch                                    ; Mux128              ; yes                    ;
+; key_out[32]$latch                                    ; Mux128              ; yes                    ;
+; key_out[33]$latch                                    ; Mux128              ; yes                    ;
+; key_out[34]$latch                                    ; Mux128              ; yes                    ;
+; key_out[35]$latch                                    ; Mux128              ; yes                    ;
+; key_out[36]$latch                                    ; Mux128              ; yes                    ;
+; key_out[37]$latch                                    ; Mux128              ; yes                    ;
+; key_out[38]$latch                                    ; Mux128              ; yes                    ;
+; key_out[39]$latch                                    ; Mux128              ; yes                    ;
+; key_out[40]$latch                                    ; Mux128              ; yes                    ;
+; key_out[41]$latch                                    ; Mux128              ; yes                    ;
+; key_out[42]$latch                                    ; Mux128              ; yes                    ;
+; key_out[43]$latch                                    ; Mux128              ; yes                    ;
+; key_out[44]$latch                                    ; Mux128              ; yes                    ;
+; key_out[45]$latch                                    ; Mux128              ; yes                    ;
+; key_out[46]$latch                                    ; Mux128              ; yes                    ;
+; key_out[47]$latch                                    ; Mux128              ; yes                    ;
+; key_out[48]$latch                                    ; Mux128              ; yes                    ;
+; key_out[49]$latch                                    ; Mux128              ; yes                    ;
+; key_out[50]$latch                                    ; Mux128              ; yes                    ;
+; key_out[51]$latch                                    ; Mux128              ; yes                    ;
+; key_out[52]$latch                                    ; Mux128              ; yes                    ;
+; key_out[53]$latch                                    ; Mux128              ; yes                    ;
+; key_out[54]$latch                                    ; Mux128              ; yes                    ;
+; key_out[55]$latch                                    ; Mux128              ; yes                    ;
+; key_out[56]$latch                                    ; Mux128              ; yes                    ;
+; key_out[57]$latch                                    ; Mux128              ; yes                    ;
+; key_out[58]$latch                                    ; Mux128              ; yes                    ;
+; key_out[59]$latch                                    ; Mux128              ; yes                    ;
+; key_out[60]$latch                                    ; Mux128              ; yes                    ;
+; key_out[61]$latch                                    ; Mux128              ; yes                    ;
+; key_out[62]$latch                                    ; Mux128              ; yes                    ;
+; key_out[63]$latch                                    ; Mux128              ; yes                    ;
+; key_out[64]$latch                                    ; Mux128              ; yes                    ;
+; key_out[65]$latch                                    ; Mux128              ; yes                    ;
+; key_out[66]$latch                                    ; Mux128              ; yes                    ;
+; key_out[67]$latch                                    ; Mux128              ; yes                    ;
+; key_out[68]$latch                                    ; Mux128              ; yes                    ;
+; key_out[69]$latch                                    ; Mux128              ; yes                    ;
+; key_out[70]$latch                                    ; Mux128              ; yes                    ;
+; key_out[71]$latch                                    ; Mux128              ; yes                    ;
+; key_out[72]$latch                                    ; Mux128              ; yes                    ;
+; key_out[73]$latch                                    ; Mux128              ; yes                    ;
+; key_out[74]$latch                                    ; Mux128              ; yes                    ;
+; key_out[75]$latch                                    ; Mux128              ; yes                    ;
+; key_out[76]$latch                                    ; Mux128              ; yes                    ;
+; key_out[77]$latch                                    ; Mux128              ; yes                    ;
+; key_out[78]$latch                                    ; Mux128              ; yes                    ;
+; key_out[79]$latch                                    ; Mux128              ; yes                    ;
+; key_out[80]$latch                                    ; Mux128              ; yes                    ;
+; key_out[81]$latch                                    ; Mux128              ; yes                    ;
+; key_out[82]$latch                                    ; Mux128              ; yes                    ;
+; key_out[83]$latch                                    ; Mux128              ; yes                    ;
+; key_out[84]$latch                                    ; Mux128              ; yes                    ;
+; key_out[85]$latch                                    ; Mux128              ; yes                    ;
+; key_out[86]$latch                                    ; Mux128              ; yes                    ;
+; key_out[87]$latch                                    ; Mux128              ; yes                    ;
+; key_out[88]$latch                                    ; Mux128              ; yes                    ;
+; key_out[89]$latch                                    ; Mux128              ; yes                    ;
+; key_out[90]$latch                                    ; Mux128              ; yes                    ;
+; key_out[91]$latch                                    ; Mux128              ; yes                    ;
+; key_out[92]$latch                                    ; Mux128              ; yes                    ;
+; key_out[93]$latch                                    ; Mux128              ; yes                    ;
+; key_out[94]$latch                                    ; Mux128              ; yes                    ;
+; key_out[95]$latch                                    ; Mux128              ; yes                    ;
+; key_out[96]$latch                                    ; Mux128              ; yes                    ;
+; key_out[97]$latch                                    ; Mux128              ; yes                    ;
+; key_out[98]$latch                                    ; Mux128              ; yes                    ;
+; key_out[99]$latch                                    ; Mux128              ; yes                    ;
+; Number of user-specified and inferred latches = 128  ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 11:1               ; 128 bits  ; 896 LEs       ; 896 LEs              ; 0 LEs                  ; No         ; |key_generator|Mux80       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g10"                                                                                                                                                                               ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[3] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; current_round[2] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; current_round[0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g9"                                                                                                                                                                                   ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[2..1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[3]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; current_round[0]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g8"                                                                                                                                                                                   ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[2..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[3]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g7"                                                                                                                                                                                   ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[2..0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; current_round[3]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g6"                                                                                                                                                                                   ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[2..1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; current_round[3]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g5"                                                                                                                                                                                ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[2] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; current_round[1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g4"                                                                                                                                                                                   ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[1..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[3]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g3"                                                                                                                                                                                   ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[1..0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; current_round[3..2] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g2"                                                                                                                                                                                   ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[3..2] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; current_round[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g_function:g1"                                                                                                                                                                                   ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; current_round       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; current_round[3..1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; current_round[0]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++---------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 3241                        ;
+;     extend            ; 85                          ;
+;         7 data inputs ; 85                          ;
+;     normal            ; 3156                        ;
+;         2 data inputs ; 260                         ;
+;         3 data inputs ; 437                         ;
+;         4 data inputs ; 330                         ;
+;         5 data inputs ; 236                         ;
+;         6 data inputs ; 1893                        ;
+; boundary_port         ; 260                         ;
+;                       ;                             ;
+; Max LUT depth         ; 31.00                       ;
+; Average LUT depth     ; 26.95                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:18     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Wed Apr 17 00:39:11 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES_in_UART -c AES_in_UART
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sbox.v
+    Info (12023): Found entity 1: sbox File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file g_function.v
+    Info (12023): Found entity 1: g_function File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file key_generator.v
+    Info (12023): Found entity 1: key_generator File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 1
+Info (12127): Elaborating entity "key_generator" for the top level hierarchy
+Warning (10270): Verilog HDL Case Statement warning at key_generator.v(98): incomplete case statement has no default case item File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Warning (10240): Verilog HDL Always Construct warning at key_generator.v(98): inferring latch(es) for variable "key_out", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[0]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[1]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[2]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[3]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[4]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[5]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[6]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[7]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[8]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[9]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[10]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[11]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[12]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[13]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[14]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[15]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[16]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[17]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[18]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[19]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[20]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[21]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[22]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[23]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[24]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[25]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[26]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[27]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[28]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[29]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[30]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[31]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[32]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[33]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[34]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[35]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[36]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[37]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[38]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[39]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[40]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[41]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[42]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[43]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[44]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[45]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[46]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[47]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[48]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[49]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[50]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[51]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[52]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[53]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[54]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[55]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[56]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[57]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[58]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[59]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[60]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[61]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[62]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[63]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[64]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[65]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[66]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[67]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[68]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[69]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[70]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[71]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[72]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[73]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[74]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[75]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[76]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[77]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[78]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[79]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[80]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[81]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[82]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[83]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[84]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[85]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[86]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[87]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[88]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[89]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[90]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[91]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[92]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[93]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[94]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[95]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[96]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[97]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[98]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[99]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[100]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[101]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[102]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[103]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[104]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[105]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[106]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[107]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[108]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[109]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[110]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[111]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[112]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[113]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[114]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[115]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[116]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[117]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[118]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[119]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[120]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[121]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[122]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[123]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[124]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[125]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[126]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[127]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+Info (12128): Elaborating entity "g_function" for hierarchy "g_function:g1" File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 19
+Warning (10270): Verilog HDL Case Statement warning at g_function.v(8): incomplete case statement has no default case item File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (10240): Verilog HDL Always Construct warning at g_function.v(8): inferring latch(es) for variable "RC", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[0]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[1]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[2]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[3]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[4]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[5]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[6]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[7]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[8]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[9]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[10]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[11]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[12]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[13]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[14]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[15]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[16]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[17]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[18]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[19]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[20]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[21]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[22]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[23]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[24]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[25]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[26]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[27]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[28]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[29]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[30]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[31]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (12128): Elaborating entity "sbox" for hierarchy "g_function:g1|sbox:sb1" File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 24
+Warning (14026): LATCH primitive "g_function:g10|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Info (276014): Found 40 instances of uninferred RAM logic
+    Info (276007): RAM logic "g_function:g10|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g10|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g10|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g10|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g9|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g9|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g9|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g9|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g8|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g8|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g8|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g8|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g7|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g7|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g7|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g7|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g6|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g6|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g6|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g6|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g5|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g5|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g5|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g5|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g4|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g4|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g4|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g4|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g3|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g3|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g3|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g3|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g2|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g2|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g2|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g2|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g1|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g1|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g1|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g1|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch key_out[0]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[1]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[2]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[3]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[4]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[5]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[6]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[7]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[8]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[9]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[10]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[11]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[12]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[13]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[14]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[15]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[16]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[17]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[18]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[19]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[20]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[21]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[22]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[23]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[24]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[25]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[26]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[27]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[28]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[29]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[30]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[31]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[32]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[33]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[34]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[35]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[36]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[37]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[38]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[39]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[40]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[41]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[42]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[43]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[44]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[45]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[46]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[47]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[48]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[49]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[50]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[51]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[52]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[53]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[54]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[55]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[56]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[57]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[58]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[59]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[60]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[61]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[62]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[63]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[64]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[65]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[66]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[67]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[68]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[69]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[70]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[71]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[72]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[73]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[74]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[75]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[76]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[77]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[78]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[79]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[80]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[81]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[82]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[83]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[84]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[85]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[86]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[87]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[88]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[89]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[90]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[91]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[92]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[93]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[94]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[95]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[96]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[97]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[98]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[99]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[100]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[101]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[102]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[103]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[104]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[105]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[106]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[107]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[108]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[109]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[110]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[111]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[112]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[113]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[114]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[115]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[116]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[117]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[118]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[119]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[120]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[121]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[122]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[123]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[124]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[125]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[126]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[127]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 3501 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 132 input pins
+    Info (21059): Implemented 128 output pins
+    Info (21061): Implemented 3241 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 332 warnings
+    Info: Peak virtual memory: 490 megabytes
+    Info: Processing ended: Wed Apr 17 00:39:41 2024
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:44
+
+

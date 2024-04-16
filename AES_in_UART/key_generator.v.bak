@@ -1,0 +1,11 @@
+module key_generator(
+							key_text, 
+							key_r0, key_r1, key_r2, key_r3,
+							key_r4, key_r5, key_r6, key_r7,
+							key_r8, key_r9, key_r10);
+					
+input  [127:0]key_text;
+output [127:0]key_r0, key_r1, key_r2, key_r3;
+output [127:0]key_r4, key_r5, key_r6, key_r7;
+output [127:0]key_r8, key_r9, key_r10;
+endmodule 

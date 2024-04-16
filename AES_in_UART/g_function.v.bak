@@ -1,0 +1,6 @@
+module g_function(w,w)
+	input [31:0] w
+	wire [31:0] w_prime;
+	assign w_prime = {w[23:0],w[15:0],w[7:0],w[31:0]}
+	
+endmodule 
