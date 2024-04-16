@@ -1,3 +1,4 @@
+// source: https://github.com/Gourav0486/AES-Core-engine-/blob/master/sbox.v
 module sbox(data,dout);
 	 input [7:0] data;
 	 output reg [7:0] dout;
