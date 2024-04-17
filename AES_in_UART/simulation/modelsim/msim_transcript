@@ -1,0 +1,144 @@
+# do AES_in_UART_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying /home/muslim/HDD/Quartus/modelsim_ase/linuxaloem/../modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:01:55 on Apr 17,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v 
+# -- Compiling module sbox
+# 
+# Top level modules:
+# 	sbox
+# End time: 12:01:56 on Apr 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:01:56 on Apr 17,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v 
+# -- Compiling module g_function
+# 
+# Top level modules:
+# 	g_function
+# End time: 12:01:56 on Apr 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:01:56 on Apr 17,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v 
+# -- Compiling module key_generator
+# 
+# Top level modules:
+# 	key_generator
+# End time: 12:01:56 on Apr 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:02:02 on Apr 17,2024
+# vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v 
+# -- Compiling module key_tb
+# ** Warning: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v(19): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	key_tb
+# End time: 12:02:02 on Apr 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim work.key_tb
+# vsim work.key_tb 
+# Start time: 12:02:07 on Apr 17,2024
+# Loading work.key_tb
+# Loading work.key_generator
+# Loading work.g_function
+# Loading work.sbox
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 27
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 35
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 59
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 83
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 90
+add wave -position insertpoint sim:/key_tb/*
+# Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: muslim  Hostname: muslim-314  ProcessID: 8394
+#           Attempting to use alternate WLF file "./wlftXoAznY".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftXoAznY
+run -all
+# ** Note: $finish    : /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v(20)
+#    Time: 1 ns  Iteration: 0  Instance: /key_tb
+# 1
+# Break in Module key_tb at /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v line 20
+vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:52:41 on Apr 17,2024
+# vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v 
+# -- Compiling module key_tb
+# 
+# Top level modules:
+# 	key_tb
+# End time: 12:52:41 on Apr 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.key_tb
+# End time: 12:52:47 on Apr 17,2024, Elapsed time: 0:50:40
+# Errors: 0, Warnings: 12
+# vsim work.key_tb 
+# Start time: 12:52:47 on Apr 17,2024
+# Loading work.key_tb
+# Loading work.key_generator
+# Loading work.g_function
+# Loading work.sbox
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 27
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 35
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 43
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 51
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 59
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 75
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 83
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /key_tb/kg1/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 90
+add wave -position insertpoint sim:/key_tb/*
+run -all
+# ** Note: $finish    : /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v(18)
+#    Time: 1 ns  Iteration: 0  Instance: /key_tb
+# 1
+# Break in Module key_tb at /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v line 18
+# End time: 12:56:16 on Apr 17,2024, Elapsed time: 0:03:29
+# Errors: 0, Warnings: 10

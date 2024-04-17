@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AES_in_UART
-Wed Apr 17 00:39:41 2024
+Wed Apr 17 11:58:19 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 17 00:39:41 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 17 11:58:19 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; AES_in_UART                                 ;
 ; Top-level Entity Name           ; key_generator                               ;
@@ -179,15 +179,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
-; sbox.v                           ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/Quartus/AES_in_UART/sbox.v          ;         ;
-; g_function.v                     ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/Quartus/AES_in_UART/g_function.v    ;         ;
-; key_generator.v                  ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                               ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
+; sbox.v                           ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v          ;         ;
+; g_function.v                     ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v    ;         ;
+; key_generator.v                  ; yes             ; User Verilog HDL File  ; /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------+
@@ -565,551 +565,554 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 17 00:39:11 2024
+    Info: Processing started: Wed Apr 17 11:57:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES_in_UART -c AES_in_UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sbox.v
-    Info (12023): Found entity 1: sbox File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 1
+    Info (12023): Found entity 1: sbox File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file g_function.v
-    Info (12023): Found entity 1: g_function File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 1
+    Info (12023): Found entity 1: g_function File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file key_generator.v
-    Info (12023): Found entity 1: key_generator File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 1
+    Info (12023): Found entity 1: key_generator File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 1
+Warning (10229): Verilog HDL Expression warning at key_tb.v(19): truncated literal to match 4 bits File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file key_tb.v
+    Info (12023): Found entity 1: key_tb File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v Line: 1
 Info (12127): Elaborating entity "key_generator" for the top level hierarchy
-Warning (10270): Verilog HDL Case Statement warning at key_generator.v(98): incomplete case statement has no default case item File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Warning (10240): Verilog HDL Always Construct warning at key_generator.v(98): inferring latch(es) for variable "key_out", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[0]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[1]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[2]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[3]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[4]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[5]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[6]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[7]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[8]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[9]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[10]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[11]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[12]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[13]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[14]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[15]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[16]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[17]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[18]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[19]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[20]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[21]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[22]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[23]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[24]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[25]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[26]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[27]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[28]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[29]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[30]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[31]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[32]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[33]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[34]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[35]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[36]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[37]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[38]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[39]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[40]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[41]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[42]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[43]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[44]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[45]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[46]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[47]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[48]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[49]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[50]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[51]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[52]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[53]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[54]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[55]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[56]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[57]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[58]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[59]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[60]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[61]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[62]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[63]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[64]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[65]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[66]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[67]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[68]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[69]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[70]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[71]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[72]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[73]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[74]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[75]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[76]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[77]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[78]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[79]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[80]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[81]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[82]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[83]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[84]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[85]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[86]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[87]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[88]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[89]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[90]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[91]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[92]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[93]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[94]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[95]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[96]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[97]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[98]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[99]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[100]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[101]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[102]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[103]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[104]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[105]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[106]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[107]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[108]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[109]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[110]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[111]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[112]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[113]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[114]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[115]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[116]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[117]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[118]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[119]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[120]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[121]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[122]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[123]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[124]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[125]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[126]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (10041): Inferred latch for "key_out[127]" at key_generator.v(98) File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-Info (12128): Elaborating entity "g_function" for hierarchy "g_function:g1" File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 19
-Warning (10270): Verilog HDL Case Statement warning at g_function.v(8): incomplete case statement has no default case item File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (10240): Verilog HDL Always Construct warning at g_function.v(8): inferring latch(es) for variable "RC", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[0]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[1]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[2]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[3]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[4]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[5]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[6]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[7]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[8]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[9]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[10]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[11]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[12]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[13]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[14]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[15]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[16]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[17]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[18]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[19]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[20]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[21]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[22]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[23]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[24]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[25]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[26]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[27]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[28]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[29]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[30]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[31]" at g_function.v(8) File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Info (12128): Elaborating entity "sbox" for hierarchy "g_function:g1|sbox:sb1" File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 24
-Warning (14026): LATCH primitive "g_function:g10|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[25]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[26]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[27]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[28]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[29]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[30]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[31]" is permanently enabled File: /home/muslim/HDD/Quartus/AES_in_UART/g_function.v Line: 8
+Warning (10270): Verilog HDL Case Statement warning at key_generator.v(98): incomplete case statement has no default case item File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Warning (10240): Verilog HDL Always Construct warning at key_generator.v(98): inferring latch(es) for variable "key_out", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[0]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[1]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[2]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[3]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[4]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[5]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[6]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[7]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[8]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[9]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[10]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[11]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[12]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[13]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[14]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[15]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[16]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[17]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[18]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[19]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[20]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[21]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[22]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[23]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[24]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[25]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[26]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[27]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[28]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[29]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[30]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[31]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[32]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[33]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[34]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[35]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[36]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[37]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[38]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[39]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[40]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[41]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[42]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[43]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[44]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[45]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[46]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[47]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[48]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[49]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[50]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[51]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[52]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[53]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[54]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[55]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[56]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[57]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[58]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[59]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[60]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[61]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[62]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[63]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[64]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[65]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[66]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[67]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[68]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[69]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[70]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[71]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[72]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[73]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[74]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[75]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[76]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[77]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[78]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[79]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[80]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[81]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[82]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[83]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[84]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[85]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[86]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[87]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[88]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[89]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[90]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[91]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[92]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[93]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[94]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[95]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[96]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[97]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[98]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[99]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[100]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[101]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[102]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[103]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[104]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[105]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[106]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[107]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[108]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[109]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[110]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[111]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[112]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[113]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[114]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[115]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[116]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[117]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[118]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[119]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[120]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[121]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[122]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[123]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[124]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[125]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[126]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (10041): Inferred latch for "key_out[127]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+Info (12128): Elaborating entity "g_function" for hierarchy "g_function:g1" File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 19
+Warning (10270): Verilog HDL Case Statement warning at g_function.v(8): incomplete case statement has no default case item File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (10240): Verilog HDL Always Construct warning at g_function.v(8): inferring latch(es) for variable "RC", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[0]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[1]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[2]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[3]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[4]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[5]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[6]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[7]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[8]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[9]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[10]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[11]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[12]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[13]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[14]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[15]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[16]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[17]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[18]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[19]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[20]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[21]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[22]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[23]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[24]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[25]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[26]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[27]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[28]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[29]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[30]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (10041): Inferred latch for "RC[31]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Info (12128): Elaborating entity "sbox" for hierarchy "g_function:g1|sbox:sb1" File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 24
+Warning (14026): LATCH primitive "g_function:g10|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g10|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g9|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g8|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g7|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g6|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g5|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g4|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g3|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g2|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (14026): LATCH primitive "g_function:g1|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
 Info (276014): Found 40 instances of uninferred RAM logic
-    Info (276007): RAM logic "g_function:g10|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g10|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g10|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g10|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g9|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g9|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g9|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g9|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g8|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g8|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g8|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g8|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g7|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g7|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g7|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g7|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g6|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g6|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g6|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g6|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g5|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g5|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g5|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g5|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g4|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g4|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g4|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g4|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g3|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g3|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g3|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g3|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g2|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g2|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g2|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g2|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g1|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g1|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g1|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g1|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/Quartus/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g10|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g10|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g10|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g10|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g9|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g9|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g9|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g9|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g8|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g8|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g8|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g8|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g7|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g7|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g7|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g7|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g6|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g6|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g6|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g6|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g5|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g5|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g5|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g5|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g4|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g4|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g4|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g4|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g3|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g3|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g3|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g3|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g2|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g2|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g2|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g2|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g1|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g1|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g1|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g1|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
 Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch key_out[0]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[1]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[2]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[3]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[4]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[5]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[6]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[7]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[8]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[9]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[10]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[11]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[12]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[13]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[14]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[15]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[16]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[17]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[18]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[19]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[20]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[21]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[22]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[23]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[24]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[25]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[26]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[27]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[28]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[29]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[30]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[31]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[32]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[33]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[34]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[35]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[36]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[37]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[38]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[39]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[40]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[41]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[42]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[43]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[44]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[45]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[46]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[47]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[48]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[49]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[50]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[51]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[52]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[53]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[54]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[55]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[56]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[57]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[58]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[59]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[60]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[61]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[62]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[63]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[64]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[65]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[66]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[67]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[68]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[69]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[70]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[71]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[72]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[73]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[74]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[75]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[76]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[77]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[78]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[79]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[80]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[81]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[82]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[83]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[84]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[85]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[86]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[87]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[88]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[89]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[90]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[91]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[92]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[93]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[94]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[95]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[96]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[97]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[98]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[99]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[100]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[101]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[102]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[103]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[104]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[105]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[106]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[107]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[108]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[109]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[110]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[111]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[112]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[113]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[114]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[115]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[116]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[117]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[118]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[119]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[120]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[121]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[122]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[123]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[124]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[125]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[126]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
-Warning (13012): Latch key_out[127]$latch has unsafe behavior File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 98
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[0]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[1]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[2]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[3]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[4]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[5]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[6]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[7]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[8]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[9]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[10]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[11]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[12]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[13]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[14]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[15]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[16]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[17]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[18]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[19]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[20]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[21]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[22]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[23]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[24]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[25]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[26]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[27]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[28]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[29]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[30]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[31]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[32]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[33]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[34]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[35]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[36]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[37]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[38]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[39]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[40]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[41]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[42]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[43]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[44]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[45]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[46]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[47]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[48]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[49]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[50]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[51]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[52]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[53]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[54]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[55]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[56]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[57]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[58]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[59]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[60]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[61]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[62]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[63]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[64]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[65]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[66]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[67]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[68]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[69]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[70]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[71]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[72]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[73]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[74]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[75]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[76]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[77]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[78]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[79]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[80]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[81]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[82]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[83]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[84]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[85]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[86]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[87]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[88]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[89]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[90]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[91]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[92]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[93]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[94]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[95]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[96]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[97]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[98]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[99]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[100]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[101]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[102]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[103]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[104]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[105]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[106]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[107]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[108]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[109]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[110]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[111]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[112]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[113]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[114]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[115]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[116]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[117]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[118]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[119]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[120]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[121]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[122]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[123]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[124]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[125]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[126]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
+Warning (13012): Latch key_out[127]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1117,10 +1120,10 @@ Info (21057): Implemented 3501 device resources after synthesis - the final reso
     Info (21058): Implemented 132 input pins
     Info (21059): Implemented 128 output pins
     Info (21061): Implemented 3241 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 332 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 333 warnings
     Info: Peak virtual memory: 490 megabytes
-    Info: Processing ended: Wed Apr 17 00:39:41 2024
+    Info: Processing ended: Wed Apr 17 11:58:19 2024
     Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Total CPU time (on all processors): 00:00:45
 
 

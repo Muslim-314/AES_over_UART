@@ -1,8 +1,9 @@
 vendor_name = ModelSim
-source_file = 1, /home/muslim/HDD/Quartus/AES_in_UART/sbox.v
-source_file = 1, /home/muslim/HDD/Quartus/AES_in_UART/g_function.v
-source_file = 1, /home/muslim/HDD/Quartus/AES_in_UART/key_generator.v
-source_file = 1, /home/muslim/HDD/Quartus/AES_in_UART/db/AES_in_UART.cbx.xml
+source_file = 1, /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v
+source_file = 1, /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v
+source_file = 1, /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v
+source_file = 1, /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v
+source_file = 1, /home/muslim/HDD/AES_over_UART/AES_in_UART/db/AES_in_UART.cbx.xml
 design_name = key_generator
 instance = comp, \key_out[0]~output , key_out[0]~output, key_generator, 1
 instance = comp, \key_out[1]~output , key_out[1]~output, key_generator, 1

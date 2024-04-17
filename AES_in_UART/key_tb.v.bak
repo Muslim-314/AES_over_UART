@@ -1,0 +1,14 @@
+module key_tb;
+	reg [127:0]key_text;
+	wire [127:0]key_out;
+	reg [3:0] current_round;
+
+	key_generator kg1(key_text, key_out, current_round);
+	
+	initial begin
+		key_text = 128h01020304050607080900090807060504;
+		current_round = 4'h1;
+		
+	end
+	
+endmodule 
