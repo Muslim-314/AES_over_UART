@@ -2,7 +2,6 @@ module key_generator(
 							key_text, 
 							key_out,
 							current_round);
-							
 	input [3:0]current_round;
 	output reg [127:0]key_out;
 	input  [127:0]key_text;

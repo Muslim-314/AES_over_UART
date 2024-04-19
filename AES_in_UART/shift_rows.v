@@ -20,7 +20,7 @@ module shift_rows(in_matrix, out_matrix);
 	//column 3
 	assign out_matrix[103:96]   = in_matrix[103:96];
 	assign out_matrix[111:104]  = in_matrix[15:8];
-	assign out_matrix[119:112]  = in_matrix[35:48];
+	assign out_matrix[119:112]  = in_matrix[55:48];
 	assign out_matrix[127:120]  = in_matrix[95:88];
 	
 endmodule	

@@ -1,0 +1,14 @@
+module single_round(data_in,data_out);
+	input [127:0]data_in;
+	output [127:0]data_out;
+	
+	wire sb; //output of the substitute byte
+	wire sr; //output of the shift row operation
+	wire mc; //output of the mix column
+	
+	sub_byte s_b(data_in,sb);
+	shift_rows s_r(sb,sr);
+	mix_
+	
+	
+endmodule 

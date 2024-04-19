@@ -1,0 +1,7 @@
+module encipher(plain_text,cipher_text);
+	input [127:0] plain_text;
+	output[127:0] cipher_text;
+	
+	
+	
+endmodule 
