@@ -1,0 +1,3 @@
+module sub_byte(in_byte, out_byte)
+	
+endmodule	

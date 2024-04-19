@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AES_in_UART
-Wed Apr 17 11:58:19 2024
+Fri Apr 19 10:40:02 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 17 11:58:19 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Apr 19 10:40:02 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; AES_in_UART                                 ;
 ; Top-level Entity Name           ; key_generator                               ;
@@ -555,7 +555,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:18     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -565,19 +565,22 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 17 11:57:49 2024
+    Info: Processing started: Fri Apr 19 10:39:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES_in_UART -c AES_in_UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sbox.v
-    Info (12023): Found entity 1: sbox File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 1
+    Info (12023): Found entity 1: sbox File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file g_function.v
-    Info (12023): Found entity 1: g_function File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 1
+    Info (12023): Found entity 1: g_function File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file key_generator.v
     Info (12023): Found entity 1: key_generator File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 1
-Warning (10229): Verilog HDL Expression warning at key_tb.v(19): truncated literal to match 4 bits File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v Line: 19
 Info (12021): Found 1 design units, including 1 entities, in source file key_tb.v
     Info (12023): Found entity 1: key_tb File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sub_byte.v
+    Info (12023): Found entity 1: sub_byte File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sub_byte.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_rows.v
+    Info (12023): Found entity 1: shift_rows File: /home/muslim/HDD/AES_over_UART/AES_in_UART/shift_rows.v Line: 1
 Info (12127): Elaborating entity "key_generator" for the top level hierarchy
 Warning (10270): Verilog HDL Case Statement warning at key_generator.v(98): incomplete case statement has no default case item File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
 Warning (10240): Verilog HDL Always Construct warning at key_generator.v(98): inferring latch(es) for variable "key_out", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
@@ -710,152 +713,152 @@ Info (10041): Inferred latch for "key_out[125]" at key_generator.v(98) File: /ho
 Info (10041): Inferred latch for "key_out[126]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
 Info (10041): Inferred latch for "key_out[127]" at key_generator.v(98) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
 Info (12128): Elaborating entity "g_function" for hierarchy "g_function:g1" File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 19
-Warning (10270): Verilog HDL Case Statement warning at g_function.v(8): incomplete case statement has no default case item File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (10240): Verilog HDL Always Construct warning at g_function.v(8): inferring latch(es) for variable "RC", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[0]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[1]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[2]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[3]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[4]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[5]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[6]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[7]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[8]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[9]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[10]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[11]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[12]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[13]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[14]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[15]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[16]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[17]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[18]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[19]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[20]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[21]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[22]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[23]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[24]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[25]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[26]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[27]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[28]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[29]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[30]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (10041): Inferred latch for "RC[31]" at g_function.v(8) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Info (12128): Elaborating entity "sbox" for hierarchy "g_function:g1|sbox:sb1" File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 24
-Warning (14026): LATCH primitive "g_function:g10|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g10|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g9|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g8|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g7|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g6|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g5|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g4|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g3|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g2|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
-Warning (14026): LATCH primitive "g_function:g1|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 8
+Warning (10270): Verilog HDL Case Statement warning at g_function.v(11): incomplete case statement has no default case item File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at g_function.v(11): inferring latch(es) for variable "RC", which holds its previous value in one or more paths through the always construct File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[0]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[1]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[2]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[3]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[4]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[5]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[6]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[7]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[8]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[9]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[10]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[11]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[12]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[13]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[14]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[15]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[16]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[17]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[18]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[19]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[20]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[21]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[22]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[23]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[24]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[25]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[26]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[27]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[28]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[29]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[30]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (10041): Inferred latch for "RC[31]" at g_function.v(11) File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Info (12128): Elaborating entity "sbox" for hierarchy "g_function:g1|sbox:sb1" File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 27
+Warning (14026): LATCH primitive "g_function:g10|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g10|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g10|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g10|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g10|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g10|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g10|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g9|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g9|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g9|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g9|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g9|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g9|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g9|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g8|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g8|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g8|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g8|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g8|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g8|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g8|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g7|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g7|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g7|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g7|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g7|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g7|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g7|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g6|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g6|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g6|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g6|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g6|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g6|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g6|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g5|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g5|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g5|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g5|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g5|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g5|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g5|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g4|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g4|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g4|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g4|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g4|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g4|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g4|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g3|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g3|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g3|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g3|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g3|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g3|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g3|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g2|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g2|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g2|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g2|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g2|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g2|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g2|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g1|RC[25]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g1|RC[26]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g1|RC[27]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g1|RC[28]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g1|RC[29]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g1|RC[30]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
+Warning (14026): LATCH primitive "g_function:g1|RC[31]" is permanently enabled File: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v Line: 11
 Info (276014): Found 40 instances of uninferred RAM logic
-    Info (276007): RAM logic "g_function:g10|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g10|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g10|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g10|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g9|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g9|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g9|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g9|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g8|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g8|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g8|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g8|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g7|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g7|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g7|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g7|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g6|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g6|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g6|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g6|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g5|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g5|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g5|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g5|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g4|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g4|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g4|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g4|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g3|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g3|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g3|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g3|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g2|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g2|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g2|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g2|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g1|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g1|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g1|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
-    Info (276007): RAM logic "g_function:g1|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 6
+    Info (276007): RAM logic "g_function:g10|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g10|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g10|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g10|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g9|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g9|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g9|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g9|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g8|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g8|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g8|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g8|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g7|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g7|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g7|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g7|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g6|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g6|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g6|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g6|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g5|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g5|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g5|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g5|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g4|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g4|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g4|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g4|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g3|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g3|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g3|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g3|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g2|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g2|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g2|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g2|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g1|sbox:sb4|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g1|sbox:sb3|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g1|sbox:sb2|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
+    Info (276007): RAM logic "g_function:g1|sbox:sb1|Ram0" is uninferred due to asynchronous read logic File: /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v Line: 7
 Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13012): Latch key_out[0]$latch has unsafe behavior File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 98
     Warning (13013): Ports D and ENA on the latch are fed by the same signal current_round[3] File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 6
@@ -1120,10 +1123,10 @@ Info (21057): Implemented 3501 device resources after synthesis - the final reso
     Info (21058): Implemented 132 input pins
     Info (21059): Implemented 128 output pins
     Info (21061): Implemented 3241 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 333 warnings
-    Info: Peak virtual memory: 490 megabytes
-    Info: Processing ended: Wed Apr 17 11:58:19 2024
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:45
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 332 warnings
+    Info: Peak virtual memory: 497 megabytes
+    Info: Processing ended: Fri Apr 19 10:40:02 2024
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:46
 
 
