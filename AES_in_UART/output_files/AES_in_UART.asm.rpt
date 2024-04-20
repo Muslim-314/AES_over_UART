@@ -1,5 +1,5 @@
 Assembler report for AES_in_UART
-Fri Apr 19 21:31:14 2024
+Sat Apr 20 19:34:07 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Apr 19 21:31:14 2024 ;
+; Assembler Status      ; Successful - Sat Apr 20 19:34:07 2024 ;
 ; Revision Name         ; AES_in_UART                           ;
-; Top-level Entity Name ; key_generator                         ;
+; Top-level Entity Name ; encipher                              ;
 ; Family                ; Cyclone V                             ;
 ; Device                ; 5CSXFC6D6F31C6                        ;
 +-----------------------+---------------------------------------+
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------------+
 ; Option         ; Setting                  ;
 +----------------+--------------------------+
-; JTAG usercode  ; 0x00FF8A4A               ;
-; Checksum       ; 0x00FF8A4A               ;
+; JTAG usercode  ; 0x017A9409               ;
+; Checksum       ; 0x017A9409               ;
 +----------------+--------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Apr 19 21:31:03 2024
+    Info: Processing started: Sat Apr 20 19:33:56 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off AES_in_UART -c AES_in_UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 547 megabytes
-    Info: Processing ended: Fri Apr 19 21:31:14 2024
+    Info: Peak virtual memory: 584 megabytes
+    Info: Processing ended: Sat Apr 20 19:34:07 2024
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:11
 
 

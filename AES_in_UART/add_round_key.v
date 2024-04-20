@@ -1,5 +1,6 @@
-module add_round_key(in_matrix, key, out_matrix);
-	input [127:0]in_matrix,key;
-	output [127:0]out_matrix;
-	assign out_matrix = key ^ out_matrix;
+module add_round_key(data, key, out);
+	input [127:0] data;
+	input [127:0] key;
+	output [127:0] out;
+	assign out = key ^ data;
 endmodule 

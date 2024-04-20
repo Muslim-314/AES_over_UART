@@ -1,13 +1,13 @@
-Fitter Status : Failed - Fri Apr 19 22:36:58 2024
+Fitter Status : Successful - Sat Apr 20 19:33:53 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : AES_in_UART
 Top-level Entity Name : encipher
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1 / 41,910 ( < 1 % )
+Logic utilization (in ALMs) : 7,087 / 41,910 ( 17 % )
 Total registers : 0
-Total pins : 384 / 499 ( 77 % )
+Total pins : 256 / 499 ( 51 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )
 Total RAM Blocks : 0 / 553 ( 0 % )

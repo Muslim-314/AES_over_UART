@@ -54,17 +54,23 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name VERILOG_FILE sbox.v
-set_global_assignment -name VERILOG_FILE g_function.v
-set_global_assignment -name VERILOG_FILE key_generator.v
-set_global_assignment -name VERILOG_FILE key_tb.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE sub_byte_tb.v
 set_global_assignment -name VERILOG_FILE sub_byte.v
-set_global_assignment -name VERILOG_FILE shift_rows.v
-set_global_assignment -name VERILOG_FILE add_round_key.v
 set_global_assignment -name VERILOG_FILE single_round.v
-set_global_assignment -name VERILOG_FILE encipher.v
+set_global_assignment -name VERILOG_FILE sbox_m.v
+set_global_assignment -name VERILOG_FILE sbox.v
+set_global_assignment -name VERILOG_FILE Mix_column.v
 set_global_assignment -name VERILOG_FILE last_round.v
+set_global_assignment -name VERILOG_FILE key_generator.v
+set_global_assignment -name VERILOG_FILE g_function.v
 set_global_assignment -name VERILOG_FILE encipher_tb.v
+set_global_assignment -name VERILOG_FILE encipher.v
+set_global_assignment -name VERILOG_FILE add_round_key.v
+set_global_assignment -name VERILOG_FILE key_tb.v
+set_global_assignment -name VERILOG_FILE shift_rows.v
+set_global_assignment -name VERILOG_FILE shift_rows_tb.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
