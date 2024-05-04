@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY encipher
+set_global_assignment -name TOP_LEVEL_ENTITY decipher
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:35:43  APRIL 16, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -59,6 +59,8 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name VERILOG_FILE sub_byte_tb.v
 set_global_assignment -name VERILOG_FILE sub_byte.v
 set_global_assignment -name VERILOG_FILE single_round.v
+set_global_assignment -name VERILOG_FILE shift_rows_tb.v
+set_global_assignment -name VERILOG_FILE shift_rows.v
 set_global_assignment -name VERILOG_FILE sbox_m.v
 set_global_assignment -name VERILOG_FILE sbox.v
 set_global_assignment -name VERILOG_FILE Mix_column.v
@@ -67,11 +69,17 @@ set_global_assignment -name VERILOG_FILE key_generator.v
 set_global_assignment -name VERILOG_FILE g_function.v
 set_global_assignment -name VERILOG_FILE encipher_tb.v
 set_global_assignment -name VERILOG_FILE encipher.v
-set_global_assignment -name VERILOG_FILE add_round_key.v
 set_global_assignment -name VERILOG_FILE key_tb.v
-set_global_assignment -name VERILOG_FILE shift_rows.v
-set_global_assignment -name VERILOG_FILE shift_rows_tb.v
+set_global_assignment -name VERILOG_FILE add_round_key.v
+set_global_assignment -name VERILOG_FILE inv_sbox.v
+set_global_assignment -name VERILOG_FILE inv_shiftrows.v
+set_global_assignment -name VERILOG_FILE inv_sub_byte.v
+set_global_assignment -name VERILOG_FILE inv_mix_column.v
+set_global_assignment -name VERILOG_FILE inv_single_round.v
+set_global_assignment -name VERILOG_FILE decipher.v
+set_global_assignment -name VERILOG_FILE inv_last_round.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE decipher_tb.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

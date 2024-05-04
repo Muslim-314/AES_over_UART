@@ -1,5 +1,5 @@
 Flow report for AES_in_UART
-Sat Apr 20 19:34:38 2024
+Sun Apr 28 18:17:01 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Apr 20 19:34:38 2024       ;
+; Flow Status                     ; Successful - Sun Apr 28 18:17:01 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; AES_in_UART                                 ;
-; Top-level Entity Name           ; encipher                                    ;
+; Top-level Entity Name           ; decipher                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 7,087 / 41,910 ( 17 % )                     ;
+; Logic utilization (in ALMs)     ; 8,034 / 41,910 ( 19 % )                     ;
 ; Total registers                 ; 0                                           ;
 ; Total pins                      ; 256 / 499 ( 51 % )                          ;
 ; Total virtual pins              ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/20/2024 19:24:22 ;
+; Start date & time ; 04/28/2024 18:02:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AES_in_UART         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 260097676359739.171362306232597        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 260097676359739.171430936700523        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -89,13 +89,13 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; encipher    ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; encipher    ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; encipher    ; Top                               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; decipher    ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; decipher    ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; decipher    ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                    ; encipher                               ; AES_in_UART   ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; decipher                               ; AES_in_UART   ; --          ; --                                ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -104,12 +104,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:06:49     ; 1.0                     ; 538 MB              ; 00:07:03                           ;
-; Fitter               ; 00:02:41     ; 1.1                     ; 1654 MB             ; 00:04:53                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 584 MB              ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:22     ; 1.5                     ; 895 MB              ; 00:00:32                           ;
-; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 765 MB              ; 00:00:07                           ;
-; Total                ; 00:10:10     ; --                      ; --                  ; 00:12:45                           ;
+; Analysis & Synthesis ; 00:09:32     ; 1.0                     ; 661 MB              ; 00:09:43                           ;
+; Fitter               ; 00:03:41     ; 1.1                     ; 1682 MB             ; 00:06:09                           ;
+; Assembler            ; 00:00:13     ; 1.0                     ; 592 MB              ; 00:00:12                           ;
+; Timing Analyzer      ; 00:00:28     ; 1.5                     ; 909 MB              ; 00:00:39                           ;
+; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 772 MB              ; 00:00:08                           ;
+; Total                ; 00:14:02     ; --                      ; --                  ; 00:16:51                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

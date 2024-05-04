@@ -1,0 +1,102 @@
+module inv_mix_column(state_in,state_out);
+	
+	
+endmodule 
+
+
+
+
+module mul_x_11(
+  input  [7:0] data_in,
+  output [7:0] data_out
+);
+
+wire [7:0] data_out1; 
+wire [7:0] data_out2; 
+wire [7:0] data_out3; 
+wire [7:0] data_out4; 
+
+mul_2 s1 ( data_in,data_out1);
+mul_2 s2 (data_out1,data_out2);
+assign data_out3 = data_out2 ^ data_in;
+mul_2 s3 ( data_out3,data_out4); 
+assign data_out = data_out4 ^ data_in;
+
+endmodule
+
+//-----------------------------
+module mul_x_9(
+  input  [7:0] data_in,
+  output [7:0] data_out
+);
+
+wire [7:0] data_out1; 
+wire [7:0] data_out2; 
+wire [7:0] data_out3; 
+wire [7:0] data_out4; 
+
+mul_2 s1 ( data_in,data_out1);
+mul_2 s2 (data_out1,data_out2);
+mul_2 s3 ( data_out2,data_out3); 
+assign data_out = data_out3 ^ data_in;
+
+endmodule
+
+
+//-----------------------------
+module mul_x_13(
+  input  [7:0] data_in,
+  output [7:0] data_out
+);
+
+wire [7:0] data_out1; 
+wire [7:0] data_out2; 
+wire [7:0] data_out3; 
+wire [7:0] data_out4; 
+
+mul_2 s1 ( data_in,data_out1);
+assign data_out2 = data_out1 ^ data_in;
+mul_2 s3 ( data_out2,data_out3);
+mul_2 s4 ( data_out3,data_out4); 
+assign data_out = data_out4 ^ data_in;
+
+endmodule
+
+
+//-----------------------------
+module mul_x_14(
+  input  [7:0] data_in,
+  output [7:0] data_out
+);
+
+wire [7:0] data_out1; 
+wire [7:0] data_out2; 
+wire [7:0] data_out3; 
+wire [7:0] data_out4; 
+
+mul_2 s1 ( data_in,data_out1);
+assign data_out2 = data_out1 ^ data_in;
+mul_2 s3 ( data_out2,data_out3);
+assign data_out4 = data_out3 ^ data_in;
+mul_2 s5 ( data_out4,data_out);
+
+
+endmodule
+//--------------------------------------------------
+
+
+module mul_2(data_in, data_out);
+input [7:0] data_in;
+
+output reg [7:0]data_out;
+
+always @(*)
+if (data_in[7] == 1) 
+data_out = ((data_in << 1) ^ 8'h1b);
+
+else 
+data_out = (data_in << 1);
+
+endmodule 
+
+//------------------------------------------------

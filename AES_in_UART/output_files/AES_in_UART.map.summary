@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Sat Apr 20 19:31:11 2024
+Analysis & Synthesis Status : Successful - Sun Apr 28 18:12:21 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : AES_in_UART
-Top-level Entity Name : encipher
+Top-level Entity Name : decipher
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
