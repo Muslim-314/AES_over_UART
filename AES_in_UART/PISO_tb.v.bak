@@ -1,0 +1,59 @@
+module PISO_tb;
+
+    // Testbench signals
+    reg clk;
+    reg reset;
+    reg load;
+    reg [127:0] parallel_in;
+    wire [7:0] serial_out;
+    wire empty;
+
+    // Instantiate the module
+    parallel_to_serial uut (
+        .clk(clk),
+        .reset(reset),
+        .load(load),
+        .parallel_in(parallel_in),
+        .serial_out(serial_out),
+        .empty(empty)
+    );
+
+    // Clock generation
+    always begin
+        #5 clk = ~clk;  // 100MHz clock
+    end
+
+    // Initial block for test stimulus
+    initial begin
+        // Initialize signals
+        clk = 0;
+        reset = 0;
+        load = 0;
+        parallel_in = 128'h0;
+
+        // Apply reset
+        reset = 1;
+        #10;
+        reset = 0;
+        #10;
+
+        // Load the data
+        parallel_in = 128'h0123456789ABCDEF_FEDCBA9876543210;
+        load = 1;
+        #10;
+        load = 0;
+
+        // Wait for empty signal to be asserted
+        wait(empty);
+        #10;
+
+        // Finish the simulation
+        $finish;
+    end
+
+    // Monitor output
+    initial begin
+        $monitor("Time: %0t, Serial Out: %0h, Empty: %b", $time, serial_out, empty);
+    end
+
+endmodule

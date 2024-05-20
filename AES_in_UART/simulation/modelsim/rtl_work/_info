@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/muslim/HDD/AES_over_UART/AES_in_UART/simulation/modelsim
 vadd_round_key
-Z1 !s110 1714310684
+Z1 !s110 1716165704
 !i10b 1
 !s100 f0EhXJ8^EeL=D6[dX;<1R3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,65 +20,91 @@ R0
 w1713610154
 8/home/muslim/HDD/AES_over_UART/AES_in_UART/add_round_key.v
 F/home/muslim/HDD/AES_over_UART/AES_in_UART/add_round_key.v
-!i122 3
+!i122 8
 L0 1 6
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1714310684.000000
+Z5 !s108 1716165704.000000
 !s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/add_round_key.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/add_round_key.v|
 !i113 1
 Z6 o-vlog01compat -work work
 Z7 !s92 -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART
 Z8 tCvgOpt 0
-vdecipher
-R1
+vCRC_MODULE
+Z9 !s110 1716165703
 !i10b 1
-!s100 9SK8dk9hkLidCz0VU9;F^0
+!s100 ZFB`W>jC^50[`IAH>BTPV0
 R2
-I6SiPV69k01aQViKl3Pk7l2
+ISaj>@`VJDiBl8mFnO;b]_0
 R3
 R0
-w1714309140
-8/home/muslim/HDD/AES_over_UART/AES_in_UART/decipher.v
-F/home/muslim/HDD/AES_over_UART/AES_in_UART/decipher.v
-!i122 9
-L0 1 63
+w1716163146
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v
+!i122 3
+L0 3 36
 R4
 r1
 !s85 0
 31
-R5
-!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/decipher.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/decipher.v|
+Z10 !s108 1716165703.000000
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v|
 !i113 1
 R6
 R7
 R8
-vdecipher_tb
-!s110 1714310743
+n@c@r@c_@m@o@d@u@l@e
+vcrc_padding
+R9
 !i10b 1
-!s100 DflcIa9<ZQ6;Ec2NaKF583
+!s100 _3]3R2^fha<9mzZG4]48m2
 R2
-IdJiWlghbTRF@JALT=Ijom2
+I<^WaDUK2674Xk00dA]KQn1
 R3
 R0
-w1714310720
-8/home/muslim/HDD/AES_over_UART/AES_in_UART/decipher_tb.v
-F/home/muslim/HDD/AES_over_UART/AES_in_UART/decipher_tb.v
-!i122 12
-L0 1 10
+w1716163129
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v
+!i122 4
+Z11 L0 1 12
 R4
 r1
 !s85 0
 31
-!s108 1714310743.000000
-!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/decipher_tb.v|
-!s90 -reportprogress|300|-work|work|/home/muslim/HDD/AES_over_UART/AES_in_UART/decipher_tb.v|
+R10
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v|
 !i113 1
-o-work work
+R6
+R7
+R8
+vencipher
+R9
+!i10b 1
+!s100 Mk10LZ]lUK9<d2oBWfPDI1
+R2
+IDMYiGHj6l_f9PX:`edial0
+R3
+R0
+w1713623311
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/encipher.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/encipher.v
+!i122 1
+L0 1 70
+R4
+r1
+!s85 0
+31
+R10
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/encipher.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/encipher.v|
+!i113 1
+R6
+R7
 R8
 vg_function
 R1
@@ -88,190 +114,192 @@ R2
 IP0V^FFRZKi<9KoW6R[C?G3
 R3
 R0
-Z9 w1713606483
+Z12 w1713606483
 8/home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v
 F/home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v
-!i122 2
+!i122 6
 L0 4 31
 R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v|
 !i113 1
 R6
 R7
 R8
-vinv_last_round
-!s110 1714310685
-!i10b 1
-!s100 ;NaZ=kSEUd9PM120aR1kb1
-R2
-I=JlF4A2;gkFeF[K_dS]a73
-R3
-R0
-w1714309366
-8/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_last_round.v
-F/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_last_round.v
-!i122 10
-L0 1 13
-R4
-r1
-!s85 0
-31
-R5
-!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/inv_last_round.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_last_round.v|
-!i113 1
-R6
-R7
-R8
-vinv_mix_column
-R1
-!i10b 1
-!s100 IDf^5`:^M^kzYRTo0d57o3
-R2
-I`TNl3>AFZci:0dF1Y`CZn1
-R3
-R0
-w1714305482
-8/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_mix_column.v
-F/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_mix_column.v
-!i122 7
-L0 1 95
-R4
-r1
-!s85 0
-31
-R5
-!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/inv_mix_column.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_mix_column.v|
-!i113 1
-R6
-R7
-R8
-vinv_sbox
-R1
-!i10b 1
-!s100 ?l_mRfEbG[nQ^bUNaTmIi0
-R2
-IIoZJoH0OzTloF@nRPQH;g0
-R3
-R0
-w1714301126
-8/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_sbox.v
-F/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_sbox.v
-!i122 4
-L0 40 281
-R4
-r1
-!s85 0
-31
-R5
-!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/inv_sbox.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_sbox.v|
-!i113 1
-R6
-R7
-R8
-vinv_shiftrows
-R1
-!i10b 1
-!s100 :zK;Qoj?L@a62m8NOGanc1
-R2
-IH>zj[bo`diU[TaGCT:=Ec0
-R3
-R0
-w1714301576
-8/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_shiftrows.v
-F/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_shiftrows.v
-!i122 5
-L0 2 28
-R4
-r1
-!s85 0
-31
-R5
-!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/inv_shiftrows.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_shiftrows.v|
-!i113 1
-R6
-R7
-R8
-vinv_single_round
-R1
-!i10b 1
-!s100 <D8Qk<gedY72eiMBYLj9V2
-R2
-IF`>M7Bz7`jV^TK=:1NXX=3
-R3
-R0
-w1714309253
-8/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_single_round.v
-F/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_single_round.v
-!i122 8
-L0 1 15
-R4
-r1
-!s85 0
-31
-R5
-!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/inv_single_round.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_single_round.v|
-!i113 1
-R6
-R7
-R8
-vinv_sub_byte
-R1
-!i10b 1
-!s100 0GO]9eRzOZ4al^eb2CLAA2
-R2
-ITJZC<?60@;hmB][`<3h[i0
-R3
-R0
-w1714301791
-8/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_sub_byte.v
-F/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_sub_byte.v
-!i122 6
-L0 1 12
-R4
-r1
-!s85 0
-31
-R5
-!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/inv_sub_byte.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/inv_sub_byte.v|
-!i113 1
-R6
-R7
-R8
 vkey_generator
-R1
+R9
 !i10b 1
 !s100 J5<Ri?@@fl_7D>O;Db@=C1
 R2
 IETimGd]X2C7?K>NEjSeVD1
 R3
 R0
-R9
+R12
 8/home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v
 F/home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v
-!i122 1
+!i122 5
 L0 1 113
 R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v|
 !i113 1
 R6
 R7
 R8
+vlast_round
+R1
+!i10b 1
+!s100 PLW8H;k3mQLZ;aAF`b5O62
+R2
+IaD4VK_`E;gSeMeh:c]Q3a2
+R3
+R0
+w1713615572
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/last_round.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/last_round.v
+!i122 13
+L0 1 14
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/last_round.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/last_round.v|
+!i113 1
+R6
+R7
+R8
+vMix_column
+R1
+!i10b 1
+!s100 DGofmj=C][8XOBThE1I_Z3
+R2
+IhQIgdJO1B9z346OGXR9G`2
+R3
+R0
+R12
+Z13 8/home/muslim/HDD/AES_over_UART/AES_in_UART/Mix_column.v
+Z14 F/home/muslim/HDD/AES_over_UART/AES_in_UART/Mix_column.v
+!i122 12
+L0 5 23
+R4
+r1
+!s85 0
+31
+R5
+Z15 !s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/Mix_column.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/Mix_column.v|
+!i113 1
+R6
+R7
+R8
+n@mix_column
+vmul_2
+R1
+!i10b 1
+!s100 >_><dE6W637>=:gQeRN^m1
+R2
+IJaFlCYF_HfQD8ITXYkP<c2
+R3
+R0
+R12
+R13
+R14
+!i122 12
+L0 34 12
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vmul_3
+R1
+!i10b 1
+!s100 Md?;TdK?YzkeK_legJ@ZO0
+R2
+IP[b9Q[897Gg0=ANM70B_U0
+R3
+R0
+R12
+R13
+R14
+!i122 12
+L0 49 11
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vmul_32
+R1
+!i10b 1
+!s100 g<M^kGPSJPz@nfRb4dOK32
+R2
+I<8?b1NX[6colCb5EjPB<o1
+R3
+R0
+R12
+R13
+R14
+!i122 12
+L0 63 33
+R4
+r1
+!s85 0
+31
+R5
+R15
+R16
+!i113 1
+R6
+R7
+R8
+vPISO
+R9
+!i10b 1
+!s100 3AR^9_o:o0PTz1M^9UX8:2
+R2
+IIU:K<BZ0H2;doYHAjbUiX0
+R3
+R0
+w1715958863
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/PISO.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/PISO.v
+!i122 0
+L0 1 30
+R4
+r1
+!s85 0
+31
+!s108 1716165702.000000
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/PISO.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/PISO.v|
+!i113 1
+R6
+R7
+R8
+n@p@i@s@o
 vsbox
 R1
 !i10b 1
@@ -280,19 +308,139 @@ R2
 Ib:bE]V@U9AV3878cmRZXo2
 R3
 R0
-R9
+R12
 8/home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v
 F/home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v
-!i122 0
+!i122 7
 L0 2 282
 R4
 r1
 !s85 0
 31
-!s108 1714310683.000000
+R5
 !s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v|
 !i113 1
 R6
 R7
 R8
+vshift_rows
+R1
+!i10b 1
+!s100 o6]j[ne0cPz@jZ`T7M;1[0
+R2
+IcfV;2SlCHmSeEzOlU?<611
+R3
+R0
+w1713622093
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/shift_rows.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/shift_rows.v
+!i122 11
+L0 1 28
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/shift_rows.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/shift_rows.v|
+!i113 1
+R6
+R7
+R8
+vsingle_round
+R1
+!i10b 1
+!s100 O_HAio<GU;Q<nTZ5j]I<=1
+R2
+IJWcUo57GWIOBn4P4Vb?7o1
+R3
+R0
+w1713620142
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/single_round.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/single_round.v
+!i122 9
+L0 1 13
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/single_round.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/single_round.v|
+!i113 1
+R6
+R7
+R8
+vsub_byte
+R1
+!i10b 1
+!s100 XmW@gGYkFU2Pe?6OgNEBI0
+R2
+I_XKL0al`YWl8Q^X;W^cH11
+R3
+R0
+w1713606484
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/sub_byte.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/sub_byte.v
+!i122 10
+R11
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/sub_byte.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART|/home/muslim/HDD/AES_over_UART/AES_in_UART/sub_byte.v|
+!i113 1
+R6
+R7
+R8
+vTOP_TX
+!s110 1716165992
+!i10b 1
+!s100 :D_dD<`]j6Q8h`1G2PUnQ3
+R2
+Il;WkaXiGza99zM@H512e;0
+R3
+R0
+w1716164367
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v
+!i122 15
+L0 1 46
+R4
+r1
+!s85 0
+31
+!s108 1716165992.000000
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v|
+!s90 -reportprogress|300|-work|work|/home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v|
+!i113 1
+Z17 o-work work
+R8
+n@t@o@p_@t@x
+vTOP_TX_tb
+!s110 1716167244
+!i10b 1
+!s100 Y3MIhej:T6K]b9D6XBNFB1
+R2
+I?@c4Zlg=k8:RbO7;>X1;>2
+R3
+R0
+w1716167217
+8/home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v
+F/home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v
+!i122 17
+L0 1 41
+R4
+r1
+!s85 0
+31
+!s108 1716167243.000000
+!s107 /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v|
+!s90 -reportprogress|300|-work|work|/home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v|
+!i113 1
+R17
+R8
+n@t@o@p_@t@x_tb

@@ -1,13 +1,13 @@
-Fitter Status : Successful - Sun Apr 28 18:16:03 2024
+Fitter Status : Successful - Mon May 20 05:37:25 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : AES_in_UART
-Top-level Entity Name : decipher
+Top-level Entity Name : TOP_TX
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 8,034 / 41,910 ( 19 % )
-Total registers : 0
-Total pins : 256 / 499 ( 51 % )
+Logic utilization (in ALMs) : 53 / 41,910 ( < 1 % )
+Total registers : 134
+Total pins : 13 / 499 ( 3 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )
 Total RAM Blocks : 0 / 553 ( 0 % )
