@@ -1,0 +1,48 @@
+module TOP_Rx (
+    input clk,
+    input reset,
+    input [7:0] serial_in,
+    input crc_en,
+    output reg validation
+	 output data_out;
+);
+    wire [127:0] sipo_data;
+    wire sipo_full;
+    wire [127:0] decipher_data;
+    wire [15:0] computed_crc;
+    reg [111:0] data_to_crc;
+	 
+	 assign data_out = data_to_crc;
+
+    SIPO sipo (
+        .clk(clk),
+        .reset(reset),
+        .serial_in(serial_in),
+        .parallel_out(sipo_data),
+        .full(sipo_full)
+    );
+
+    decipher decipher_inst (
+        .cipher_text(sipo_data),
+        .data(decipher_data)
+    );
+
+    CRC_MODULE crc_module (
+        .data_in(data_to_crc),
+        .crc_en(crc_en),
+        .crc_out(computed_crc)
+    );
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            validation <= 0;
+        end else if (sipo_full) begin
+            data_to_crc <= decipher_data[127:16];
+            if (computed_crc == decipher_data[15:0]) begin
+                validation <= 1;
+            end else begin
+                validation <= 0;
+            end
+        end
+    end
+endmodule

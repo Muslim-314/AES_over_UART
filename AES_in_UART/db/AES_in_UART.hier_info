@@ -1,17 +1,32 @@
 |TOP_TX
-clk => clk.IN1
+clk => clk.IN4
+start => start.IN1
 reset => reset.IN1
-crc_en => crc_en.IN1
-load => load.IN1
-serial_out[0] <= PISO:piso_inst.serial_out
-serial_out[1] <= PISO:piso_inst.serial_out
-serial_out[2] <= PISO:piso_inst.serial_out
-serial_out[3] <= PISO:piso_inst.serial_out
-serial_out[4] <= PISO:piso_inst.serial_out
-serial_out[5] <= PISO:piso_inst.serial_out
-serial_out[6] <= PISO:piso_inst.serial_out
-serial_out[7] <= PISO:piso_inst.serial_out
-empty <= PISO:piso_inst.empty
+tx_out << UART_Tx:UTx.out
+
+
+|TOP_TX|controller:controller_inst
+clk => EN_UDR~reg0.CLK
+clk => PISO_load~reg0.CLK
+clk => tx_start~reg0.CLK
+clk => EnTx~reg0.CLK
+clk => hold~reg0.CLK
+clk => PISO_reset~reg0.CLK
+clk => state~1.DATAIN
+PISO_empty => Selector6.IN4
+PISO_empty => Selector4.IN2
+start => Selector3.IN2
+start => Selector6.IN1
+start => Selector6.IN2
+Done => state.DATAB
+Done => Selector5.IN2
+hold <= hold~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EnTx <= EnTx~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tx_start <= tx_start~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PISO_reset <= PISO_reset~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en_crc <= <GND>
+PISO_load <= PISO_load~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EN_UDR <= EN_UDR~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TOP_TX|CRC_MODULE:crc_inst
@@ -61905,6 +61920,7 @@ load => serial_out[3]~reg0.ENA
 load => serial_out[2]~reg0.ENA
 load => serial_out[1]~reg0.ENA
 load => serial_out[0]~reg0.ENA
+hold => always0.IN1
 parallel_in[0] => shift_reg.DATAB
 parallel_in[1] => shift_reg.DATAB
 parallel_in[2] => shift_reg.DATAB
@@ -62042,5 +62058,106 @@ serial_out[5] <= serial_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 serial_out[6] <= serial_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 serial_out[7] <= serial_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 empty <= empty~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TOP_TX|UDR:UART_REG
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+reset => data_out[0]~reg0.ACLR
+reset => data_out[1]~reg0.ACLR
+reset => data_out[2]~reg0.ACLR
+reset => data_out[3]~reg0.ACLR
+reset => data_out[4]~reg0.ACLR
+reset => data_out[5]~reg0.ACLR
+reset => data_out[6]~reg0.ACLR
+reset => data_out[7]~reg0.ACLR
+enable => data_out[7]~reg0.ENA
+enable => data_out[6]~reg0.ENA
+enable => data_out[5]~reg0.ENA
+enable => data_out[4]~reg0.ENA
+enable => data_out[3]~reg0.ENA
+enable => data_out[2]~reg0.ENA
+enable => data_out[1]~reg0.ENA
+enable => data_out[0]~reg0.ENA
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+data_in[2] => data_out[2]~reg0.DATAIN
+data_in[3] => data_out[3]~reg0.DATAIN
+data_in[4] => data_out[4]~reg0.DATAIN
+data_in[5] => data_out[5]~reg0.DATAIN
+data_in[6] => data_out[6]~reg0.DATAIN
+data_in[7] => data_out[7]~reg0.DATAIN
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TOP_TX|BaudRateGenerator:BRG
+clk => txClk~reg0.CLK
+clk => txCounter[0].CLK
+clk => txCounter[1].CLK
+clk => txCounter[2].CLK
+clk => txCounter[3].CLK
+clk => txCounter[4].CLK
+clk => txCounter[5].CLK
+clk => txCounter[6].CLK
+clk => txCounter[7].CLK
+clk => txCounter[8].CLK
+clk => txCounter[9].CLK
+clk => txCounter[10].CLK
+clk => txCounter[11].CLK
+clk => rxClk~reg0.CLK
+clk => rxCounter[0].CLK
+clk => rxCounter[1].CLK
+clk => rxCounter[2].CLK
+clk => rxCounter[3].CLK
+clk => rxCounter[4].CLK
+clk => rxCounter[5].CLK
+clk => rxCounter[6].CLK
+clk => rxCounter[7].CLK
+rxClk <= rxClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+txClk <= txClk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TOP_TX|UART_Tx:UTx
+clk => data[0].CLK
+clk => data[1].CLK
+clk => data[2].CLK
+clk => data[3].CLK
+clk => data[4].CLK
+clk => data[5].CLK
+clk => data[6].CLK
+clk => data[7].CLK
+clk => bitIdx[0].CLK
+clk => bitIdx[1].CLK
+clk => bitIdx[2].CLK
+clk => busy~reg0.CLK
+clk => done~reg0.CLK
+clk => out~reg0.CLK
+clk => state~6.DATAIN
+en => always0.IN0
+start => always0.IN1
+in[0] => data.DATAB
+in[1] => data.DATAB
+in[2] => data.DATAB
+in[3] => data.DATAB
+in[4] => data.DATAB
+in[5] => data.DATAB
+in[6] => data.DATAB
+in[7] => data.DATAB
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done <= done~reg0.DB_MAX_OUTPUT_PORT_TYPE
+busy <= busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

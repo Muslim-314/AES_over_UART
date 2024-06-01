@@ -1,0 +1,74 @@
+module tb_TOP_Rx;
+    // Testbench signals
+    reg clk;
+    reg reset;
+    reg [7:0] serial_in;
+    reg crc_en;
+    wire validation;
+
+    // Instantiate the TOP_Rx module
+    TOP_Rx uut (
+        .clk(clk),
+        .reset(reset),
+        .serial_in(serial_in),
+        .crc_en(crc_en),
+        .validation(validation)
+    );
+
+    // Clock generation
+    always #5 clk = ~clk; // 100 MHz clock
+
+    // Task to send data serially
+    task send_serial_data;
+        input [127:0] data;
+        integer i;
+        begin
+            for (i = 127; i >= 0; i = i - 8) begin
+                serial_in = data[i -: 8];
+                #10; // Wait for one clock period
+            end
+        end
+    endtask
+
+    // Test vector
+    reg [127:0] test_data;
+    reg [127:0] decrypted_data;
+    reg [15:0] expected_crc;
+
+    initial begin
+        // Initialize signals
+        clk = 0;
+        reset = 1;
+        serial_in = 0;
+        crc_en = 0;
+
+        // Release reset
+        #20;
+        reset = 0;
+
+        // Set up test data (cipher text)
+        test_data = 128'h0123456789ABCDEF0123456789ABCDEF; // Example cipher text
+
+        // Set up expected decrypted data and CRC for this example
+        decrypted_data = 128'hFEDCBA9876543210FEDCBA9876543210; // Example decrypted data
+        expected_crc = 16'h1D0F; // Example CRC of the first 112 bits of decrypted data
+
+        // Send test data
+        send_serial_data(test_data);
+
+        // Enable CRC computation
+        crc_en = 1;
+
+        // Wait for some time to allow processing
+        #100;
+
+        // Check the validation signal
+        if (validation) begin
+            $display("Test Passed: Validation signal is high");
+        end else begin
+            $display("Test Failed: Validation signal is low");
+        end
+
+        $stop;
+    end
+endmodule

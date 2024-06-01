@@ -3,51 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -0.873
-TNS   : -94.659
+Slack : -4.341
+TNS   : -44.378
+
+Type  : Slow 1100mV 85C Model Setup 'BaudRateGenerator:BRG|txClk'
+Slack : -3.981
+TNS   : -21.251
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.226
+Slack : 0.268
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'BaudRateGenerator:BRG|txClk'
+Slack : 0.753
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.394
-TNS   : -71.493
+TNS   : -14.147
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'BaudRateGenerator:BRG|txClk'
+Slack : -0.394
+TNS   : -8.476
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -0.739
-TNS   : -80.479
+Slack : -4.493
+TNS   : -43.791
+
+Type  : Slow 1100mV 0C Model Setup 'BaudRateGenerator:BRG|txClk'
+Slack : -4.082
+TNS   : -21.437
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.211
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'BaudRateGenerator:BRG|txClk'
+Slack : 0.700
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.394
-TNS   : -76.238
+TNS   : -15.399
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'BaudRateGenerator:BRG|txClk'
+Slack : -0.394
+TNS   : -8.380
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.124
-TNS   : -4.348
+Slack : -2.480
+TNS   : -18.216
+
+Type  : Fast 1100mV 85C Model Setup 'BaudRateGenerator:BRG|txClk'
+Slack : -1.938
+TNS   : -8.808
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.136
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'BaudRateGenerator:BRG|txClk'
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.085
-TNS   : -11.016
+Slack : -0.197
+TNS   : -2.196
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'BaudRateGenerator:BRG|txClk'
+Slack : 0.114
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.034
-TNS   : -0.044
+Slack : -2.090
+TNS   : -15.163
+
+Type  : Fast 1100mV 0C Model Setup 'BaudRateGenerator:BRG|txClk'
+Slack : -1.880
+TNS   : -7.756
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.126
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'BaudRateGenerator:BRG|txClk'
+Slack : 0.303
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.082
-TNS   : -10.822
+Slack : -0.208
+TNS   : -2.228
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'BaudRateGenerator:BRG|txClk'
+Slack : 0.121
+TNS   : 0.000
 
 ------------------------------------------------------------

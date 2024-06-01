@@ -1,0 +1,53 @@
+module controller(
+	input SIPO_empty,     //Indicates if the SIPO is empty or not
+	input start,          //Assert when want to start the FSM
+	input Done,			    //Indicates if the current ttransaction is done or not
+	inout reg hold,       //Hold the data at the SIPO untill the current transaction is done
+	output reg EnTx,      //Enable the UART Tx module
+	output reg tx_start,  //Start the transaction
+	output reg SIPO_reset,//Reset signal for the parallel to serial converter
+	output reg en_crc,    // enable the CRC16 module
+	output reg SIPO_load, // load the computed meaasge+CRC to the SIPO 
+	output reg EN_UDR     // enable the Uart DATA  register
+);
+	//state 
+	localparam Reset         =   3'b000;
+	localparam LOAD;         =   3'b001;
+	localparam LoadByteToUDR =   3'b010;
+	localparam START_UART_Tx =   3'b011;
+	localparam CHECK_EMPTY;  =   3'b100;
+	localparam IDEL;         =   3'b101;
+	reg state ;
+	
+	
+	always@ (posedge clk)begin
+		case(state)begin
+			RESET: begin
+				SIPO_reset <= 1'b1;
+				state      <= (start) ?  LOAD : IDEL; 
+			  end
+			LOAD: begin
+				load       <= 1'b1;
+				state      <= LoadByteToUDR;
+			  end
+		   LoadByteToUDR: begin  //enable the UDR and load a byte for transmission
+			   EN_UDR     <= 1'b1;  
+			   hold       <= 1'b0;
+				state      <= START_UART_Tx;
+			  end 
+			START_UART_Tx: begin   
+			   hold       <= 1'b1;
+				EnTx       <= 1'b1;
+				tx_start   <= 1'b1;
+				state      <= (Done) ? CHECK_EMPTY : START_UART_Tx;
+			  end
+			CHECK_EMPTY: begin
+				
+			   state      <= (empty)? IDEL : LoadByteToUDR;
+			  end
+			
+		endcase
+	end
+	
+	
+endmodule 

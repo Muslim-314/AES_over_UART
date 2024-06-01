@@ -1,7 +1,8 @@
 module PISO (
-    input clk,
+	 input clk,
     input reset,
     input load,
+	 input hold,
     input [127:0] parallel_in,
     output reg [7:0] serial_out,
     output reg empty
@@ -18,7 +19,7 @@ module PISO (
             shift_reg <= parallel_in;
             count <= 4'd0;
             empty <= 1'b0;
-        end else if (!empty) begin
+        end else if (!empty && !hold) begin
             serial_out <= shift_reg[127:120];
             shift_reg <= {shift_reg[119:0], 8'b0};
             count <= count + 4'd1;

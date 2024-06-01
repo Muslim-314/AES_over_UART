@@ -1,0 +1,71 @@
+module Uart_Rx
+	#(parameter CLKS_PER_BITS)
+	(
+		input clock,
+		input i_rx,            //recieved bit
+		output o_data_avail,   //ouptput data available 
+		output [7:0] o_data_byte 
+	);
+	
+	localparam IDEL_STATE    = 3'b00;
+	localparam START_STATE   = 3'b01;
+	localparam GET_BIT_STATE = 3'b10;
+	localparam STOP_STATE    = 3'b11;
+	
+	//counter the metal stability 
+	reg rx_buffer;
+	reg rx;        //stop bit to indicate the initialization of transmission
+	
+	
+	reg [1:0]  state      = 0;
+	reg [15:0] counter    = 0;
+	reg [2:0]  bit_index  = 0;
+	reg        data_avail = 0;
+	reg [7:0]  data_byte  = 0;
+	
+	assign o_data_avail = data_avail;
+	assign o_data_byte  = data_bytes; 
+	
+	
+	// Double Buffer the incomming Rx line to avoid the metastability 
+	always @(posedge clock)begin
+		rx_buffer <= i_rx;
+		rx        <= rx_buffer;
+	end
+	
+	always@(posedge clock)begin
+		case(state)
+			IDEL_STATE: begin
+				data_avail <= 0;
+				counter    <= 0;
+				bit_index  <= 0;
+				if(rx == 0)
+					state <= START_STATE;
+				else
+					state <= IDEL_STATE;
+			 end
+			
+			START_STATE: begin
+				if(counter == (CLKS_PER_BITS - 1)/2) begin
+					if(rx == 0) begin
+						counter <= 0;
+						state   <= GET_BTT_STATE;
+					end
+				   else begin
+						state <= IDEL_STATE;
+					end
+				end
+				else begin
+					counter <= counter + 16'b1;
+					state   <= START_STATE;
+				end
+	      end
+					
+				
+				
+	end
+	
+	
+	
+	 
+endmodule 

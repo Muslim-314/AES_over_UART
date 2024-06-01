@@ -8,129 +8,59 @@
 # vmap work rtl_work 
 # Modifying /home/muslim/HDD/Quartus/modelsim_ase/linuxaloem/../modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/PISO.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:42 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/PISO.v 
-# -- Compiling module PISO
-# 
-# Top level modules:
-# 	PISO
-# End time: 05:41:43 on May 20,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/encipher.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:43 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/encipher.v 
-# -- Compiling module encipher
-# 
-# Top level modules:
-# 	encipher
-# End time: 05:41:43 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:43 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v 
-# -- Compiling module TOP_TX
-# 
-# Top level modules:
-# 	TOP_TX
-# End time: 05:41:43 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:43 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v 
-# -- Compiling module CRC_MODULE
-# 
-# Top level modules:
-# 	CRC_MODULE
-# End time: 05:41:43 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:43 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v 
-# -- Compiling module crc_padding
-# 
-# Top level modules:
-# 	crc_padding
-# End time: 05:41:43 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:43 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v 
-# -- Compiling module key_generator
-# 
-# Top level modules:
-# 	key_generator
-# End time: 05:41:43 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:43 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v 
-# -- Compiling module g_function
-# 
-# Top level modules:
-# 	g_function
-# End time: 05:41:44 on May 20,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:44 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v 
-# -- Compiling module sbox
-# 
-# Top level modules:
-# 	sbox
-# End time: 05:41:44 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/add_round_key.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:44 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/add_round_key.v 
-# -- Compiling module add_round_key
-# 
-# Top level modules:
-# 	add_round_key
-# End time: 05:41:44 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/single_round.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:44 on May 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/single_round.v 
-# -- Compiling module single_round
-# 
-# Top level modules:
-# 	single_round
-# End time: 05:41:44 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/sub_byte.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:44 on May 20,2024
+# Start time: 16:14:10 on Jun 01,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/sub_byte.v 
 # -- Compiling module sub_byte
 # 
 # Top level modules:
 # 	sub_byte
-# End time: 05:41:44 on May 20,2024, Elapsed time: 0:00:00
+# End time: 16:14:10 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:10 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v 
+# -- Compiling module key_generator
+# 
+# Top level modules:
+# 	key_generator
+# End time: 16:14:10 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:10 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v 
+# -- Compiling module g_function
+# 
+# Top level modules:
+# 	g_function
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/shift_rows.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:44 on May 20,2024
+# Start time: 16:14:11 on Jun 01,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/shift_rows.v 
 # -- Compiling module shift_rows
 # 
 # Top level modules:
 # 	shift_rows
-# End time: 05:41:44 on May 20,2024, Elapsed time: 0:00:00
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:11 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/sbox.v 
+# -- Compiling module sbox
+# 
+# Top level modules:
+# 	sbox
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/Mix_column.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:44 on May 20,2024
+# Start time: 16:14:11 on Jun 01,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/Mix_column.v 
 # -- Compiling module Mix_column
 # -- Compiling module mul_2
@@ -139,36 +69,147 @@
 # 
 # Top level modules:
 # 	Mix_column
-# End time: 05:41:44 on May 20,2024, Elapsed time: 0:00:00
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/last_round.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:41:44 on May 20,2024
+# Start time: 16:14:11 on Jun 01,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/last_round.v 
 # -- Compiling module last_round
 # 
 # Top level modules:
 # 	last_round
-# End time: 05:41:44 on May 20,2024, Elapsed time: 0:00:00
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/encipher.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:11 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/encipher.v 
+# -- Compiling module encipher
+# 
+# Top level modules:
+# 	encipher
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:11 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v 
+# -- Compiling module crc_padding
+# 
+# Top level modules:
+# 	crc_padding
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:11 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v 
+# -- Compiling module CRC_MODULE
+# 
+# Top level modules:
+# 	CRC_MODULE
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/add_round_key.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:11 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/add_round_key.v 
+# -- Compiling module add_round_key
+# 
+# Top level modules:
+# 	add_round_key
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/single_round.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:11 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/single_round.v 
+# -- Compiling module single_round
+# 
+# Top level modules:
+# 	single_round
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/PISO.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:11 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/PISO.v 
+# -- Compiling module PISO
+# 
+# Top level modules:
+# 	PISO
+# End time: 16:14:11 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:11 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/controller.v 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 16:14:12 on Jun 01,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/UDR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:12 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/UDR.v 
+# -- Compiling module UDR
+# 
+# Top level modules:
+# 	UDR
+# End time: 16:14:12 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/BaudRateGenerator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:12 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/BaudRateGenerator.v 
+# -- Compiling module BaudRateGenerator
+# 
+# Top level modules:
+# 	BaudRateGenerator
+# End time: 16:14:12 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:12 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v 
+# -- Compiling module TOP_TX
+# 
+# Top level modules:
+# 	TOP_TX
+# End time: 16:14:12 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART {/home/muslim/HDD/AES_over_UART/AES_in_UART/UART_Tx.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:14:12 on Jun 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/muslim/HDD/AES_over_UART/AES_in_UART" /home/muslim/HDD/AES_over_UART/AES_in_UART/UART_Tx.v 
+# -- Compiling module UART_Tx
+# 
+# Top level modules:
+# 	UART_Tx
+# End time: 16:14:12 on Jun 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
 # stdin: <EOF>
 vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:42:16 on May 20,2024
+# Start time: 16:14:39 on Jun 01,2024
 # vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v 
 # -- Compiling module TOP_TX_tb
 # 
 # Top level modules:
 # 	TOP_TX_tb
-# End time: 05:42:16 on May 20,2024, Elapsed time: 0:00:00
+# End time: 16:14:39 on Jun 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.TOP_TX_tb
 # vsim work.TOP_TX_tb 
-# Start time: 05:42:26 on May 20,2024
+# Start time: 16:14:48 on Jun 01,2024
 # Loading work.TOP_TX_tb
 # Loading work.TOP_TX
+# Loading work.controller
 # Loading work.CRC_MODULE
 # Loading work.crc_padding
 # Loading work.encipher
@@ -185,288 +226,13 @@ vsim work.TOP_TX_tb
 # Loading work.mul_3
 # Loading work.last_round
 # Loading work.PISO
-# ** Error (suppressible): (vsim-3389) Port 'data_in' not found in the connected module (5th connection).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v Line: 15
+# Loading work.UDR
+# Loading work.BaudRateGenerator
+# Loading work.UART_Tx
 # ** Warning: (vsim-3015) [PCDPC] - Port size (112) does not match connection size (128) for port 'data_in'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/crc_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 17
+#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/crc_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 45
 # ** Warning: (vsim-3015) [PCDPC] - Port size (112) does not match connection size (128) for port 'data_in'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/padding_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# Error loading design
-# End time: 05:42:27 on May 20,2024, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 112
-vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:46:32 on May 20,2024
-# vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v 
-# -- Compiling module TOP_TX
-# 
-# Top level modules:
-# 	TOP_TX
-# End time: 05:46:32 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:46:34 on May 20,2024
-# vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v 
-# -- Compiling module TOP_TX_tb
-# ** Error: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v(32): (vlog-2730) Undefined variable: 'data_in'.
-# End time: 05:46:34 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 05:47:02 on May 20,2024
-# vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v 
-# -- Compiling module TOP_TX_tb
-# 
-# Top level modules:
-# 	TOP_TX_tb
-# End time: 05:47:02 on May 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.TOP_TX_tb
-# vsim work.TOP_TX_tb 
-# Start time: 05:47:08 on May 20,2024
-# Loading work.TOP_TX_tb
-# Loading work.TOP_TX
-# Loading work.CRC_MODULE
-# Loading work.crc_padding
-# Loading work.encipher
-# Loading work.key_generator
-# Loading work.g_function
-# Loading work.sbox
-# Loading work.add_round_key
-# Loading work.single_round
-# Loading work.sub_byte
-# Loading work.shift_rows
-# Loading work.Mix_column
-# Loading work.mul_32
-# Loading work.mul_2
-# Loading work.mul_3
-# Loading work.last_round
-# Loading work.PISO
-# ** Warning: (vsim-3015) [PCDPC] - Port size (112) does not match connection size (128) for port 'data_in'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/crc_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 17
-# ** Warning: (vsim-3015) [PCDPC] - Port size (112) does not match connection size (128) for port 'data_in'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/padding_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 24
+#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/padding_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 52
 # ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
 #    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
 # ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
@@ -689,541 +455,8 @@ vsim work.TOP_TX_tb
 #    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
 add wave -position insertpoint sim:/TOP_TX_tb/*
 run -all
-# ** Note: $finish    : /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v(43)
-#    Time: 340 ps  Iteration: 0  Instance: /TOP_TX_tb
+# Time: 0, tx_out: x
+# ** Note: $finish    : /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v(48)
+#    Time: 1040 ns  Iteration: 0  Instance: /TOP_TX_tb
 # 1
-# Break in Module TOP_TX_tb at /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v line 43
-add wave -position insertpoint sim:/TOP_TX_tb/#INITIAL#26/*
-add wave -position insertpoint sim:/TOP_TX_tb/uut/crc_inst/#ALWAYS#12/*
-vsim work.TOP_TX_tb
-# End time: 06:00:03 on May 20,2024, Elapsed time: 0:12:55
-# Errors: 0, Warnings: 112
-# vsim work.TOP_TX_tb 
-# Start time: 06:00:03 on May 20,2024
-# Loading work.TOP_TX_tb
-# Loading work.TOP_TX
-# Loading work.CRC_MODULE
-# Loading work.crc_padding
-# Loading work.encipher
-# Loading work.key_generator
-# Loading work.g_function
-# Loading work.sbox
-# Loading work.add_round_key
-# Loading work.single_round
-# Loading work.sub_byte
-# Loading work.shift_rows
-# Loading work.Mix_column
-# Loading work.mul_32
-# Loading work.mul_2
-# Loading work.mul_3
-# Loading work.last_round
-# Loading work.PISO
-# ** Warning: (vsim-3015) [PCDPC] - Port size (112) does not match connection size (128) for port 'data_in'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/crc_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 17
-# ** Warning: (vsim-3015) [PCDPC] - Port size (112) does not match connection size (128) for port 'data_in'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/padding_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-add wave -position insertpoint sim:/TOP_TX_tb/*
-add wave -position insertpoint sim:/TOP_TX_tb/uut/crc_inst/#ALWAYS#12/*
-add wave -position insertpoint sim:/TOP_TX_tb/uut/padding_inst/#ASSIGN#9/*
-# ** UI-Msg: (vish-4014) No objects found matching '/TOP_TX_tb/uut/padding_inst/#ASSIGN#9/*'.
-add wave -position insertpoint sim:/TOP_TX_tb/uut/padding_inst/#ASSIGN#9/*
-# ** UI-Msg: (vish-4014) No objects found matching '/TOP_TX_tb/uut/padding_inst/#ASSIGN#9/*'.
-add wave -position insertpoint sim:/TOP_TX_tb/uut/padding_inst/#ASSIGN#10/*
-# ** UI-Msg: (vish-4014) No objects found matching '/TOP_TX_tb/uut/padding_inst/#ASSIGN#10/*'.
-add wave -position insertpoint sim:/TOP_TX_tb/uut/padding_inst/*
-add wave -position insertpoint  \
-sim:/TOP_TX_tb/uut/encipher_inst/cipher_text
-run -all
-# ** Note: $finish    : /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v(43)
-#    Time: 340 ps  Iteration: 0  Instance: /TOP_TX_tb
-# 1
-# Break in Module TOP_TX_tb at /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v line 43
-vlog -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:07:23 on May 20,2024
-# vlog -reportprogress 300 -work work /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v 
-# -- Compiling module TOP_TX_tb
-# 
-# Top level modules:
-# 	TOP_TX_tb
-# End time: 06:07:24 on May 20,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vsim work.TOP_TX_tb
-# End time: 06:07:26 on May 20,2024, Elapsed time: 0:07:23
-# Errors: 0, Warnings: 112
-# vsim work.TOP_TX_tb 
-# Start time: 06:07:26 on May 20,2024
-# Loading work.TOP_TX_tb
-# Loading work.TOP_TX
-# Loading work.CRC_MODULE
-# Loading work.crc_padding
-# Loading work.encipher
-# Loading work.key_generator
-# Loading work.g_function
-# Loading work.sbox
-# Loading work.add_round_key
-# Loading work.single_round
-# Loading work.sub_byte
-# Loading work.shift_rows
-# Loading work.Mix_column
-# Loading work.mul_32
-# Loading work.mul_2
-# Loading work.mul_3
-# Loading work.last_round
-# Loading work.PISO
-# ** Warning: (vsim-3015) [PCDPC] - Port size (112) does not match connection size (128) for port 'data_in'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/CRC_MODULE.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/crc_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 17
-# ** Warning: (vsim-3015) [PCDPC] - Port size (112) does not match connection size (128) for port 'data_in'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/crc_padding.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/padding_inst File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 24
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg0/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg1/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg2/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg3/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg4/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg5/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg6/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg7/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg8/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg9/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g1 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 18
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g2 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 26
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g3 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 34
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g4 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 42
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g5 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 50
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g6 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 58
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g7 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 67
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g8 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 74
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g9 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 82
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'current_round'. The port definition is at: /home/muslim/HDD/AES_over_UART/AES_in_UART/g_function.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TOP_TX_tb/uut/encipher_inst/kg10/g10 File: /home/muslim/HDD/AES_over_UART/AES_in_UART/key_generator.v Line: 89
-add wave -position insertpoint sim:/TOP_TX_tb/*
-add wave -position insertpoint  \
-sim:/TOP_TX_tb/uut/crc_inst/crc_out
-add wave -position insertpoint  \
-sim:/TOP_TX_tb/uut/padding_inst/tr_out
-add wave -position insertpoint  \
-sim:/TOP_TX_tb/uut/encipher_inst/cipher_text
-run -all
-# ** Note: $finish    : /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v(36)
-#    Time: 330 ps  Iteration: 0  Instance: /TOP_TX_tb
-# 1
-# Break in Module TOP_TX_tb at /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v line 36
+# Break in Module TOP_TX_tb at /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX_tb.v line 48
