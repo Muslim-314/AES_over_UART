@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sat Jun  1 16:07:28 2024
+Fitter Status : Successful - Sat Jun  1 21:44:30 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : AES_in_UART
 Top-level Entity Name : TOP_TX
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 17 / 41,910 ( < 1 % )
-Total registers : 43
+Logic utilization (in ALMs) : 58 / 41,910 ( < 1 % )
+Total registers : 166
 Total pins : 4 / 499 ( < 1 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )

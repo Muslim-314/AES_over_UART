@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at controller.v(3): object "reset" differs only in case from object "RESET" in the same scope File: /home/muslim/HDD/AES_over_UART/AES_in_UART/controller.v Line: 3

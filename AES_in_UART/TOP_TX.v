@@ -28,7 +28,8 @@ module TOP_TX (
   wire        txclk;
   
   controller controller_inst (
-    .clk(clk),           
+    .clk(clk),
+    .reset(reset),
     .PISO_empty(PISO_empty),     
     .start(start),          
     .Done(Done),		

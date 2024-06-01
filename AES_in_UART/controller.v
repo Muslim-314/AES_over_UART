@@ -1,13 +1,14 @@
 module controller(
 	input clk,            //global clock signal
-	input PISO_empty,     //Indicates if the SIPO is empty or not
+	input reset,          //global reset
+ 	input PISO_empty,     //Indicates if the SIPO is empty or not
 	input start,          //Assert when want to start the FSM
 	input Done,			    //Indicates if the current ttransaction is done or not
 	output reg hold,       //Hold the data at the SIPO untill the current transaction is done
 	output reg EnTx,      //Enable the UART Tx module
 	output reg tx_start,  //Start the transaction
 	output reg PISO_reset,//Reset signal for the parallel to serial converter
-	output reg en_crc,    //enable the CRC16 module
+	output reg en_crc,        //enable the CRC16 module
 	output reg PISO_load, //load the computed meaasge+CRC to the SIPO 
 	output reg EN_UDR     //enable the Uart DATA  register
 );
@@ -20,44 +21,72 @@ module controller(
 	localparam IDEL          =   3'b101;
 	reg  [2:0] state;
 	
-	always@ (posedge clk)begin
+	always@ (posedge clk )begin
+		if(reset)
+			state <= RESET;
 		case(state)
 			RESET: begin
-				PISO_reset <= 1'b1;
-				hold       <= 1'b1;
-				EnTx       <= 1'b0;
-				tx_start   <= 1'b0;
-				state      <= (start) ?  LOAD : IDEL; 
+				hold         <=   1'b1;       
+				EnTx         <=   1'b0;         
+				tx_start     <=   1'b0;        
+				PISO_reset   <=   1'b1;     
+				en_crc       <=   1'b1;        
+				PISO_load    <=   1'b0;    
+				EN_UDR       <=   1'b0;
+				state        <= (start) ?  LOAD : IDEL; 
 			  end
 			LOAD: begin
-				PISO_load  <= 1'b1;
-				state      <= LoadByteToUDR;
+				hold         <=   1'b1;       
+				EnTx         <=   1'b0;         
+				tx_start     <=   1'b0;        
+				PISO_reset   <=   1'b0;     
+				en_crc       <=   1'b1;        
+				PISO_load    <=   1'b1;    
+				EN_UDR       <=   1'b0;
+				state        <= LoadByteToUDR;
 			  end
 		   LoadByteToUDR: begin  //enable the UDR and load a byte for transmission
-			   PISO_load  <= 1'b0;
-			   EN_UDR     <= 1'b1;  
-			   hold       <= 1'b0;
-				state      <= START_UART_Tx;
+			   hold         <=   1'b0;       
+				EnTx         <=   1'b0;         
+				tx_start     <=   1'b0;        
+				PISO_reset   <=   1'b0;     
+				en_crc       <=   1'b1;        
+				PISO_load    <=   1'b0;    
+				EN_UDR       <=   1'b0;
+				state        <= START_UART_Tx;
 			  end 
 			START_UART_Tx: begin   
-			   hold       <= 1'b1;
-				EnTx       <= 1'b1;
-				EN_UDR     <= 1'b0; 
-				tx_start   <= 1'b1;
-				state      <= (Done) ? CHECK_EMPTY : START_UART_Tx;
+			   hold         <=   1'b1;       
+				EnTx         <=   1'b1;         
+				tx_start     <=   1'b1;        
+				PISO_reset   <=   1'b0;     
+				en_crc       <=   1'b1;        
+				PISO_load    <=   1'b0;    
+				EN_UDR       <=   1'b1;
+				state        <= (Done) ? CHECK_EMPTY : START_UART_Tx;
 			  end
 			CHECK_EMPTY: begin
-				tx_start   <= 1'b0;
-			   state      <= (PISO_empty)? IDEL : LoadByteToUDR;
+				hold         <=   1'b1;       
+				EnTx         <=   1'b0;         
+				tx_start     <=   1'b0;        
+				PISO_reset   <=   1'b0;     
+				en_crc       <=   1'b1;        
+				PISO_load    <=   1'b0;    
+				EN_UDR       <=   1'b0;
+			   state        <= (PISO_empty)? IDEL : LoadByteToUDR;
 			  end
 			IDEL: begin
-				hold       <= 1'b1;
-				EnTx       <= 1'b0;
-				tx_start   <= 1'b0;
-				state      <= start ? LOAD : IDEL;
+				hold         <=   1'b1;       
+				EnTx         <=   1'b0;         
+				tx_start     <=   1'b0;        
+				PISO_reset   <=   1'b1;     
+				en_crc       <=   1'b1;        
+				PISO_load    <=   1'b0;    
+				EN_UDR       <=   1'b0;
+				state        <= start ? LOAD : IDEL;
 			 end
 			default: begin
-				state      <= IDEL;
+				state         <= RESET;
 			 end
 		endcase
 	end

@@ -1,30 +1,32 @@
 |TOP_TX
 clk => clk.IN4
 start => start.IN1
-reset => reset.IN1
+reset => reset.IN2
 tx_out << UART_Tx:UTx.out
 
 
 |TOP_TX|controller:controller_inst
 clk => EN_UDR~reg0.CLK
 clk => PISO_load~reg0.CLK
+clk => en_crc~reg0.CLK
+clk => PISO_reset~reg0.CLK
 clk => tx_start~reg0.CLK
 clk => EnTx~reg0.CLK
 clk => hold~reg0.CLK
-clk => PISO_reset~reg0.CLK
 clk => state~1.DATAIN
-PISO_empty => Selector6.IN4
-PISO_empty => Selector4.IN2
+reset => ~NO_FANOUT~
+PISO_empty => Selector3.IN4
+PISO_empty => Selector1.IN2
+start => Selector0.IN2
+start => Selector3.IN1
 start => Selector3.IN2
-start => Selector6.IN1
-start => Selector6.IN2
 Done => state.DATAB
-Done => Selector5.IN2
+Done => Selector2.IN2
 hold <= hold~reg0.DB_MAX_OUTPUT_PORT_TYPE
 EnTx <= EnTx~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tx_start <= tx_start~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PISO_reset <= PISO_reset~reg0.DB_MAX_OUTPUT_PORT_TYPE
-en_crc <= <GND>
+en_crc <= en_crc~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PISO_load <= PISO_load~reg0.DB_MAX_OUTPUT_PORT_TYPE
 EN_UDR <= EN_UDR~reg0.DB_MAX_OUTPUT_PORT_TYPE
 

@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-
 module TOP_TX_tb;
   // Inputs
   reg clk;
@@ -42,7 +41,28 @@ module TOP_TX_tb;
     start = 0;
 
     // Wait for some time to let the process complete
-    #1000;
+    #100000;
+	 
+	 
+	 
+	 // Initialize Inputs
+    reset = 1;
+    start = 0;
+
+    // Apply reset
+    #10;
+    reset = 0;
+
+    // Wait for the reset to propagate
+    #20;
+
+    // Start the transmission process
+    start = 1;
+    #10;
+    start = 0;
+
+    // Wait for some time to let the process complete
+    #10000000;
 
     // End the simulation
     $finish;

@@ -12,6 +12,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "start",
 					"strict" : false
 				}
