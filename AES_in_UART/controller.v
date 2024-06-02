@@ -27,73 +27,73 @@ module controller(
 			state <= RESET;
 		case(state)
 			RESET: begin
-				hold         <=   1'b1;       
-				EnTx         <=   1'b0;         
-				tx_start     <=   1'b0;        
-				PISO_reset   <=   1'b1;     
-				en_crc       <=   1'b1;        
-				PISO_load    <=   1'b0;    
-				EN_UDR       <=   1'b0;
+				hold         =   1'b1;       
+				EnTx         =   1'b0;         
+				tx_start     =   1'b0;        
+				PISO_reset   =   1'b1;     
+				en_crc       =   1'b1;        
+				PISO_load    =   1'b0;    
+				EN_UDR       =   1'b0;
 				state        <= (start) ?  LOAD : IDEL; 
 			  end
 			LOAD: begin
-				hold         <=   1'b1;       
-				EnTx         <=   1'b0;         
-				tx_start     <=   1'b0;        
-				PISO_reset   <=   1'b0;     
-				en_crc       <=   1'b1;        
-				PISO_load    <=   1'b1;    
-				EN_UDR       <=   1'b0;
+				hold         =   1'b1;       
+				EnTx         =   1'b0;         
+				tx_start     =   1'b0;        
+				PISO_reset   =   1'b0;     
+				en_crc       =   1'b1;        
+				PISO_load    =   1'b1;    
+				EN_UDR       =   1'b0;
 				state        <= LoadByteToUDR;
 			  end
 		   LoadByteToUDR: begin  //enable the UDR and load a byte for transmission
-			   hold         <=   1'b0;       
-				EnTx         <=   1'b1;         
-				tx_start     <=   1'b0;        
-				PISO_reset   <=   1'b0;     
-				en_crc       <=   1'b1;        
-				PISO_load    <=   1'b0;    
-				EN_UDR       <=   1'b0;
+			   hold         =   1'b0;       
+				EnTx         =   1'b1;         
+				tx_start     =   1'b0;        
+				PISO_reset   =   1'b0;     
+				en_crc       =   1'b1;        
+				PISO_load    =   1'b0;    
+				EN_UDR       =   1'b0;
 				state        <= START_UART_Tx;
 			  end 
 			START_UART_Tx: begin   
-			   hold         <=   1'b1;       
-				EnTx         <=   1'b1;         
-				tx_start     <=   1'b1;        
-				PISO_reset   <=   1'b0;     
-				en_crc       <=   1'b1;        
-				PISO_load    <=   1'b0;    
-				EN_UDR       <=   1'b1;
+			   hold         =   1'b1;       
+				EnTx         =   1'b1;         
+				tx_start     =   1'b1;        
+				PISO_reset   =   1'b0;     
+				en_crc       =   1'b1;        
+				PISO_load    =   1'b0;    
+				EN_UDR       =   1'b1;
 				state        <=  WAIT_DONE;
 			  end
 			WAIT_DONE: begin   
-			   hold         <=   1'b1;       
-				EnTx         <=   1'b1;         
-				tx_start     <=   1'b0;        
-				PISO_reset   <=   1'b0;     
-				en_crc       <=   1'b1;        
-				PISO_load    <=   1'b0;    
-				EN_UDR       <=   1'b1;
+			   hold         =   1'b1;       
+				EnTx         =   1'b1;         
+				tx_start     =   1'b0;        
+				PISO_reset   =   1'b0;     
+				en_crc       =   1'b1;        
+				PISO_load    =   1'b0;    
+				EN_UDR       =   1'b1;
 				state        <=  (Done)? CHECK_EMPTY: WAIT_DONE;
 			  end
 			CHECK_EMPTY: begin
-				hold         <=   1'b1;       
-				EnTx         <=   1'b0;         
-				tx_start     <=   1'b0;        
-				PISO_reset   <=   1'b0;     
-				en_crc       <=   1'b1;        
-				PISO_load    <=   1'b0;    
-				EN_UDR       <=   1'b0;
+				hold         =   1'b1;       
+				EnTx         =   1'b0;         
+				tx_start     =   1'b0;        
+				PISO_reset   =   1'b0;     
+				en_crc       =   1'b1;        
+				PISO_load    =   1'b0;    
+				EN_UDR       =   1'b0;
 			   state        <= PISO_empty ? IDEL : LoadByteToUDR;
 			  end
 			IDEL: begin
-				hold         <=   1'b1;       
-				EnTx         <=   1'b0;         
-				tx_start     <=   1'b0;        
-				PISO_reset   <=   1'b1;     
-				en_crc       <=   1'b1;        
-				PISO_load    <=   1'b0;    
-				EN_UDR       <=   1'b0;
+				hold         =   1'b1;       
+				EnTx         =   1'b0;         
+				tx_start     =   1'b0;        
+				PISO_reset   =   1'b1;     
+				en_crc       =   1'b1;        
+				PISO_load    =   1'b0;    
+				EN_UDR       =   1'b0;
 				state        <= start ? LOAD : IDEL;
 			 end
 			default: begin
