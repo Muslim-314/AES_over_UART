@@ -19,7 +19,7 @@ The repo contains an implementation of Advanced Encryption Standard 128-bit bloc
 |---------------|------|------|----------|------------|--------|-----------|--------|--------------------------------|
 | RESET         | 1    | 0    | 0        | 1          | 1      | 0         | 0      | start ? LOAD : IDEL            |
 | LOAD          | 1    | 0    | 0        | 0          | 1      | 1         | 0      | LoadByteToUDR                  |
-| LoadByteToUDR | 0    | 1    | 0        | 0          | 1      | 0         | 0      | START_UART_Tx                  |
+| LoadByteToUDR | 0    | 1    | 0        | 0          | 1      | 0         | 1      | START_UART_Tx                  |
 | START_UART_Tx | 1    | 1    | 1        | 0          | 1      | 0         | 1      | WAIT_DONE                      |
 | WAIT_DONE     | 1    | 1    | 0        | 0          | 1      | 0         | 1      | Done ? CHECK_EMPTY : WAIT_DONE |
 | CHECK_EMPTY   | 1    | 0    | 0        | 0          | 1      | 0         | 0      | PISO_empty ? IDEL : LoadByteToUDR |
