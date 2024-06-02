@@ -15,7 +15,7 @@ module UART_Tx (
     output reg        done,  // end on transaction
     output reg        busy   // transaction is in process
 );
-    reg [2:0] state  =  RESET;
+    reg [2:0] state  =  `RESET;
     reg [7:0] data   = 8'b0; // to store a copy of input data
     reg [2:0] bitIdx = 3'b0; // for 8-bit data
     wire [2:0] idx;
@@ -25,9 +25,9 @@ module UART_Tx (
     always @(posedge clk) begin
         case (state)
             default     : begin
-                state   <= IDLE;
+                state   <= `IDLE;
             end
-             IDLE       : begin
+             `IDLE       : begin
                 out     <= 1'b1; // drive line high for idle
                 done    <= 1'b0;
                 busy    <= 1'b0;
@@ -38,13 +38,13 @@ module UART_Tx (
                     state   <= `START_BIT;
                 end
             end
-             START_BIT  : begin
+             `START_BIT  : begin
                 out     <= 1'b0; // send start bit (low)
 					 done    <= 1'b0;
                 busy    <= 1'b1;
                 state   <= `DATA_BITS;
             end
-            DATA_BITS  : begin // Wait 8 clock cycles for data bits to be sent
+            `DATA_BITS  : begin // Wait 8 clock cycles for data bits to be sent
                 out     <= data[idx];
                 if (&bitIdx) begin
                     bitIdx  <= 3'b0;
@@ -55,7 +55,7 @@ module UART_Tx (
 						  done    <= 1'b0;
                 end
             end
-             STOP_BIT   : begin // Send out Stop bit (high)
+             `STOP_BIT   : begin // Send out Stop bit (high)
                 done    <= 1'b1;
                 data    <= 8'b0;
                 state   <= `IDLE;

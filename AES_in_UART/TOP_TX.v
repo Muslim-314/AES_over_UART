@@ -73,7 +73,7 @@ module TOP_TX (
     .empty(PISO_empty)
   );
 
-  UDR UART_REG (
+  UDR UART_REG ( 
     .clk(clk),
     .reset(reset),
     .enable(EN_UDR),

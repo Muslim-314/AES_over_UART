@@ -8,10 +8,11 @@ state.100 0 1 0 0 1
 state.101 1 0 0 0 1 
 
 State Machine - |TOP_TX|controller:controller_inst|state
-Name state.IDEL state.CHECK_EMPTY state.START_UART_Tx state.LoadByteToUDR state.LOAD state.RESET 
-state.RESET 0 0 0 0 0 0 
-state.LOAD 0 0 0 0 1 1 
-state.LoadByteToUDR 0 0 0 1 0 1 
-state.START_UART_Tx 0 0 1 0 0 1 
-state.CHECK_EMPTY 0 1 0 0 0 1 
-state.IDEL 1 0 0 0 0 1 
+Name state.WAIT_DONE state.IDEL state.CHECK_EMPTY state.START_UART_Tx state.LoadByteToUDR state.LOAD state.RESET 
+state.RESET 0 0 0 0 0 0 0 
+state.LOAD 0 0 0 0 0 1 1 
+state.LoadByteToUDR 0 0 0 0 1 0 1 
+state.START_UART_Tx 0 0 0 1 0 0 1 
+state.CHECK_EMPTY 0 0 1 0 0 0 1 
+state.IDEL 0 1 0 0 0 0 1 
+state.WAIT_DONE 1 0 0 0 0 0 1 

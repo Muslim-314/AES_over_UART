@@ -4,10 +4,8 @@ module TOP_TX_tb;
   reg clk;
   reg start;
   reg reset;
-
   // Outputs
   wire tx_out;
-
   // Instantiate the Unit Under Test (UUT)
   TOP_TX uut (
     .clk(clk), 
@@ -15,23 +13,19 @@ module TOP_TX_tb;
     .reset(reset), 
     .tx_out(tx_out)
   );
-
   // Clock generation
   initial begin
     clk = 0;
     forever #5 clk = ~clk; // 100MHz clock
   end
-
   // Test sequence
   initial begin
     // Initialize Inputs
     reset = 1;
     start = 0;
-
     // Apply reset
     #10;
     reset = 0;
-
     // Wait for the reset to propagate
     #20;
 
@@ -41,7 +35,7 @@ module TOP_TX_tb;
     start = 0;
 
     // Wait for some time to let the process complete
-    #100000;
+    #10000000;
 	 
 	 
 	 

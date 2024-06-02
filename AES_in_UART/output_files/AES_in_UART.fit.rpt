@@ -1,5 +1,5 @@
 Fitter report for AES_in_UART
-Sat Jun  1 21:44:30 2024
+Sun Jun  2 12:11:18 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sat Jun  1 21:44:30 2024       ;
+; Fitter Status                   ; Successful - Sun Jun  2 12:11:18 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; AES_in_UART                                 ;
 ; Top-level Entity Name           ; TOP_TX                                      ;
@@ -70,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 58 / 41,910 ( < 1 % )                       ;
-; Total registers                 ; 166                                         ;
+; Total registers                 ; 175                                         ;
 ; Total pins                      ; 4 / 499 ( < 1 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -157,7 +157,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.9%      ;
+;     Processor 2            ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -169,11 +169,18 @@ https://fpgasoftware.intel.com/eula.
 ; clk~inputCLKENA0                               ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                          ;                  ;                       ;
 ; BaudRateGenerator:BRG|txCounter[0]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; BaudRateGenerator:BRG|txCounter[0]~DUPLICATE             ;                  ;                       ;
 ; BaudRateGenerator:BRG|txCounter[3]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; BaudRateGenerator:BRG|txCounter[3]~DUPLICATE             ;                  ;                       ;
-; UART_Tx:UTx|bitIdx[1]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; UART_Tx:UTx|bitIdx[1]~DUPLICATE                          ;                  ;                       ;
+; BaudRateGenerator:BRG|txCounter[5]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; BaudRateGenerator:BRG|txCounter[5]~DUPLICATE             ;                  ;                       ;
+; BaudRateGenerator:BRG|txCounter[6]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; BaudRateGenerator:BRG|txCounter[6]~DUPLICATE             ;                  ;                       ;
+; BaudRateGenerator:BRG|txCounter[7]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; BaudRateGenerator:BRG|txCounter[7]~DUPLICATE             ;                  ;                       ;
+; PISO:piso_inst|count[0]                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PISO:piso_inst|count[0]~DUPLICATE                        ;                  ;                       ;
+; PISO:piso_inst|count[1]                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PISO:piso_inst|count[1]~DUPLICATE                        ;                  ;                       ;
+; PISO:piso_inst|count[2]                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PISO:piso_inst|count[2]~DUPLICATE                        ;                  ;                       ;
+; UART_Tx:UTx|state.001                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; UART_Tx:UTx|state.001~DUPLICATE                          ;                  ;                       ;
 ; UART_Tx:UTx|state.100                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; UART_Tx:UTx|state.100~DUPLICATE                          ;                  ;                       ;
 ; UART_Tx:UTx|state.101                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; UART_Tx:UTx|state.101~DUPLICATE                          ;                  ;                       ;
-; controller:controller_inst|hold                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; controller:controller_inst|hold~DUPLICATE                ;                  ;                       ;
-; controller:controller_inst|state.LoadByteToUDR ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; controller:controller_inst|state.LoadByteToUDR~DUPLICATE ;                  ;                       ;
+; controller:controller_inst|EnTx                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; controller:controller_inst|EnTx~DUPLICATE                ;                  ;                       ;
+; controller:controller_inst|state.START_UART_Tx ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; controller:controller_inst|state.START_UART_Tx~DUPLICATE ;                  ;                       ;
+; controller:controller_inst|tx_start            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; controller:controller_inst|tx_start~DUPLICATE            ;                  ;                       ;
 +------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------------+------------------+-----------------------+
 
 
@@ -183,8 +190,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 273 ) ; 0.00 % ( 0 / 273 )         ; 0.00 % ( 0 / 273 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 273 ) ; 0.00 % ( 0 / 273 )         ; 0.00 % ( 0 / 273 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 276 ) ; 0.00 % ( 0 / 276 )         ; 0.00 % ( 0 / 276 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 276 ) ; 0.00 % ( 0 / 276 )         ; 0.00 % ( 0 / 276 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -207,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 273 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 276 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -225,12 +232,12 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 58 / 41,910        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 58                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 87 / 41,910        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 47                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 10                 ;       ;
-;         [c] ALMs used for registers                         ; 30                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 80 / 41,910        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 49                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 8                  ;       ;
+;         [c] ALMs used for registers                         ; 23                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 29 / 41,910        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 22 / 41,910        ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41,910         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -239,25 +246,25 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 12 / 4,191         ; < 1 % ;
-;     -- Logic LABs                                           ; 12                 ;       ;
+; Total LABs:  partially or completely used                   ; 11 / 4,191         ; < 1 % ;
+;     -- Logic LABs                                           ; 11                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 107                ;       ;
+; Combinational ALUT usage for logic                          ; 108                ;       ;
 ;     -- 7 input functions                                    ; 2                  ;       ;
 ;     -- 6 input functions                                    ; 1                  ;       ;
-;     -- 5 input functions                                    ; 6                  ;       ;
-;     -- 4 input functions                                    ; 7                  ;       ;
-;     -- <=3 input functions                                  ; 91                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 17                 ;       ;
+;     -- 5 input functions                                    ; 7                  ;       ;
+;     -- 4 input functions                                    ; 6                  ;       ;
+;     -- <=3 input functions                                  ; 92                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 18                 ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 166                ;       ;
+; Dedicated logic registers                                   ; 175                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 153 / 83,820       ; < 1 % ;
-;         -- Secondary logic registers                        ; 13 / 83,820        ; < 1 % ;
+;         -- Primary logic registers                          ; 144 / 83,820       ; < 1 % ;
+;         -- Secondary logic registers                        ; 31 / 83,820        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 159                ;       ;
-;         -- Routing optimization registers                   ; 7                  ;       ;
+;         -- Design implementation registers                  ; 161                ;       ;
+;         -- Routing optimization registers                   ; 14                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 4 / 499            ; < 1 % ;
@@ -318,12 +325,12 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 ; Channel PLLs                                                ; 0 / 9              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.5% / 1.5% / 1.3% ;       ;
-; Maximum fan-out                                             ; 144                ;       ;
-; Highest non-global fan-out                                  ; 110                ;       ;
-; Total fan-out                                               ; 931                ;       ;
-; Average fan-out                                             ; 3.11               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.0% / 0.1% / 0.0% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.4% / 1.6% / 0.8% ;       ;
+; Maximum fan-out                                             ; 153                ;       ;
+; Highest non-global fan-out                                  ; 113                ;       ;
+; Total fan-out                                               ; 976                ;       ;
+; Average fan-out                                             ; 3.15               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -334,12 +341,12 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 58 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 58                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 87 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 47                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 10                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 30                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 80 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 49                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 8                     ; 0                              ;
+;         [c] ALMs used for registers                         ; 23                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 29 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 22 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41910 ( 0 % )     ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -348,28 +355,28 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 12 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
-;     -- Logic LABs                                           ; 12                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 11 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
+;     -- Logic LABs                                           ; 11                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 107                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 108                   ; 0                              ;
 ;     -- 7 input functions                                    ; 2                     ; 0                              ;
 ;     -- 6 input functions                                    ; 1                     ; 0                              ;
-;     -- 5 input functions                                    ; 6                     ; 0                              ;
-;     -- 4 input functions                                    ; 7                     ; 0                              ;
-;     -- <=3 input functions                                  ; 91                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 17                    ; 0                              ;
+;     -- 5 input functions                                    ; 7                     ; 0                              ;
+;     -- 4 input functions                                    ; 6                     ; 0                              ;
+;     -- <=3 input functions                                  ; 92                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 18                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 153 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 13 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
+;         -- Primary logic registers                          ; 144 / 83820 ( < 1 % ) ; 0 / 83820 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 31 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 159                   ; 0                              ;
-;         -- Routing optimization registers                   ; 7                     ; 0                              ;
+;         -- Design implementation registers                  ; 161                   ; 0                              ;
+;         -- Routing optimization registers                   ; 14                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -386,8 +393,8 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 931                   ; 0                              ;
-;     -- Registered Connections                               ; 392                   ; 0                              ;
+;     -- Total Connections                                    ; 976                   ; 0                              ;
+;     -- Registered Connections                               ; 412                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -419,9 +426,9 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk   ; Y27   ; 5B       ; 89           ; 25           ; 20           ; 145                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; reset ; AC30  ; 5B       ; 89           ; 25           ; 54           ; 9                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; start ; AD30  ; 5B       ; 89           ; 25           ; 37           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; clk   ; Y27   ; 5B       ; 89           ; 25           ; 20           ; 154                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; reset ; Y26   ; 5B       ; 89           ; 25           ; 3            ; 9                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; start ; AC30  ; 5B       ; 89           ; 25           ; 54           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -430,7 +437,7 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; tx_out ; Y26   ; 5B       ; 89           ; 25           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; tx_out ; AD30  ; 5B       ; 89           ; 25           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -579,7 +586,7 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 ; AC27     ; 242        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC28     ; 245        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC29     ; 247        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AC30     ; 259        ; 5B             ; reset                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AC30     ; 259        ; 5B             ; start                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AD1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD2      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD3      ; 36         ; B0L            ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -609,7 +616,7 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 ; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD28     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD29     ; 255        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AD30     ; 257        ; 5B             ; start                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AD30     ; 257        ; 5B             ; tx_out                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AE1      ; 39         ; B0L            ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE2      ; 38         ; B0L            ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1353,7 +1360,7 @@ The pin-out file can be found in /home/muslim/HDD/AES_over_UART/AES_in_UART/outp
 ; Y23      ; 232        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y24      ; 234        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y25      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; Y26      ; 256        ; 5B             ; tx_out                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; Y26      ; 256        ; 5B             ; reset                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; Y27      ; 258        ; 5B             ; clk                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; Y28      ; 269        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y29      ; 263        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1383,12 +1390,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node      ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name       ; Library Name ;
 +---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+-------------------+--------------+
-; |TOP_TX                         ; 57.5 (0.8)           ; 86.5 (0.8)                       ; 29.0 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 107 (2)             ; 166 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 4    ; 0            ; |TOP_TX                            ; TOP_TX            ; work         ;
-;    |BaudRateGenerator:BRG|      ; 8.5 (8.5)            ; 10.0 (10.0)                      ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|BaudRateGenerator:BRG      ; BaudRateGenerator ; work         ;
-;    |PISO:piso_inst|             ; 30.2 (30.2)          ; 53.7 (53.7)                      ; 23.6 (23.6)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 59 (59)             ; 110 (110)                 ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|PISO:piso_inst             ; PISO              ; work         ;
-;    |UART_Tx:UTx|                ; 11.8 (11.8)          ; 13.5 (13.5)                      ; 1.7 (1.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|UART_Tx:UTx                ; UART_Tx           ; work         ;
-;    |UDR:UART_REG|               ; 2.0 (2.0)            ; 4.0 (4.0)                        ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|UDR:UART_REG               ; UDR               ; work         ;
-;    |controller:controller_inst| ; 4.2 (4.2)            ; 4.5 (4.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|controller:controller_inst ; controller        ; work         ;
+; |TOP_TX                         ; 58.0 (0.8)           ; 79.5 (0.8)                       ; 21.5 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 108 (2)             ; 175 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 4    ; 0            ; |TOP_TX                            ; TOP_TX            ; work         ;
+;    |BaudRateGenerator:BRG|      ; 8.5 (8.5)            ; 10.0 (10.0)                      ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|BaudRateGenerator:BRG      ; BaudRateGenerator ; work         ;
+;    |PISO:piso_inst|             ; 31.2 (31.2)          ; 47.7 (47.7)                      ; 16.6 (16.6)                                       ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 59 (59)             ; 113 (113)                 ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|PISO:piso_inst             ; PISO              ; work         ;
+;    |UART_Tx:UTx|                ; 11.8 (11.8)          ; 12.0 (12.0)                      ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|UART_Tx:UTx                ; UART_Tx           ; work         ;
+;    |UDR:UART_REG|               ; 1.0 (1.0)            ; 2.8 (2.8)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|UDR:UART_REG               ; UDR               ; work         ;
+;    |controller:controller_inst| ; 4.7 (4.7)            ; 6.3 (6.3)                        ; 1.6 (1.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (9)               ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TOP_TX|controller:controller_inst ; controller        ; work         ;
 +---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1399,7 +1406,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name   ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5   ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
 +--------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 ; tx_out ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; clk    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; clk    ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; reset  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; start  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +--------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
@@ -1411,7 +1418,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                           ; Pad To Core Index ; Setting ;
 +-----------------------------------------------+-------------------+---------+
 ; clk                                           ;                   ;         ;
-;      - BaudRateGenerator:BRG|txClk            ; 0                 ; 0       ;
+;      - BaudRateGenerator:BRG|txClk            ; 1                 ; 0       ;
 ; reset                                         ;                   ;         ;
 ;      - UDR:UART_REG|data_out[4]               ; 1                 ; 0       ;
 ;      - UDR:UART_REG|data_out[5]               ; 1                 ; 0       ;
@@ -1424,28 +1431,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - comb~0                                 ; 1                 ; 0       ;
 ; start                                         ;                   ;         ;
 ;      - controller:controller_inst|Selector0~0 ; 1                 ; 0       ;
-;      - controller:controller_inst|Selector3~0 ; 1                 ; 0       ;
+;      - controller:controller_inst|Selector2~0 ; 1                 ; 0       ;
 +-----------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                               ;
-+--------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                 ; Location            ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; BaudRateGenerator:BRG|Equal1~2       ; LABCELL_X83_Y25_N36 ; 14      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; BaudRateGenerator:BRG|txClk          ; FF_X83_Y25_N41      ; 22      ; Clock                   ; no     ; --                   ; --               ; --                        ;
-; PISO:piso_inst|serial_out[7]~0       ; LABCELL_X81_Y29_N39 ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; PISO:piso_inst|shift_reg[41]~0       ; LABCELL_X81_Y29_N18 ; 100     ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; UART_Tx:UTx|Selector13~0             ; LABCELL_X81_Y25_N33 ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; UART_Tx:UTx|state.010                ; FF_X81_Y25_N56      ; 15      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; clk                                  ; PIN_Y27             ; 2       ; Clock                   ; no     ; --                   ; --               ; --                        ;
-; clk                                  ; PIN_Y27             ; 144     ; Clock                   ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; comb~0                               ; LABCELL_X81_Y28_N33 ; 110     ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-; controller:controller_inst|EnTx      ; FF_X81_Y25_N8       ; 18      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; controller:controller_inst|PISO_load ; FF_X81_Y29_N8       ; 104     ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; reset                                ; PIN_AC30            ; 9       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-+--------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                ;
++--------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                 ; Location             ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; BaudRateGenerator:BRG|Equal1~2       ; LABCELL_X85_Y25_N48  ; 17      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; BaudRateGenerator:BRG|txClk          ; FF_X85_Y25_N53       ; 22      ; Clock                   ; no     ; --                   ; --               ; --                        ;
+; PISO:piso_inst|serial_out[7]~0       ; LABCELL_X83_Y27_N3   ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; PISO:piso_inst|shift_reg[41]~0       ; LABCELL_X83_Y27_N45  ; 103     ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; UART_Tx:UTx|Selector13~0             ; MLABCELL_X84_Y25_N39 ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; UART_Tx:UTx|state.010                ; FF_X84_Y25_N5        ; 15      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; clk                                  ; PIN_Y27              ; 2       ; Clock                   ; no     ; --                   ; --               ; --                        ;
+; clk                                  ; PIN_Y27              ; 153     ; Clock                   ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; comb~0                               ; LABCELL_X83_Y27_N48  ; 113     ; Async. clear            ; no     ; --                   ; --               ; --                        ;
+; controller:controller_inst|EN_UDR    ; FF_X83_Y25_N43       ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; controller:controller_inst|PISO_load ; FF_X83_Y27_N32       ; 107     ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; reset                                ; PIN_Y26              ; 9       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
++--------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -1453,7 +1460,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_Y27  ; 144     ; Global Clock         ; GCLK10           ; --                        ;
+; clk  ; PIN_Y27  ; 153     ; Global Clock         ; GCLK10           ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1463,13 +1470,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
 ; Block interconnects                         ; 188 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 2 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 58 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 25 / 56,300 ( < 1 % )   ;
+; C12 interconnects                           ; 3 / 13,420 ( < 1 % )    ;
+; C2 interconnects                            ; 29 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 18 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 35 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 41 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1525,12 +1532,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 64 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 63 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 13 / 12,676 ( < 1 % )   ;
+; R14 interconnects                           ; 11 / 12,676 ( < 1 % )   ;
 ; R14/C12 interconnect drivers                ; 14 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 101 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 68 / 266,960 ( < 1 % )  ;
+; R3 interconnects                            ; 84 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 83 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1650,9 +1657,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------------+-------------------+
 ; Source Clock(s)             ; Destination Clock(s)        ; Delay Added in ns ;
 +-----------------------------+-----------------------------+-------------------+
-; clk                         ; clk                         ; 19.9              ;
-; BaudRateGenerator:BRG|txClk ; BaudRateGenerator:BRG|txClk ; 16.9              ;
-; BaudRateGenerator:BRG|txClk ; clk                         ; 8.1               ;
+; clk                         ; clk                         ; 20.7              ;
+; BaudRateGenerator:BRG|txClk ; BaudRateGenerator:BRG|txClk ; 18.3              ;
+; BaudRateGenerator:BRG|txClk ; clk                         ; 8.5               ;
 +-----------------------------+-----------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1663,92 +1670,108 @@ This will disable optimization of problematic paths and expose them for further 
 +------------------------------------------------+------------------------------------------------+-------------------+
 ; Source Register                                ; Destination Register                           ; Delay Added in ns ;
 +------------------------------------------------+------------------------------------------------+-------------------+
-; BaudRateGenerator:BRG|txClk                    ; BaudRateGenerator:BRG|txClk                    ; 4.471             ;
-; UART_Tx:UTx|done                               ; controller:controller_inst|state.CHECK_EMPTY   ; 4.052             ;
-; BaudRateGenerator:BRG|txCounter[10]            ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[8]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[7]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[6]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[5]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[4]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[11]            ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[3]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[2]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[1]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[0]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; BaudRateGenerator:BRG|txCounter[9]             ; BaudRateGenerator:BRG|txClk                    ; 1.446             ;
-; UART_Tx:UTx|state.011                          ; UART_Tx:UTx|state.100                          ; 0.903             ;
-; UART_Tx:UTx|state.001                          ; UART_Tx:UTx|state.100                          ; 0.872             ;
-; UART_Tx:UTx|state.101                          ; UART_Tx:UTx|state.100                          ; 0.861             ;
-; UART_Tx:UTx|bitIdx[1]                          ; UART_Tx:UTx|state.101                          ; 0.830             ;
-; UART_Tx:UTx|bitIdx[0]                          ; UART_Tx:UTx|state.101                          ; 0.826             ;
-; UART_Tx:UTx|state.100                          ; UART_Tx:UTx|state.100                          ; 0.822             ;
-; UART_Tx:UTx|bitIdx[2]                          ; UART_Tx:UTx|state.100                          ; 0.817             ;
-; UART_Tx:UTx|data[5]                            ; UART_Tx:UTx|out                                ; 0.512             ;
-; UART_Tx:UTx|state.010                          ; UART_Tx:UTx|state.011                          ; 0.497             ;
-; UART_Tx:UTx|data[7]                            ; UART_Tx:UTx|out                                ; 0.482             ;
-; controller:controller_inst|hold                ; PISO:piso_inst|empty                           ; 0.320             ;
-; PISO:piso_inst|count[0]                        ; PISO:piso_inst|count[2]                        ; 0.296             ;
-; controller:controller_inst|PISO_load           ; PISO:piso_inst|shift_reg[105]                  ; 0.280             ;
-; controller:controller_inst|state.START_UART_Tx ; controller:controller_inst|state.CHECK_EMPTY   ; 0.280             ;
-; UART_Tx:UTx|data[1]                            ; UART_Tx:UTx|out                                ; 0.267             ;
-; PISO:piso_inst|shift_reg[81]                   ; PISO:piso_inst|shift_reg[89]                   ; 0.260             ;
-; PISO:piso_inst|shift_reg[26]                   ; PISO:piso_inst|shift_reg[21]                   ; 0.260             ;
-; PISO:piso_inst|shift_reg[116]                  ; PISO:piso_inst|shift_reg[124]                  ; 0.260             ;
-; PISO:piso_inst|shift_reg[64]                   ; PISO:piso_inst|shift_reg[72]                   ; 0.258             ;
-; controller:controller_inst|state.RESET         ; controller:controller_inst|state.IDEL          ; 0.254             ;
-; PISO:piso_inst|shift_reg[97]                   ; PISO:piso_inst|shift_reg[105]                  ; 0.253             ;
-; controller:controller_inst|state.CHECK_EMPTY   ; controller:controller_inst|state.IDEL          ; 0.253             ;
-; PISO:piso_inst|shift_reg[49]                   ; PISO:piso_inst|shift_reg[57]                   ; 0.251             ;
-; PISO:piso_inst|shift_reg[75]                   ; PISO:piso_inst|shift_reg[83]                   ; 0.251             ;
-; PISO:piso_inst|shift_reg[67]                   ; PISO:piso_inst|shift_reg[75]                   ; 0.251             ;
-; PISO:piso_inst|shift_reg[68]                   ; PISO:piso_inst|shift_reg[76]                   ; 0.251             ;
-; PISO:piso_inst|shift_reg[45]                   ; PISO:piso_inst|shift_reg[53]                   ; 0.251             ;
-; PISO:piso_inst|shift_reg[70]                   ; PISO:piso_inst|shift_reg[78]                   ; 0.251             ;
-; PISO:piso_inst|shift_reg[102]                  ; PISO:piso_inst|shift_reg[110]                  ; 0.251             ;
-; PISO:piso_inst|count[2]                        ; PISO:piso_inst|count[3]                        ; 0.251             ;
-; PISO:piso_inst|shift_reg[73]                   ; PISO:piso_inst|shift_reg[81]                   ; 0.250             ;
-; PISO:piso_inst|shift_reg[32]                   ; PISO:piso_inst|shift_reg[40]                   ; 0.247             ;
-; PISO:piso_inst|shift_reg[37]                   ; PISO:piso_inst|shift_reg[45]                   ; 0.243             ;
-; PISO:piso_inst|shift_reg[61]                   ; PISO:piso_inst|shift_reg[69]                   ; 0.243             ;
-; PISO:piso_inst|shift_reg[39]                   ; PISO:piso_inst|shift_reg[47]                   ; 0.240             ;
-; PISO:piso_inst|shift_reg[38]                   ; PISO:piso_inst|shift_reg[46]                   ; 0.239             ;
-; PISO:piso_inst|shift_reg[105]                  ; PISO:piso_inst|shift_reg[113]                  ; 0.239             ;
-; controller:controller_inst|state.LOAD          ; controller:controller_inst|state.LoadByteToUDR ; 0.239             ;
-; controller:controller_inst|state.LoadByteToUDR ; controller:controller_inst|state.START_UART_Tx ; 0.239             ;
-; PISO:piso_inst|shift_reg[21]                   ; PISO:piso_inst|shift_reg[29]                   ; 0.238             ;
-; PISO:piso_inst|shift_reg[93]                   ; PISO:piso_inst|shift_reg[101]                  ; 0.238             ;
-; PISO:piso_inst|shift_reg[57]                   ; PISO:piso_inst|shift_reg[65]                   ; 0.237             ;
-; UART_Tx:UTx|data[3]                            ; UART_Tx:UTx|out                                ; 0.237             ;
-; PISO:piso_inst|shift_reg[112]                  ; PISO:piso_inst|shift_reg[120]                  ; 0.237             ;
-; controller:controller_inst|state.IDEL          ; controller:controller_inst|state.LOAD          ; 0.235             ;
-; PISO:piso_inst|shift_reg[53]                   ; PISO:piso_inst|shift_reg[61]                   ; 0.235             ;
-; PISO:piso_inst|shift_reg[78]                   ; PISO:piso_inst|shift_reg[86]                   ; 0.235             ;
-; PISO:piso_inst|shift_reg[86]                   ; PISO:piso_inst|shift_reg[94]                   ; 0.235             ;
-; PISO:piso_inst|shift_reg[34]                   ; PISO:piso_inst|shift_reg[33]                   ; 0.230             ;
-; PISO:piso_inst|shift_reg[47]                   ; PISO:piso_inst|shift_reg[55]                   ; 0.177             ;
-; PISO:piso_inst|shift_reg[35]                   ; PISO:piso_inst|shift_reg[43]                   ; 0.176             ;
-; PISO:piso_inst|shift_reg[46]                   ; PISO:piso_inst|shift_reg[54]                   ; 0.171             ;
-; PISO:piso_inst|shift_reg[54]                   ; PISO:piso_inst|shift_reg[62]                   ; 0.170             ;
-; PISO:piso_inst|count[3]                        ; PISO:piso_inst|empty                           ; 0.169             ;
-; UART_Tx:UTx|data[6]                            ; UART_Tx:UTx|out                                ; 0.152             ;
-; PISO:piso_inst|shift_reg[80]                   ; PISO:piso_inst|shift_reg[88]                   ; 0.116             ;
-; PISO:piso_inst|shift_reg[109]                  ; PISO:piso_inst|shift_reg[117]                  ; 0.115             ;
-; PISO:piso_inst|shift_reg[126]                  ; PISO:piso_inst|serial_out[6]                   ; 0.115             ;
-; PISO:piso_inst|shift_reg[98]                   ; PISO:piso_inst|shift_reg[106]                  ; 0.115             ;
-; PISO:piso_inst|shift_reg[40]                   ; PISO:piso_inst|shift_reg[48]                   ; 0.115             ;
-; PISO:piso_inst|shift_reg[122]                  ; PISO:piso_inst|serial_out[2]                   ; 0.115             ;
-; UART_Tx:UTx|data[4]                            ; UART_Tx:UTx|out                                ; 0.109             ;
-; PISO:piso_inst|shift_reg[77]                   ; PISO:piso_inst|shift_reg[85]                   ; 0.102             ;
-; PISO:piso_inst|shift_reg[117]                  ; PISO:piso_inst|shift_reg[125]                  ; 0.102             ;
-; PISO:piso_inst|shift_reg[125]                  ; PISO:piso_inst|serial_out[5]                   ; 0.102             ;
-; PISO:piso_inst|shift_reg[63]                   ; PISO:piso_inst|shift_reg[71]                   ; 0.102             ;
-; PISO:piso_inst|shift_reg[123]                  ; PISO:piso_inst|serial_out[3]                   ; 0.101             ;
-; PISO:piso_inst|count[1]                        ; PISO:piso_inst|empty                           ; 0.091             ;
-; PISO:piso_inst|shift_reg[66]                   ; PISO:piso_inst|shift_reg[74]                   ; 0.036             ;
-; PISO:piso_inst|shift_reg[106]                  ; PISO:piso_inst|shift_reg[114]                  ; 0.036             ;
+; BaudRateGenerator:BRG|txClk                    ; BaudRateGenerator:BRG|txClk                    ; 4.327             ;
+; UART_Tx:UTx|done                               ; controller:controller_inst|state.WAIT_DONE     ; 4.253             ;
+; BaudRateGenerator:BRG|txCounter[10]            ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[8]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[7]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[6]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[5]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[4]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[11]            ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[3]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[2]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[1]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[0]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; BaudRateGenerator:BRG|txCounter[9]             ; BaudRateGenerator:BRG|txClk                    ; 1.417             ;
+; UART_Tx:UTx|bitIdx[1]                          ; UART_Tx:UTx|state.101                          ; 0.907             ;
+; UART_Tx:UTx|bitIdx[2]                          ; UART_Tx:UTx|state.101                          ; 0.898             ;
+; UART_Tx:UTx|bitIdx[0]                          ; UART_Tx:UTx|state.101                          ; 0.881             ;
+; UART_Tx:UTx|state.001                          ; UART_Tx:UTx|state.100                          ; 0.881             ;
+; UART_Tx:UTx|state.100                          ; UART_Tx:UTx|state.101                          ; 0.859             ;
+; UART_Tx:UTx|state.011                          ; UART_Tx:UTx|state.100                          ; 0.857             ;
+; UART_Tx:UTx|state.010                          ; UART_Tx:UTx|state.011                          ; 0.789             ;
+; UART_Tx:UTx|state.101                          ; UART_Tx:UTx|state.100                          ; 0.779             ;
+; UART_Tx:UTx|data[5]                            ; UART_Tx:UTx|out                                ; 0.516             ;
+; UART_Tx:UTx|data[7]                            ; UART_Tx:UTx|out                                ; 0.486             ;
+; controller:controller_inst|PISO_load           ; PISO:piso_inst|shift_reg[82]                   ; 0.277             ;
+; controller:controller_inst|state.START_UART_Tx ; PISO:piso_inst|empty                           ; 0.274             ;
+; UART_Tx:UTx|data[1]                            ; UART_Tx:UTx|out                                ; 0.271             ;
+; controller:controller_inst|state.WAIT_DONE     ; controller:controller_inst|state.CHECK_EMPTY   ; 0.263             ;
+; PISO:piso_inst|count[1]                        ; PISO:piso_inst|count[2]                        ; 0.250             ;
+; PISO:piso_inst|count[0]                        ; PISO:piso_inst|count[2]                        ; 0.249             ;
+; PISO:piso_inst|shift_reg[74]                   ; PISO:piso_inst|shift_reg[82]                   ; 0.248             ;
+; PISO:piso_inst|shift_reg[75]                   ; PISO:piso_inst|shift_reg[83]                   ; 0.244             ;
+; PISO:piso_inst|shift_reg[34]                   ; PISO:piso_inst|shift_reg[33]                   ; 0.242             ;
+; UART_Tx:UTx|data[3]                            ; UART_Tx:UTx|out                                ; 0.240             ;
+; PISO:piso_inst|shift_reg[29]                   ; PISO:piso_inst|shift_reg[37]                   ; 0.238             ;
+; PISO:piso_inst|shift_reg[105]                  ; PISO:piso_inst|shift_reg[113]                  ; 0.238             ;
+; PISO:piso_inst|shift_reg[115]                  ; PISO:piso_inst|shift_reg[123]                  ; 0.238             ;
+; PISO:piso_inst|shift_reg[108]                  ; PISO:piso_inst|shift_reg[116]                  ; 0.238             ;
+; controller:controller_inst|state.IDEL          ; controller:controller_inst|state.LOAD          ; 0.237             ;
+; PISO:piso_inst|shift_reg[73]                   ; PISO:piso_inst|shift_reg[81]                   ; 0.236             ;
+; PISO:piso_inst|shift_reg[81]                   ; PISO:piso_inst|shift_reg[89]                   ; 0.236             ;
+; PISO:piso_inst|shift_reg[45]                   ; PISO:piso_inst|shift_reg[53]                   ; 0.236             ;
+; PISO:piso_inst|shift_reg[98]                   ; PISO:piso_inst|shift_reg[106]                  ; 0.236             ;
+; PISO:piso_inst|shift_reg[47]                   ; PISO:piso_inst|shift_reg[55]                   ; 0.236             ;
+; PISO:piso_inst|shift_reg[101]                  ; PISO:piso_inst|shift_reg[109]                  ; 0.234             ;
+; PISO:piso_inst|shift_reg[97]                   ; PISO:piso_inst|shift_reg[105]                  ; 0.232             ;
+; PISO:piso_inst|shift_reg[68]                   ; PISO:piso_inst|shift_reg[76]                   ; 0.232             ;
+; PISO:piso_inst|shift_reg[65]                   ; PISO:piso_inst|shift_reg[73]                   ; 0.230             ;
+; PISO:piso_inst|shift_reg[61]                   ; PISO:piso_inst|shift_reg[69]                   ; 0.225             ;
+; PISO:piso_inst|shift_reg[116]                  ; PISO:piso_inst|shift_reg[124]                  ; 0.225             ;
+; PISO:piso_inst|shift_reg[54]                   ; PISO:piso_inst|shift_reg[62]                   ; 0.223             ;
+; PISO:piso_inst|shift_reg[110]                  ; PISO:piso_inst|shift_reg[118]                  ; 0.223             ;
+; PISO:piso_inst|shift_reg[72]                   ; PISO:piso_inst|shift_reg[80]                   ; 0.223             ;
+; controller:controller_inst|state.CHECK_EMPTY   ; controller:controller_inst|state.IDEL          ; 0.223             ;
+; controller:controller_inst|state.LOAD          ; controller:controller_inst|state.LoadByteToUDR ; 0.223             ;
+; PISO:piso_inst|shift_reg[114]                  ; PISO:piso_inst|shift_reg[122]                  ; 0.221             ;
+; PISO:piso_inst|shift_reg[32]                   ; PISO:piso_inst|shift_reg[40]                   ; 0.221             ;
+; PISO:piso_inst|shift_reg[48]                   ; PISO:piso_inst|shift_reg[56]                   ; 0.221             ;
+; PISO:piso_inst|shift_reg[88]                   ; PISO:piso_inst|shift_reg[96]                   ; 0.221             ;
+; PISO:piso_inst|shift_reg[93]                   ; PISO:piso_inst|shift_reg[101]                  ; 0.219             ;
+; PISO:piso_inst|shift_reg[26]                   ; PISO:piso_inst|shift_reg[21]                   ; 0.219             ;
+; PISO:piso_inst|shift_reg[84]                   ; PISO:piso_inst|shift_reg[92]                   ; 0.219             ;
+; controller:controller_inst|state.LoadByteToUDR ; controller:controller_inst|EnTx                ; 0.178             ;
+; PISO:piso_inst|count[2]                        ; PISO:piso_inst|count[3]                        ; 0.162             ;
+; UART_Tx:UTx|data[6]                            ; UART_Tx:UTx|out                                ; 0.156             ;
+; PISO:piso_inst|shift_reg[76]                   ; PISO:piso_inst|shift_reg[84]                   ; 0.152             ;
+; PISO:piso_inst|shift_reg[53]                   ; PISO:piso_inst|shift_reg[61]                   ; 0.148             ;
+; PISO:piso_inst|shift_reg[107]                  ; PISO:piso_inst|shift_reg[115]                  ; 0.147             ;
+; PISO:piso_inst|shift_reg[77]                   ; PISO:piso_inst|shift_reg[85]                   ; 0.147             ;
+; PISO:piso_inst|shift_reg[46]                   ; PISO:piso_inst|shift_reg[54]                   ; 0.121             ;
+; PISO:piso_inst|shift_reg[64]                   ; PISO:piso_inst|shift_reg[72]                   ; 0.121             ;
+; PISO:piso_inst|shift_reg[51]                   ; PISO:piso_inst|shift_reg[59]                   ; 0.117             ;
+; UART_Tx:UTx|data[4]                            ; UART_Tx:UTx|out                                ; 0.112             ;
+; PISO:piso_inst|shift_reg[38]                   ; PISO:piso_inst|shift_reg[46]                   ; 0.110             ;
+; PISO:piso_inst|shift_reg[37]                   ; PISO:piso_inst|shift_reg[45]                   ; 0.102             ;
+; PISO:piso_inst|shift_reg[70]                   ; PISO:piso_inst|shift_reg[78]                   ; 0.101             ;
+; PISO:piso_inst|shift_reg[117]                  ; PISO:piso_inst|shift_reg[125]                  ; 0.101             ;
+; PISO:piso_inst|shift_reg[100]                  ; PISO:piso_inst|shift_reg[108]                  ; 0.101             ;
+; PISO:piso_inst|shift_reg[91]                   ; PISO:piso_inst|shift_reg[99]                   ; 0.100             ;
+; PISO:piso_inst|shift_reg[122]                  ; PISO:piso_inst|serial_out[2]                   ; 0.100             ;
+; PISO:piso_inst|shift_reg[56]                   ; PISO:piso_inst|shift_reg[64]                   ; 0.100             ;
+; PISO:piso_inst|shift_reg[31]                   ; PISO:piso_inst|shift_reg[39]                   ; 0.100             ;
+; PISO:piso_inst|shift_reg[102]                  ; PISO:piso_inst|shift_reg[110]                  ; 0.094             ;
+; PISO:piso_inst|shift_reg[21]                   ; PISO:piso_inst|shift_reg[29]                   ; 0.093             ;
+; PISO:piso_inst|shift_reg[35]                   ; PISO:piso_inst|shift_reg[43]                   ; 0.093             ;
+; PISO:piso_inst|shift_reg[111]                  ; PISO:piso_inst|shift_reg[119]                  ; 0.089             ;
+; PISO:piso_inst|shift_reg[113]                  ; PISO:piso_inst|shift_reg[121]                  ; 0.089             ;
+; PISO:piso_inst|shift_reg[123]                  ; PISO:piso_inst|serial_out[3]                   ; 0.089             ;
+; PISO:piso_inst|shift_reg[50]                   ; PISO:piso_inst|shift_reg[58]                   ; 0.089             ;
+; PISO:piso_inst|shift_reg[66]                   ; PISO:piso_inst|shift_reg[74]                   ; 0.089             ;
+; PISO:piso_inst|shift_reg[124]                  ; PISO:piso_inst|serial_out[4]                   ; 0.089             ;
+; PISO:piso_inst|shift_reg[85]                   ; PISO:piso_inst|shift_reg[93]                   ; 0.087             ;
+; PISO:piso_inst|shift_reg[71]                   ; PISO:piso_inst|shift_reg[79]                   ; 0.087             ;
+; PISO:piso_inst|shift_reg[79]                   ; PISO:piso_inst|shift_reg[87]                   ; 0.087             ;
+; PISO:piso_inst|shift_reg[83]                   ; PISO:piso_inst|shift_reg[91]                   ; 0.087             ;
+; PISO:piso_inst|shift_reg[90]                   ; PISO:piso_inst|shift_reg[98]                   ; 0.087             ;
+; PISO:piso_inst|shift_reg[106]                  ; PISO:piso_inst|shift_reg[114]                  ; 0.087             ;
+; PISO:piso_inst|shift_reg[127]                  ; PISO:piso_inst|serial_out[7]                   ; 0.032             ;
+; PISO:piso_inst|shift_reg[42]                   ; PISO:piso_inst|shift_reg[50]                   ; 0.032             ;
+; PISO:piso_inst|shift_reg[80]                   ; PISO:piso_inst|shift_reg[88]                   ; 0.022             ;
 +------------------------------------------------+------------------------------------------------+-------------------+
-Note: This table only shows the top 84 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1765,7 +1788,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Critical Warning (169085): No exact pin location assignment(s) for 4 pins of 4 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clk~inputCLKENA0 with 140 fanout uses global clock CLKCTRL_G10
+    Info (11162): clk~inputCLKENA0 with 142 fanout uses global clock CLKCTRL_G10
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'AES_in_UART.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1778,26 +1801,26 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:16
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:06
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:03
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X78_Y23 to location X89_Y34
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
-Info (11888): Total time spent on timing analysis during the Fitter is 0.73 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 0.72 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1590 megabytes
-    Info: Processing ended: Sat Jun  1 21:44:31 2024
-    Info: Elapsed time: 00:00:58
-    Info: Total CPU time (on all processors): 00:01:34
+    Info: Peak virtual memory: 1591 megabytes
+    Info: Processing ended: Sun Jun  2 12:11:18 2024
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:01:25
 
 

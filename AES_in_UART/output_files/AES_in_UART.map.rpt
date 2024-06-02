@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AES_in_UART
-Sat Jun  1 21:43:32 2024
+Sun Jun  2 12:10:25 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -76,13 +76,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jun  1 21:43:32 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun  2 12:10:24 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; AES_in_UART                                 ;
 ; Top-level Entity Name           ; TOP_TX                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 159                                         ;
+; Total registers                 ; 161                                         ;
 ; Total pins                      ; 4                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -232,25 +232,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 84        ;
+; Estimate of Logic utilization (ALMs needed) ; 85        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 104       ;
+; Combinational ALUT usage for logic          ; 105       ;
 ;     -- 7 input functions                    ; 2         ;
 ;     -- 6 input functions                    ; 1         ;
-;     -- 5 input functions                    ; 6         ;
-;     -- 4 input functions                    ; 7         ;
-;     -- <=3 input functions                  ; 88        ;
+;     -- 5 input functions                    ; 7         ;
+;     -- 4 input functions                    ; 6         ;
+;     -- <=3 input functions                  ; 89        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 159       ;
+; Dedicated logic registers                   ; 161       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 4         ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 141       ;
-; Total fan-out                               ; 895       ;
-; Average fan-out                             ; 3.30      ;
+; Maximum fan-out                             ; 143       ;
+; Total fan-out                               ; 913       ;
+; Average fan-out                             ; 3.33      ;
 +---------------------------------------------+-----------+
 
 
@@ -259,12 +259,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name       ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
-; |TOP_TX                         ; 104 (1)             ; 159 (0)                   ; 0                 ; 0          ; 4    ; 0            ; |TOP_TX                            ; TOP_TX            ; work         ;
+; |TOP_TX                         ; 105 (1)             ; 161 (0)                   ; 0                 ; 0          ; 4    ; 0            ; |TOP_TX                            ; TOP_TX            ; work         ;
 ;    |BaudRateGenerator:BRG|      ; 16 (16)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_TX|BaudRateGenerator:BRG      ; BaudRateGenerator ; work         ;
 ;    |PISO:piso_inst|             ; 59 (59)             ; 110 (110)                 ; 0                 ; 0          ; 0    ; 0            ; |TOP_TX|PISO:piso_inst             ; PISO              ; work         ;
 ;    |UART_Tx:UTx|                ; 21 (21)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_TX|UART_Tx:UTx                ; UART_Tx           ; work         ;
 ;    |UDR:UART_REG|               ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TOP_TX|UDR:UART_REG               ; UDR               ; work         ;
-;    |controller:controller_inst| ; 7 (7)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_TX|controller:controller_inst ; controller        ; work         ;
+;    |controller:controller_inst| ; 8 (8)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TOP_TX|controller:controller_inst ; controller        ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -284,60 +284,60 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |TOP_TX|controller:controller_inst|state                                                                    ;
-+---------------------+------------+-------------------+---------------------+---------------------+------------+-------------+
-; Name                ; state.IDEL ; state.CHECK_EMPTY ; state.START_UART_Tx ; state.LoadByteToUDR ; state.LOAD ; state.RESET ;
-+---------------------+------------+-------------------+---------------------+---------------------+------------+-------------+
-; state.RESET         ; 0          ; 0                 ; 0                   ; 0                   ; 0          ; 0           ;
-; state.LOAD          ; 0          ; 0                 ; 0                   ; 0                   ; 1          ; 1           ;
-; state.LoadByteToUDR ; 0          ; 0                 ; 0                   ; 1                   ; 0          ; 1           ;
-; state.START_UART_Tx ; 0          ; 0                 ; 1                   ; 0                   ; 0          ; 1           ;
-; state.CHECK_EMPTY   ; 0          ; 1                 ; 0                   ; 0                   ; 0          ; 1           ;
-; state.IDEL          ; 1          ; 0                 ; 0                   ; 0                   ; 0          ; 1           ;
-+---------------------+------------+-------------------+---------------------+---------------------+------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TOP_TX|controller:controller_inst|state                                                                                      ;
++---------------------+-----------------+------------+-------------------+---------------------+---------------------+------------+-------------+
+; Name                ; state.WAIT_DONE ; state.IDEL ; state.CHECK_EMPTY ; state.START_UART_Tx ; state.LoadByteToUDR ; state.LOAD ; state.RESET ;
++---------------------+-----------------+------------+-------------------+---------------------+---------------------+------------+-------------+
+; state.RESET         ; 0               ; 0          ; 0                 ; 0                   ; 0                   ; 0          ; 0           ;
+; state.LOAD          ; 0               ; 0          ; 0                 ; 0                   ; 0                   ; 1          ; 1           ;
+; state.LoadByteToUDR ; 0               ; 0          ; 0                 ; 0                   ; 1                   ; 0          ; 1           ;
+; state.START_UART_Tx ; 0               ; 0          ; 0                 ; 1                   ; 0                   ; 0          ; 1           ;
+; state.CHECK_EMPTY   ; 0               ; 0          ; 1                 ; 0                   ; 0                   ; 0          ; 1           ;
+; state.IDEL          ; 0               ; 1          ; 0                 ; 0                   ; 0                   ; 0          ; 1           ;
+; state.WAIT_DONE     ; 1               ; 0          ; 0                 ; 0                   ; 0                   ; 0          ; 1           ;
++---------------------+-----------------+------------+-------------------+---------------------+---------------------+------------+-------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; controller:controller_inst|en_crc      ; Stuck at VCC due to stuck port data_in      ;
-; controller:controller_inst|tx_start    ; Merged with controller:controller_inst|EnTx ;
-; controller:controller_inst|EN_UDR      ; Merged with controller:controller_inst|EnTx ;
-; PISO:piso_inst|shift_reg[0,4,5]        ; Merged with PISO:piso_inst|shift_reg[6]     ;
-; PISO:piso_inst|shift_reg[1,2]          ; Merged with PISO:piso_inst|shift_reg[3]     ;
-; PISO:piso_inst|shift_reg[13]           ; Merged with PISO:piso_inst|shift_reg[14]    ;
-; PISO:piso_inst|shift_reg[8]            ; Merged with PISO:piso_inst|shift_reg[12]    ;
-; PISO:piso_inst|shift_reg[9]            ; Merged with PISO:piso_inst|shift_reg[11]    ;
-; PISO:piso_inst|shift_reg[3]            ; Merged with PISO:piso_inst|shift_reg[7]     ;
-; PISO:piso_inst|shift_reg[16]           ; Merged with PISO:piso_inst|shift_reg[20]    ;
-; PISO:piso_inst|shift_reg[10]           ; Merged with PISO:piso_inst|shift_reg[15]    ;
-; PISO:piso_inst|shift_reg[18]           ; Merged with PISO:piso_inst|shift_reg[23]    ;
-; PISO:piso_inst|shift_reg[7,15]         ; Stuck at GND due to stuck port data_in      ;
-; PISO:piso_inst|shift_reg[6,11]         ; Merged with PISO:piso_inst|shift_reg[23]    ;
-; PISO:piso_inst|shift_reg[12,19]        ; Merged with PISO:piso_inst|shift_reg[31]    ;
-; PISO:piso_inst|shift_reg[14]           ; Merged with PISO:piso_inst|shift_reg[26]    ;
-; PISO:piso_inst|shift_reg[20,27]        ; Merged with PISO:piso_inst|shift_reg[39]    ;
-; PISO:piso_inst|shift_reg[22]           ; Merged with PISO:piso_inst|shift_reg[34]    ;
-; PISO:piso_inst|shift_reg[17]           ; Merged with PISO:piso_inst|shift_reg[26]    ;
-; PISO:piso_inst|shift_reg[24]           ; Merged with PISO:piso_inst|shift_reg[47]    ;
-; PISO:piso_inst|shift_reg[28]           ; Merged with PISO:piso_inst|shift_reg[35]    ;
-; PISO:piso_inst|shift_reg[25]           ; Merged with PISO:piso_inst|shift_reg[34]    ;
-; PISO:piso_inst|shift_reg[36]           ; Merged with PISO:piso_inst|shift_reg[43]    ;
-; PISO:piso_inst|shift_reg[30]           ; Merged with PISO:piso_inst|shift_reg[33]    ;
-; PISO:piso_inst|shift_reg[44]           ; Merged with PISO:piso_inst|shift_reg[51]    ;
-; PISO:piso_inst|shift_reg[52]           ; Merged with PISO:piso_inst|shift_reg[59]    ;
-; PISO:piso_inst|shift_reg[60]           ; Merged with PISO:piso_inst|shift_reg[67]    ;
-; UART_Tx:UTx|state~7                    ; Lost fanout                                 ;
-; UART_Tx:UTx|state~8                    ; Lost fanout                                 ;
-; UART_Tx:UTx|state~9                    ; Lost fanout                                 ;
-; controller:controller_inst|state~2     ; Lost fanout                                 ;
-; controller:controller_inst|state~3     ; Lost fanout                                 ;
-; controller:controller_inst|state~4     ; Lost fanout                                 ;
-; Total Number of Removed Registers = 40 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++----------------------------------------+------------------------------------------------------------+
+; Register name                          ; Reason for Removal                                         ;
++----------------------------------------+------------------------------------------------------------+
+; controller:controller_inst|en_crc      ; Stuck at VCC due to stuck port data_in                     ;
+; PISO:piso_inst|shift_reg[0,4,5]        ; Merged with PISO:piso_inst|shift_reg[6]                    ;
+; PISO:piso_inst|shift_reg[1,2]          ; Merged with PISO:piso_inst|shift_reg[3]                    ;
+; PISO:piso_inst|shift_reg[13]           ; Merged with PISO:piso_inst|shift_reg[14]                   ;
+; PISO:piso_inst|shift_reg[8]            ; Merged with PISO:piso_inst|shift_reg[12]                   ;
+; PISO:piso_inst|shift_reg[9]            ; Merged with PISO:piso_inst|shift_reg[11]                   ;
+; PISO:piso_inst|shift_reg[3]            ; Merged with PISO:piso_inst|shift_reg[7]                    ;
+; PISO:piso_inst|shift_reg[16]           ; Merged with PISO:piso_inst|shift_reg[20]                   ;
+; PISO:piso_inst|shift_reg[10]           ; Merged with PISO:piso_inst|shift_reg[15]                   ;
+; PISO:piso_inst|shift_reg[18]           ; Merged with PISO:piso_inst|shift_reg[23]                   ;
+; PISO:piso_inst|shift_reg[7,15]         ; Stuck at GND due to stuck port data_in                     ;
+; PISO:piso_inst|shift_reg[6,11]         ; Merged with PISO:piso_inst|shift_reg[23]                   ;
+; PISO:piso_inst|shift_reg[12,19]        ; Merged with PISO:piso_inst|shift_reg[31]                   ;
+; PISO:piso_inst|shift_reg[14]           ; Merged with PISO:piso_inst|shift_reg[26]                   ;
+; PISO:piso_inst|shift_reg[20,27]        ; Merged with PISO:piso_inst|shift_reg[39]                   ;
+; PISO:piso_inst|shift_reg[22]           ; Merged with PISO:piso_inst|shift_reg[34]                   ;
+; PISO:piso_inst|shift_reg[17]           ; Merged with PISO:piso_inst|shift_reg[26]                   ;
+; PISO:piso_inst|shift_reg[24]           ; Merged with PISO:piso_inst|shift_reg[47]                   ;
+; PISO:piso_inst|shift_reg[28]           ; Merged with PISO:piso_inst|shift_reg[35]                   ;
+; PISO:piso_inst|shift_reg[25]           ; Merged with PISO:piso_inst|shift_reg[34]                   ;
+; PISO:piso_inst|shift_reg[36]           ; Merged with PISO:piso_inst|shift_reg[43]                   ;
+; PISO:piso_inst|shift_reg[30]           ; Merged with PISO:piso_inst|shift_reg[33]                   ;
+; PISO:piso_inst|shift_reg[44]           ; Merged with PISO:piso_inst|shift_reg[51]                   ;
+; PISO:piso_inst|shift_reg[52]           ; Merged with PISO:piso_inst|shift_reg[59]                   ;
+; PISO:piso_inst|shift_reg[60]           ; Merged with PISO:piso_inst|shift_reg[67]                   ;
+; UART_Tx:UTx|state~7                    ; Lost fanout                                                ;
+; UART_Tx:UTx|state~8                    ; Lost fanout                                                ;
+; UART_Tx:UTx|state~9                    ; Lost fanout                                                ;
+; controller:controller_inst|state~2     ; Lost fanout                                                ;
+; controller:controller_inst|state~3     ; Lost fanout                                                ;
+; controller:controller_inst|state~4     ; Lost fanout                                                ;
+; controller:controller_inst|hold        ; Merged with controller:controller_inst|state.START_UART_Tx ;
+; Total Number of Removed Registers = 39 ;                                                            ;
++----------------------------------------+------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -355,7 +355,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 159   ;
+; Total registers                              ; 161   ;
 ; Number of registers using Synchronous Clear  ; 70    ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 118   ;
@@ -730,25 +730,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 159                         ;
+; arriav_ff             ; 161                         ;
 ;     CLR               ; 1                           ;
 ;     CLR SLD           ; 1                           ;
 ;     ENA CLR           ; 66                          ;
 ;     ENA CLR SCLR      ; 50                          ;
 ;     ENA SCLR          ; 8                           ;
 ;     SCLR              ; 12                          ;
-;     plain             ; 21                          ;
-; arriav_lcell_comb     ; 104                         ;
+;     plain             ; 23                          ;
+; arriav_lcell_comb     ; 105                         ;
 ;     arith             ; 12                          ;
 ;         1 data inputs ; 12                          ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 90                          ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 64                          ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 7                           ;
-;         5 data inputs ; 6                           ;
+;     normal            ; 91                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 56                          ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 7                           ;
 ;         6 data inputs ; 1                           ;
 ; boundary_port         ; 4                           ;
 ;                       ;                             ;
@@ -772,7 +772,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Jun  1 21:43:14 2024
+    Info: Processing started: Sun Jun  2 12:10:07 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES_in_UART -c AES_in_UART
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -855,6 +855,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file BaudRat
     Info (12023): Found entity 1: BaudRateGenerator File: /home/muslim/HDD/AES_over_UART/AES_in_UART/BaudRateGenerator.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file TOP_TX.v
     Info (12023): Found entity 1: TOP_TX File: /home/muslim/HDD/AES_over_UART/AES_in_UART/TOP_TX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Uart8Transmitter_tb.v
+    Info (12023): Found entity 1: Uart8Transmitter_tb File: /home/muslim/HDD/AES_over_UART/AES_in_UART/Uart8Transmitter_tb.v Line: 3
+Warning (12019): Can't analyze file -- file uart_tx.v is missing
+Warning (12019): Can't analyze file -- file uart_tb.v is missing
 Warning (10222): Verilog HDL Parameter Declaration warning at BaudRateGenerator.v(13): Parameter Declaration in module "BaudRateGenerator" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/muslim/HDD/AES_over_UART/AES_in_UART/BaudRateGenerator.v Line: 13
 Warning (10222): Verilog HDL Parameter Declaration warning at BaudRateGenerator.v(14): Parameter Declaration in module "BaudRateGenerator" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/muslim/HDD/AES_over_UART/AES_in_UART/BaudRateGenerator.v Line: 14
 Warning (10222): Verilog HDL Parameter Declaration warning at BaudRateGenerator.v(15): Parameter Declaration in module "BaudRateGenerator" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: /home/muslim/HDD/AES_over_UART/AES_in_UART/BaudRateGenerator.v Line: 15
@@ -3582,15 +3586,15 @@ Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/muslim/HDD/AES_over_UART/AES_in_UART/output_files/AES_in_UART.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 174 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 170 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2160 warnings
-    Info: Peak virtual memory: 546 megabytes
-    Info: Processing ended: Sat Jun  1 21:43:32 2024
+    Info (21061): Implemented 172 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2162 warnings
+    Info: Peak virtual memory: 547 megabytes
+    Info: Processing ended: Sun Jun  2 12:10:25 2024
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+

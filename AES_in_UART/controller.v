@@ -19,6 +19,7 @@ module controller(
 	localparam START_UART_Tx =   3'b011;
 	localparam CHECK_EMPTY   =   3'b100;
 	localparam IDEL          =   3'b101;
+	localparam WAIT_DONE     =   3'b110;
 	reg  [2:0] state;
 	
 	always@ (posedge clk )begin
@@ -47,7 +48,7 @@ module controller(
 			  end
 		   LoadByteToUDR: begin  //enable the UDR and load a byte for transmission
 			   hold         <=   1'b0;       
-				EnTx         <=   1'b0;         
+				EnTx         <=   1'b1;         
 				tx_start     <=   1'b0;        
 				PISO_reset   <=   1'b0;     
 				en_crc       <=   1'b1;        
@@ -63,7 +64,17 @@ module controller(
 				en_crc       <=   1'b1;        
 				PISO_load    <=   1'b0;    
 				EN_UDR       <=   1'b1;
-				state        <= (Done) ? CHECK_EMPTY : START_UART_Tx;
+				state        <=  WAIT_DONE;
+			  end
+			WAIT_DONE: begin   
+			   hold         <=   1'b1;       
+				EnTx         <=   1'b1;         
+				tx_start     <=   1'b0;        
+				PISO_reset   <=   1'b0;     
+				en_crc       <=   1'b1;        
+				PISO_load    <=   1'b0;    
+				EN_UDR       <=   1'b1;
+				state        <=  (Done)? CHECK_EMPTY: WAIT_DONE;
 			  end
 			CHECK_EMPTY: begin
 				hold         <=   1'b1;       
@@ -73,7 +84,7 @@ module controller(
 				en_crc       <=   1'b1;        
 				PISO_load    <=   1'b0;    
 				EN_UDR       <=   1'b0;
-			   state        <= (PISO_empty)? IDEL : LoadByteToUDR;
+			   state        <= PISO_empty ? IDEL : LoadByteToUDR;
 			  end
 			IDEL: begin
 				hold         <=   1'b1;       
