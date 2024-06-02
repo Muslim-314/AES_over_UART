@@ -1,5 +1,5 @@
 Timing Analyzer report for AES_in_UART
-Sun Jun  2 13:12:48 2024
+Sun Jun  2 16:13:33 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -102,33 +102,31 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
+; Average used               ; 1.05        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.1%      ;
+;     Processor 2            ;   5.1%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                   ;
-+-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
-; Clock Name                  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                         ;
-+-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
-; BaudRateGenerator:BRG|txClk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { BaudRateGenerator:BRG|txClk } ;
-; clk                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                         ;
-+-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                ;
-+------------+-----------------+-----------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                  ; Note ;
-+------------+-----------------+-----------------------------+------+
-; 190.59 MHz ; 190.59 MHz      ; clk                         ;      ;
-; 326.37 MHz ; 326.37 MHz      ; BaudRateGenerator:BRG|txClk ;      ;
-+------------+-----------------+-----------------------------+------+
++--------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 479.16 MHz ; 479.16 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -138,24 +136,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                  ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clk                         ; -4.247 ; -234.030      ;
-; BaudRateGenerator:BRG|txClk ; -3.850 ; -49.418       ;
-+-----------------------------+--------+---------------+
++-------------------------------------+
+; Slow 1100mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -1.087 ; -134.427           ;
++-------+--------+--------------------+
 
 
-+-----------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                  ;
-+-----------------------------+-------+---------------+
-; Clock                       ; Slack ; End Point TNS ;
-+-----------------------------+-------+---------------+
-; clk                         ; 0.363 ; 0.000         ;
-; BaudRateGenerator:BRG|txClk ; 0.662 ; 0.000         ;
-+-----------------------------+-------+---------------+
++------------------------------------+
+; Slow 1100mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.236 ; 0.000              ;
++-------+-------+--------------------+
 
 
 +----------------------------------------+
@@ -163,7 +159,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -0.820 ; -82.019               ;
+; clk   ; -0.674 ; -59.920               ;
 +-------+--------+-----------------------+
 
 
@@ -172,18 +168,17 @@ HTML report is unavailable in plain text report export.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 0.762 ; 0.000                 ;
+; clk   ; 0.873 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
-+------------------------------------------------------+
-; Slow 1100mV 85C Model Minimum Pulse Width Summary    ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clk                         ; -0.394 ; -81.856       ;
-; BaudRateGenerator:BRG|txClk ; -0.394 ; -10.958       ;
-+-----------------------------+--------+---------------+
++---------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -0.394 ; -86.269                          ;
++-------+--------+----------------------------------+
 
 
 -----------------------------------------------
@@ -192,35 +187,32 @@ HTML report is unavailable in plain text report export.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                 ;
-+------------+-----------------+-----------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                  ; Note ;
-+------------+-----------------+-----------------------------+------+
-; 186.95 MHz ; 186.95 MHz      ; clk                         ;      ;
-; 331.02 MHz ; 331.02 MHz      ; BaudRateGenerator:BRG|txClk ;      ;
-+------------+-----------------+-----------------------------+------+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 477.33 MHz ; 477.33 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+------------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary                   ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clk                         ; -4.349 ; -222.381      ;
-; BaudRateGenerator:BRG|txClk ; -3.987 ; -50.333       ;
-+-----------------------------+--------+---------------+
++------------------------------------+
+; Slow 1100mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -1.095 ; -123.841          ;
++-------+--------+-------------------+
 
 
-+-----------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                   ;
-+-----------------------------+-------+---------------+
-; Clock                       ; Slack ; End Point TNS ;
-+-----------------------------+-------+---------------+
-; clk                         ; 0.182 ; 0.000         ;
-; BaudRateGenerator:BRG|txClk ; 0.627 ; 0.000         ;
-+-----------------------------+-------+---------------+
++-----------------------------------+
+; Slow 1100mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.224 ; 0.000             ;
++-------+-------+-------------------+
 
 
 +---------------------------------------+
@@ -228,7 +220,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clk   ; -0.747 ; -73.391              ;
+; clk   ; -0.599 ; -51.552              ;
 +-------+--------+----------------------+
 
 
@@ -237,18 +229,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.712 ; 0.000                ;
+; clk   ; 0.817 ; 0.000                ;
 +-------+-------+----------------------+
 
 
-+------------------------------------------------------+
-; Slow 1100mV 0C Model Minimum Pulse Width Summary     ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clk                         ; -0.394 ; -87.574       ;
-; BaudRateGenerator:BRG|txClk ; -0.394 ; -10.876       ;
-+-----------------------------+--------+---------------+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -0.394 ; -94.054                         ;
++-------+--------+---------------------------------+
 
 
 ----------------------------------------------
@@ -257,33 +248,31 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+------------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                  ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clk                         ; -2.464 ; -80.341       ;
-; BaudRateGenerator:BRG|txClk ; -1.825 ; -23.037       ;
-+-----------------------------+--------+---------------+
++-------------------------------------+
+; Fast 1100mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -0.273 ; -14.242            ;
++-------+--------+--------------------+
 
 
-+-----------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                  ;
-+-----------------------------+-------+---------------+
-; Clock                       ; Slack ; End Point TNS ;
-+-----------------------------+-------+---------------+
-; clk                         ; 0.182 ; 0.000         ;
-; BaudRateGenerator:BRG|txClk ; 0.318 ; 0.000         ;
-+-----------------------------+-------+---------------+
++------------------------------------+
+; Fast 1100mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.142 ; 0.000              ;
++-------+-------+--------------------+
 
 
 +----------------------------------------+
 ; Fast 1100mV 85C Model Recovery Summary ;
-+-------+--------+-----------------------+
-; Clock ; Slack  ; End Point TNS         ;
-+-------+--------+-----------------------+
-; clk   ; -0.151 ; -8.016                ;
-+-------+--------+-----------------------+
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 0.010 ; 0.000                  ;
++-------+-------+------------------------+
 
 
 +---------------------------------------+
@@ -291,18 +280,17 @@ No synchronizer chains to report.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 0.425 ; 0.000                 ;
+; clk   ; 0.498 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 85C Model Minimum Pulse Width Summary    ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clk                         ; -0.198 ; -12.433       ;
-; BaudRateGenerator:BRG|txClk ; 0.085  ; 0.000         ;
-+-----------------------------+--------+---------------+
++---------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -0.081 ; -12.528                          ;
++-------+--------+----------------------------------+
 
 
 -----------------------------------------------
@@ -311,33 +299,31 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+------------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                   ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clk                         ; -2.072 ; -61.262       ;
-; BaudRateGenerator:BRG|txClk ; -1.791 ; -21.668       ;
-+-----------------------------+--------+---------------+
++------------------------------------+
+; Fast 1100mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.165 ; -3.963            ;
++-------+--------+-------------------+
 
 
-+-----------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                   ;
-+-----------------------------+-------+---------------+
-; Clock                       ; Slack ; End Point TNS ;
-+-----------------------------+-------+---------------+
-; clk                         ; 0.170 ; 0.000         ;
-; BaudRateGenerator:BRG|txClk ; 0.290 ; 0.000         ;
-+-----------------------------+-------+---------------+
++-----------------------------------+
+; Fast 1100mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.130 ; 0.000             ;
++-------+-------+-------------------+
 
 
 +---------------------------------------+
 ; Fast 1100mV 0C Model Recovery Summary ;
-+-------+--------+----------------------+
-; Clock ; Slack  ; End Point TNS        ;
-+-------+--------+----------------------+
-; clk   ; -0.062 ; -1.234               ;
-+-------+--------+----------------------+
++-------+-------+-----------------------+
+; Clock ; Slack ; End Point TNS         ;
++-------+-------+-----------------------+
+; clk   ; 0.094 ; 0.000                 ;
++-------+-------+-----------------------+
 
 
 +--------------------------------------+
@@ -345,18 +331,17 @@ No synchronizer chains to report.
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.383 ; 0.000                ;
+; clk   ; 0.448 ; 0.000                ;
 +-------+-------+----------------------+
 
 
-+------------------------------------------------------+
-; Fast 1100mV 0C Model Minimum Pulse Width Summary     ;
-+-----------------------------+--------+---------------+
-; Clock                       ; Slack  ; End Point TNS ;
-+-----------------------------+--------+---------------+
-; clk                         ; -0.210 ; -12.426       ;
-; BaudRateGenerator:BRG|txClk ; 0.096  ; 0.000         ;
-+-----------------------------+--------+---------------+
++--------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -0.083 ; -12.689                         ;
++-------+--------+---------------------------------+
 
 
 ----------------------------------------------
@@ -365,18 +350,16 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                        ;
-+------------------------------+----------+-------+----------+---------+---------------------+
-; Clock                        ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack             ; -4.349   ; 0.170 ; -0.820   ; 0.383   ; -0.394              ;
-;  BaudRateGenerator:BRG|txClk ; -3.987   ; 0.290 ; N/A      ; N/A     ; -0.394              ;
-;  clk                         ; -4.349   ; 0.170 ; -0.820   ; 0.383   ; -0.394              ;
-; Design-wide TNS              ; -283.448 ; 0.0   ; -82.019  ; 0.0     ; -98.45              ;
-;  BaudRateGenerator:BRG|txClk ; -50.333  ; 0.000 ; N/A      ; N/A     ; -10.958             ;
-;  clk                         ; -234.030 ; 0.000 ; -82.019  ; 0.000   ; -87.574             ;
-+------------------------------+----------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.095   ; 0.130 ; -0.674   ; 0.448   ; -0.394              ;
+;  clk             ; -1.095   ; 0.130 ; -0.674   ; 0.448   ; -0.394              ;
+; Design-wide TNS  ; -134.427 ; 0.0   ; -59.92   ; 0.0     ; -94.054             ;
+;  clk             ; -134.427 ; 0.000 ; -59.920  ; 0.000   ; -94.054             ;
++------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -435,29 +418,23 @@ No synchronizer chains to report.
 +--------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                       ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-; BaudRateGenerator:BRG|txClk ; BaudRateGenerator:BRG|txClk ; 83       ; 0        ; 0        ; 0        ;
-; clk                         ; BaudRateGenerator:BRG|txClk ; 28       ; 0        ; 0        ; 0        ;
-; BaudRateGenerator:BRG|txClk ; clk                         ; 3        ; 1        ; 0        ; 0        ;
-; clk                         ; clk                         ; 930      ; 0        ; 0        ; 0        ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 748      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                        ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
-; BaudRateGenerator:BRG|txClk ; BaudRateGenerator:BRG|txClk ; 83       ; 0        ; 0        ; 0        ;
-; clk                         ; BaudRateGenerator:BRG|txClk ; 28       ; 0        ; 0        ; 0        ;
-; BaudRateGenerator:BRG|txClk ; clk                         ; 3        ; 1        ; 0        ; 0        ;
-; clk                         ; clk                         ; 930      ; 0        ; 0        ; 0        ;
-+-----------------------------+-----------------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 748      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -466,7 +443,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 113      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 115      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -476,7 +453,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 113      ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 115      ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -501,20 +478,19 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 123   ; 123  ;
+; Unconstrained Input Port Paths  ; 125   ; 125  ;
 ; Unconstrained Output Ports      ; 1     ; 1    ;
 ; Unconstrained Output Port Paths ; 1     ; 1    ;
 +---------------------------------+-------+------+
 
 
-+--------------------------------------------------------------------------------+
-; Clock Status Summary                                                           ;
-+-----------------------------+-----------------------------+------+-------------+
-; Target                      ; Clock                       ; Type ; Status      ;
-+-----------------------------+-----------------------------+------+-------------+
-; BaudRateGenerator:BRG|txClk ; BaudRateGenerator:BRG|txClk ; Base ; Constrained ;
-; clk                         ; clk                         ; Base ; Constrained ;
-+-----------------------------+-----------------------------+------+-------------+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -561,7 +537,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun  2 13:12:41 2024
+    Info: Processing started: Sun Jun  2 16:13:25 2024
 Info: Command: quartus_sta AES_in_UART -c AES_in_UART
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -571,7 +547,6 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'AES_in_UART.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name BaudRateGenerator:BRG|txClk BaudRateGenerator:BRG|txClk
     Info (332105): create_clock -period 1.000 -name clk clk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -579,120 +554,108 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.247
+Info (332146): Worst-case setup slack is -1.087
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.247            -234.030 clk 
-    Info (332119):    -3.850             -49.418 BaudRateGenerator:BRG|txClk 
-Info (332146): Worst-case hold slack is 0.363
+    Info (332119):    -1.087            -134.427 clk 
+Info (332146): Worst-case hold slack is 0.236
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.363               0.000 clk 
-    Info (332119):     0.662               0.000 BaudRateGenerator:BRG|txClk 
-Info (332146): Worst-case recovery slack is -0.820
+    Info (332119):     0.236               0.000 clk 
+Info (332146): Worst-case recovery slack is -0.674
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.820             -82.019 clk 
-Info (332146): Worst-case removal slack is 0.762
+    Info (332119):    -0.674             -59.920 clk 
+Info (332146): Worst-case removal slack is 0.873
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.762               0.000 clk 
+    Info (332119):     0.873               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -81.856 clk 
-    Info (332119):    -0.394             -10.958 BaudRateGenerator:BRG|txClk 
+    Info (332119):    -0.394             -86.269 clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.349
+Info (332146): Worst-case setup slack is -1.095
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.349            -222.381 clk 
-    Info (332119):    -3.987             -50.333 BaudRateGenerator:BRG|txClk 
-Info (332146): Worst-case hold slack is 0.182
+    Info (332119):    -1.095            -123.841 clk 
+Info (332146): Worst-case hold slack is 0.224
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.182               0.000 clk 
-    Info (332119):     0.627               0.000 BaudRateGenerator:BRG|txClk 
-Info (332146): Worst-case recovery slack is -0.747
+    Info (332119):     0.224               0.000 clk 
+Info (332146): Worst-case recovery slack is -0.599
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.747             -73.391 clk 
-Info (332146): Worst-case removal slack is 0.712
+    Info (332119):    -0.599             -51.552 clk 
+Info (332146): Worst-case removal slack is 0.817
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.712               0.000 clk 
+    Info (332119):     0.817               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -87.574 clk 
-    Info (332119):    -0.394             -10.876 BaudRateGenerator:BRG|txClk 
+    Info (332119):    -0.394             -94.054 clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.464
+Info (332146): Worst-case setup slack is -0.273
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.464             -80.341 clk 
-    Info (332119):    -1.825             -23.037 BaudRateGenerator:BRG|txClk 
-Info (332146): Worst-case hold slack is 0.182
+    Info (332119):    -0.273             -14.242 clk 
+Info (332146): Worst-case hold slack is 0.142
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.182               0.000 clk 
-    Info (332119):     0.318               0.000 BaudRateGenerator:BRG|txClk 
-Info (332146): Worst-case recovery slack is -0.151
+    Info (332119):     0.142               0.000 clk 
+Info (332146): Worst-case recovery slack is 0.010
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.151              -8.016 clk 
-Info (332146): Worst-case removal slack is 0.425
+    Info (332119):     0.010               0.000 clk 
+Info (332146): Worst-case removal slack is 0.498
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.425               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.198
+    Info (332119):     0.498               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.081
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.198             -12.433 clk 
-    Info (332119):     0.085               0.000 BaudRateGenerator:BRG|txClk 
+    Info (332119):    -0.081             -12.528 clk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.072
+Info (332146): Worst-case setup slack is -0.165
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.072             -61.262 clk 
-    Info (332119):    -1.791             -21.668 BaudRateGenerator:BRG|txClk 
-Info (332146): Worst-case hold slack is 0.170
+    Info (332119):    -0.165              -3.963 clk 
+Info (332146): Worst-case hold slack is 0.130
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.170               0.000 clk 
-    Info (332119):     0.290               0.000 BaudRateGenerator:BRG|txClk 
-Info (332146): Worst-case recovery slack is -0.062
+    Info (332119):     0.130               0.000 clk 
+Info (332146): Worst-case recovery slack is 0.094
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.062              -1.234 clk 
-Info (332146): Worst-case removal slack is 0.383
+    Info (332119):     0.094               0.000 clk 
+Info (332146): Worst-case removal slack is 0.448
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.383               0.000 clk 
-Info (332146): Worst-case minimum pulse width slack is -0.210
+    Info (332119):     0.448               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -0.083
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.210             -12.426 clk 
-    Info (332119):     0.096               0.000 BaudRateGenerator:BRG|txClk 
+    Info (332119):    -0.083             -12.689 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 806 megabytes
-    Info: Processing ended: Sun Jun  2 13:12:48 2024
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 804 megabytes
+    Info: Processing ended: Sun Jun  2 16:13:33 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
 
 

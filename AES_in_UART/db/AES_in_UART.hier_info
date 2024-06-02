@@ -1,5 +1,5 @@
 |TOP_TX
-clk => clk.IN4
+clk => clk.IN5
 start => start.IN1
 reset => reset.IN2
 tx_out << UART_Tx:UTx.out

@@ -88,8 +88,8 @@ module TOP_TX (
   );
   
   UART_Tx UTx (
-    .clk(txclk),   // baud rate
-    .en(EnTx),
+    .clk(clk),   // baud rate
+    .en(txclk),
     .start(tx_start), // start of transaction
     .in(UDR_OUT),    // data to transmit
     .out(tx_out),   // tx
