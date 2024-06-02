@@ -13,7 +13,6 @@ The repo contains an implementation of Advanced Encryption Standard 128-bit bloc
 
 
 ## Transmitter state machine
-# State Machine Signal Table
 
 | State         | hold | EnTx | tx_start | PISO_reset | en_crc | PISO_load | EN_UDR | Next State                     |
 |---------------|------|------|----------|------------|--------|-----------|--------|--------------------------------|
