@@ -1,4 +1,4 @@
-![image](https://github.com/Muslim-314/AES_over_UART/assets/101193416/2ce4767d-ca74-4e86-bcbe-787a6012a9dd)# AES-128 in UART 
+# AES-128 in UART 
 The repo contains an implementation of Advanced Encryption Standard 128-bit block cipher in UART for serial communication.
 ## Selection 
 + UART for serial communication
@@ -27,7 +27,8 @@ The repo contains an implementation of Advanced Encryption Standard 128-bit bloc
 
 .
 ## Complete Transmitter Core
-![image](https://github.com/Muslim-314/AES_over_UART/assets/101193416/633bc428-7d78-4bee-a9e7-876504b1b0ff)
+
+![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Tx%20Block%20Diagram.png)
 
 
 
