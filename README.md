@@ -34,5 +34,5 @@ The repo contains an implementation of Advanced Encryption Standard 128-bit bloc
 ![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Rx.jpeg)
 
 ## Results
-![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Outputwave.png)
+![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/WAVE_OUTPUT.png)
 
