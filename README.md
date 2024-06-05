@@ -15,17 +15,19 @@ The repo contains an implementation of Advanced Encryption Standard 128-bit bloc
 # Tx State Machine 
 ![image1](https://github.com/Muslim-314/AES_over_UART/blob/main/images/State_Machine.png)
 
-| **State**      | **hold** | **EnTx** | **tx_start** | **PISO_reset** | **en_crc** | **PISO_load** | **EN_UDR** | **Next State** |
-|----------------|----------|----------|--------------|----------------|------------|---------------|------------|----------------|
-| RESET          | 1'b1     | 1'b0     | 1'b0         | 1'b1           | 1'b1       | 1'b0          | 1'b0       | (start) ? LOAD : IDEL |
-| LOAD           | 1'b1     | 1'b0     | 1'b0         | 1'b0           | 1'b1       | 1'b1          | 1'b0       | LoadByteToUDR  |
-| LoadByteToUDR  | 1'b0     | 1'b1     | 1'b0         | 1'b0           | 1'b1       | 1'b0          | 1'b0       | START_UART_Tx  |
-| START_UART_Tx  | 1'b1     | 1'b1     | 1'b1         | 1'b0           | 1'b1       | 1'b0          | 1'b1       | WAIT_DONE      |
-| WAIT_DONE      | 1'b1     | 1'b1     | 1'b1         | 1'b0           | 1'b1       | 1'b0          | 1'b1       | (Done) ? WAIT_UNDONE : WAIT_DONE |
-| WAIT_UNDONE    | 1'b1     | 1'b1     | 1'b0         | 1'b0           | 1'b1       | 1'b0          | 1'b1       | (!Done) ? CHECK_EMPTY : WAIT_UNDONE |
-| CHECK_EMPTY    | 1'b1     | 1'b0     | 1'b0         | 1'b0           | 1'b1       | 1'b0          | 1'b0       | PISO_empty ? IDEL : LoadByteToUDR |
-| IDEL           | 1'b1     | 1'b0     | 1'b0         | 1'b1           | 1'b1       | 1'b0          | 1'b0       | start ? LOAD : IDEL |
-| default        | -        | -        | -            | -              | -          | -             | -          | RESET          |
+
+| **State**      | **hold** | **EnTx** | **tx_start** | **PISO_reset** | **en_crc** | **PISO_load** | **EN_UDR** | **Next State**                           |
+|----------------|----------|----------|--------------|----------------|------------|---------------|------------|------------------------------------------|
+| RESET          | 1        | 0        | 0            | 1              | 1          | 0             | 0          | (start) ? LOAD : IDEL                    |
+| LOAD           | 1        | 0        | 0            | 0              | 1          | 1             | 0          | LoadByteToUDR                            |
+| LoadByteToUDR  | 0        | 1        | 0            | 0              | 1          | 0             | 0          | START_UART_Tx                            |
+| START_UART_Tx  | 1        | 1        | 1            | 0              | 1          | 0             | 1          | WAIT_DONE                                |
+| WAIT_DONE      | 1        | 1        | 1            | 0              | 1          | 0             | 1          | (Done) ? WAIT_UNDONE : WAIT_DONE         |
+| WAIT_UNDONE    | 1        | 1        | 0            | 0              | 1          | 0             | 1          | (!Done) ? CHECK_EMPTY : WAIT_UNDONE      |
+| CHECK_EMPTY    | 1        | 0        | 0            | 0              | 1          | 0             | 0          | PISO_empty ? IDEL : LoadByteToUDR        |
+| IDEL           | 1        | 0        | 0            | 1              | 1          | 0             | 0          | start ? LOAD : IDEL                      |
+| default        | -        | -        | -            | -              | -          | -             | -          | RESET                                    |
+
 
 
 .
