@@ -34,6 +34,18 @@ The repo contains an implementation of Advanced Encryption Standard 128-bit bloc
 ## Complete Tx Core
 ![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Tx.jpeg)
 
+## Rx State Machine
+
+| **State**      | **Wr** | **EnRx** | **En_valadation** | **SIPO_reset** | **EnDec** | **Next State**                           |
+|----------------|--------|----------|-------------------|----------------|-----------|------------------------------------------|
+| START_RX       | 0      | 1        | 1                 | 0              | 0         | (Done) ? SIPO_WRITE : START_RX           |
+| SIPO_WRITE     | 1      | 1        | 1                 | 0              | 0         | (full) ? EN_COMB : WAIT_UNDONE           |
+| WAIT_UNDONE    | 0      | 1        | 1                 | 0              | 0         | (!Done) ? START_RX : WAIT_UNDONE         |
+| EN_COMB        | 0      | 0        | 1                 | 0              | 1         | IDEL                                     |
+| IDEL           | 0      | 0        | 1                 | 0              | 1         | (!tx_out) ? START_RX : IDEL              |
+| default        | -      | -        | -                 | -              | -         | IDEL                                     |
+
+
 ## Complete Rx Core
 ![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Rx.jpeg)
 
