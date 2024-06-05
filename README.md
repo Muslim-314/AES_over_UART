@@ -45,7 +45,7 @@ This project demonstrates secure communication using AES encryption over UART. I
 ![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Rx.jpeg)
 
 ## Results
-![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/WAVE_OUTPUT.png)
+![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/OUTPUT.png)
 
 ## References
 TimRudy's [UART Core](https://github.com/TimRudy/uart-verilog?tab=readme-ov-file) <br />
