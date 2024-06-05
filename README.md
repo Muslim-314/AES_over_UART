@@ -58,4 +58,5 @@ TimRudy's [UART Core](https://github.com/TimRudy/uart-verilog?tab=readme-ov-file
 Gourav Saini's [Medium Article](https://medium.com/@imgouravsaini/aes-algorithm-and-its-hardware-implementation-on-fpga-a-step-by-step-guide-2bef178db736)  <br />
 AES Encryption [Wikipedia Article](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)  <br />
 [Publication](https://informationsecurity.report/Resources/Whitepapers/1a0d13d0-83b3-46f3-b9b0-31c06caab19d_Implementation%20of%20AES%20Algorithm%20in%20UART%20Module%20for%20Secure%20Data%20Transmission.pdf) by M. RAMAKRISHNA and JAGAN MOHAN RAO  <br />
+Ben Eater's [CRC16 Hardware Implementation](https://www.youtube.com/watch?v=sNkERQlK8j8&t=2809s&ab_channel=BenEater)
 
