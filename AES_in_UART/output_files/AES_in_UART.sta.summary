@@ -2,84 +2,180 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : -4.102
+TNS   : -128.184
+
+Type  : Slow 1100mV 85C Model Setup 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : -4.034
+TNS   : -61.311
+
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -1.087
-TNS   : -134.427
+Slack : -3.724
+TNS   : -451.918
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.236
+Slack : 0.075
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : 0.460
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'clk'
-Slack : -0.674
-TNS   : -59.920
+Slack : -0.939
+TNS   : -93.608
 
 Type  : Slow 1100mV 85C Model Removal 'clk'
-Slack : 0.873
+Slack : 0.921
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.394
-TNS   : -86.269
+TNS   : -181.318
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : -0.394
+TNS   : -26.774
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : -0.394
+TNS   : -11.038
+
+Type  : Slow 1100mV 0C Model Setup 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : -4.215
+TNS   : -127.115
+
+Type  : Slow 1100mV 0C Model Setup 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : -4.160
+TNS   : -62.666
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -1.095
-TNS   : -123.841
+Slack : -3.947
+TNS   : -416.187
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.224
+Slack : -0.261
+TNS   : -0.878
+
+Type  : Slow 1100mV 0C Model Hold 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : 0.467
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'clk'
-Slack : -0.599
-TNS   : -51.552
+Slack : -0.850
+TNS   : -84.460
 
 Type  : Slow 1100mV 0C Model Removal 'clk'
-Slack : 0.817
+Slack : 0.860
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.394
-TNS   : -94.054
+TNS   : -193.790
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : -0.394
+TNS   : -26.637
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : -0.394
+TNS   : -10.743
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.273
-TNS   : -14.242
+Slack : -2.520
+TNS   : -150.410
+
+Type  : Fast 1100mV 85C Model Setup 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : -2.025
+TNS   : -58.728
+
+Type  : Fast 1100mV 85C Model Setup 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : -1.930
+TNS   : -28.610
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.142
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : 0.190
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'clk'
-Slack : 0.010
-TNS   : 0.000
+Slack : -0.246
+TNS   : -14.234
 
 Type  : Fast 1100mV 85C Model Removal 'clk'
-Slack : 0.498
+Slack : 0.516
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.081
-TNS   : -12.528
+Slack : -0.360
+TNS   : -28.040
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : -0.007
+TNS   : -0.007
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : 0.063
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.165
-TNS   : -3.963
+Slack : -2.119
+TNS   : -108.102
+
+Type  : Fast 1100mV 0C Model Setup 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : -1.955
+TNS   : -52.436
+
+Type  : Fast 1100mV 0C Model Setup 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : -1.882
+TNS   : -27.460
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.130
+Slack : -0.120
+TNS   : -0.514
+
+Type  : Fast 1100mV 0C Model Hold 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : 0.172
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'clk'
-Slack : 0.094
-TNS   : 0.000
+Slack : -0.145
+TNS   : -5.791
 
 Type  : Fast 1100mV 0C Model Removal 'clk'
-Slack : 0.448
+Slack : 0.467
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.083
-TNS   : -12.689
+Slack : -0.349
+TNS   : -28.030
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'TOP_TX:core_tx|BaudRateGenerator:BRG|txClk'
+Slack : 0.026
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'TOP_Rx:core_rx|BaudRateGenerator:BRG_rx|rxClk'
+Slack : 0.084
+TNS   : 0.000
 
 ------------------------------------------------------------

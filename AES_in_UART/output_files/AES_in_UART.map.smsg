@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at controller.v(25): always construct contains both blocking and non-blocking assignments File: /home/muslim/HDD/AES_over_UART/AES_in_UART/controller.v Line: 25
+Warning (10268): Verilog HDL information at controller.v(26): always construct contains both blocking and non-blocking assignments File: /home/muslim/HDD/AES_over_UART/AES_in_UART/controller.v Line: 26
 Info (10281): Verilog HDL Declaration information at controller.v(3): object "reset" differs only in case from object "RESET" in the same scope File: /home/muslim/HDD/AES_over_UART/AES_in_UART/controller.v Line: 3

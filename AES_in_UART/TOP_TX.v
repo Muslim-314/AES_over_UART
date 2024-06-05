@@ -2,30 +2,29 @@ module TOP_TX (
   input clk,
   input start,
   input reset,
-  output tx_out 
+  output tx_out
 );
-  wire [127:0] data_in = 128'hDEADBEEFCAFEBABE1234567890ABCDEF;
-  
+  wire [111:0] data_in = 128'hBEEFCAFEBABE1234567890ABCDEF;
   wire [15:0]  crc_out;
   wire [127:0] padded_data;
   wire [127:0] enciphered_data;
   wire [7:0]   serial_out;
-  wire [7:0]   UDR_OUT;     // Output of UDR register
+  wire [7:0]   UDR_OUT;      // Output of UDR register
   
   wire         PISO_empty;   // Flag for the empty state of PISO
-  wire         Done;         // Asserted if the single 8-bit transaction is done
+  wire         Done;         // Asserted if the single 8-bit transaction is Done_tx
   wire         hold;         // Hold the data in PISO 
   wire         EnTx;         // Enable the UART Tx module
   wire         tx_start;     // Start the transaction
   wire         en_crc;       // Enable the CRC16 module
   wire         PISO_load;    // Load the computed message + CRC to the PISO
   wire         EN_UDR;       // Enable the UART DATA register
-  wire         busy; 
-  wire         PISO_reset;  
+  wire         busy;         // Uart is currently busy transmitting the packet
+  wire         PISO_reset;   // PISO reset signal
   
   // Clocks
-  wire        rxclk;
-  wire        txclk;
+  wire         rxclk;
+  wire         txclk;
   
   controller controller_inst (
     .clk(clk),
@@ -86,14 +85,14 @@ module TOP_TX (
     .rxClk(rxclk), 
     .txClk(txclk) 
   );
-  
   UART_Tx UTx (
-    .clk(clk),   // baud rate
-    .en(txclk),
+    .clk(txclk),   // baud rate
+    .en(EnTx),
     .start(tx_start), // start of transaction
     .in(UDR_OUT),    // data to transmit
-    .out(tx_out),   // tx
-    .done(Done),    // end of transaction
-    .busy(busy)     // transaction is in process
+    .busy(busy),     // transaction is in process
+	 .done(Done),    // end of transaction
+	 .out(tx_out)   // tx
   );
+  
 endmodule 

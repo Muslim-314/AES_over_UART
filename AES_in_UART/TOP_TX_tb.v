@@ -16,48 +16,19 @@ module TOP_TX_tb;
   // Clock generation
   initial begin
     clk = 0;
-    forever #5 clk = ~clk; // 100MHz clock
+    forever #1 clk = ~clk; // 100MHz clock
   end
   // Test sequence
   initial begin
     // Initialize Inputs
     reset = 1;
-    start = 0;
-    // Apply reset
-    #10;
-    reset = 0;
-    // Wait for the reset to propagate
-    #20;
-
-    // Start the transmission process
-    start = 1;
-    #10;
-    start = 0;
-
-    // Wait for some time to let the process complete
-    #10000000;
-	 
-	 
-	 
-	 // Initialize Inputs
-    reset = 1;
-    start = 0;
-
-    // Apply reset
-    #10;
-    reset = 0;
-
-    // Wait for the reset to propagate
-    #20;
-
-    // Start the transmission process
-    start = 1;
-    #10;
-    start = 0;
-
-    // Wait for some time to let the process complete
-    #10000000;
-
+	 start = 0;
+	 #35000;
+	 reset = 0;
+	 start = 1;
+	 #3000;
+	 start = 0;	
+    #1000000;		
     // End the simulation
     $finish;
   end

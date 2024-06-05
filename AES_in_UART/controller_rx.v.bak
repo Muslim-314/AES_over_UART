@@ -1,0 +1,63 @@
+module controller_rx(
+	input clk,                   //Golbal Clock 
+	input full,                  //SIPO Full signal
+	input Done,                  //Asserted when the single Uart packet is recieved
+	input reset,                 //Global Reset
+	output reg Wr,               //SIPO Write Enable 
+	output reg EnRx,             //Uart Reciever ENable
+	output reg En_valadation,    //CRC valadation Enable
+	output reg SIPO_reset,       //SIPO reset signal
+	output reg EnDec             //Decryption module
+);
+ 
+ 
+	//states 
+	localparam START_RX    = 1'b000;
+	localparam SIPO_WRITE  = 1'b001;
+   localparam EN_COMB     = 1'b010; //enables the combinational logic which inculdes Decryption and CRC valadation
+	localparam IDEL        = 1'b011;
+	
+	reg [2:0]state;
+	
+	
+	always@(posedge clk)begin
+		if(reset)
+			state <= IDEL;
+		case(state)
+			START_RX: begin
+				Wr            <= 0;
+				EnRx          <= 1;
+				En_valadation <= 0;
+				SIPO_reset    <= 0;
+				EnDec         <= 0;
+				state         <= (Done)? SIPO_WRITE : START_RX;
+			end
+			SIPO_WRITE: begin
+				Wr            <= 1;
+				EnRx          <= 1;
+				En_valadation <= 0;
+				SIPO_reset    <= 0;
+				EnDec         <= 0;
+				state         <= (full)? EN_COMB : START_RX;
+			end
+			EN_COMB: begin
+				Wr            <= 0;
+				EnRx          <= 0;
+				En_valadation <= 1;
+				SIPO_reset    <= 0;
+				EnDec         <= 1;
+				state         <= IDEL;
+			end
+			IDEL: begin
+				Wr            <= 0;
+				EnRx          <= 0;
+				En_valadation <= 1;
+				SIPO_reset    <= 0;
+				EnDec         <= 1;
+				state         <= IDEL;
+			end
+		endcase
+		
+		
+	end
+endmodule 

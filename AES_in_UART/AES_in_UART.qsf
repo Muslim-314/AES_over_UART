@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY TOP_TX
+set_global_assignment -name TOP_LEVEL_ENTITY core
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:35:43  APRIL 16, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -56,9 +56,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE TOP_TX_tb.v
 set_global_assignment -name VERILOG_FILE TOP_Rx.v
 set_global_assignment -name VERILOG_FILE tb_TOP_Rx.v
@@ -100,4 +97,15 @@ set_global_assignment -name VERILOG_FILE TOP_TX.v
 set_global_assignment -name VERILOG_FILE Uart8Transmitter_tb.v
 set_global_assignment -name VERILOG_FILE uart_tx.v
 set_global_assignment -name VERILOG_FILE uart_tb.v
+set_global_assignment -name VERILOG_FILE controller_rx.v
+set_global_assignment -name VERILOG_FILE UART_Rx.v
+set_global_assignment -name VERILOG_FILE tb_UART_Rx.v
+set_global_assignment -name VERILOG_FILE SYSTEM.v
+set_global_assignment -name VERILOG_FILE tb_SYSTEM.v
+set_global_assignment -name VERILOG_FILE TB_TOP_Rx.v
+set_global_assignment -name VERILOG_FILE UART_Tx_tb.v
+set_global_assignment -name VERILOG_FILE core.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

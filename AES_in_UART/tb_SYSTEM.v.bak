@@ -1,0 +1,60 @@
+`timescale 1ns / 1ps
+
+module tb_SYSTEM;
+
+    // Testbench signals
+    reg clk;
+    reg reset;
+    reg start;
+    wire valid;
+    wire [111:0] data_out;
+
+    // Instantiate the SYSTEM module
+    SYSTEM uut (
+        .clk(clk),
+        .reset(reset),
+        .valid(valid),
+        .start(start),
+        .data_out(data_out)
+    );
+
+    // Clock generation: 100 MHz clock for simulation purposes
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk; // 10ns period (100 MHz)
+    end
+
+    // Test vectors
+    initial begin
+        // Initialize inputs
+        reset = 1;
+        start = 0;
+
+        // Apply reset
+        #20 reset = 0;
+
+        // Wait for some time and then pulse the start signal
+        #50 start = 1;
+        #20 start = 0;
+
+        // Wait to observe the output
+        #200;
+
+        // Pulse the start signal again
+        #50 start = 1;
+        #20 start = 0;
+
+        // Wait to observe the output
+        #200;
+
+        // Finish simulation
+        #100 $finish;
+    end
+
+    // Monitor signals
+    initial begin
+        $monitor("Time: %d, clk: %b, reset: %b, start: %b, valid: %b, data_out: %h", 
+                 $time, clk, reset, start, valid, data_out);
+    end
+
+endmodule

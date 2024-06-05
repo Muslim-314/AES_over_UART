@@ -1,0 +1,12 @@
+module core(
+	input start,
+	input reset,
+	output valid,
+	output [111:0]data_out
+);
+
+	
+
+
+
+endmodule 

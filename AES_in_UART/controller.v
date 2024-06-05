@@ -4,11 +4,11 @@ module controller(
  	input PISO_empty,     //Indicates if the SIPO is empty or not
 	input start,          //Assert when want to start the FSM
 	input Done,			    //Indicates if the current ttransaction is done or not
-	output reg hold,       //Hold the data at the SIPO untill the current transaction is done
+	output reg hold,      //Hold the data at the SIPO untill the current transaction is done
 	output reg EnTx,      //Enable the UART Tx module
 	output reg tx_start,  //Start the transaction
 	output reg PISO_reset,//Reset signal for the parallel to serial converter
-	output reg en_crc,        //enable the CRC16 module
+	output reg en_crc,    //enable the CRC16 module
 	output reg PISO_load, //load the computed meaasge+CRC to the SIPO 
 	output reg EN_UDR     //enable the Uart DATA  register
 );
@@ -17,9 +17,10 @@ module controller(
 	localparam LOAD          =   3'b001;
 	localparam LoadByteToUDR =   3'b010;
 	localparam START_UART_Tx =   3'b011;
-	localparam CHECK_EMPTY   =   3'b100;
-	localparam IDEL          =   3'b101;
-	localparam WAIT_DONE     =   3'b110;
+	localparam WAIT_DONE     =   3'b100;
+	localparam WAIT_UNDONE   =   3'b101;
+	localparam CHECK_EMPTY   =   3'b110;
+	localparam IDEL          =   3'b111;
 	reg  [2:0] state;
 	
 	always@ (posedge clk )begin
@@ -69,12 +70,22 @@ module controller(
 			WAIT_DONE: begin   
 			   hold         =   1'b1;       
 				EnTx         =   1'b1;         
+				tx_start     =   1'b1;        
+				PISO_reset   =   1'b0;     
+				en_crc       =   1'b1;        
+				PISO_load    =   1'b0;    
+				EN_UDR       =   1'b1;
+				state        <=  (Done)? WAIT_UNDONE: WAIT_DONE;
+			  end
+			WAIT_UNDONE: begin
+				hold         =   1'b1;       
+				EnTx         =   1'b1;         
 				tx_start     =   1'b0;        
 				PISO_reset   =   1'b0;     
 				en_crc       =   1'b1;        
 				PISO_load    =   1'b0;    
 				EN_UDR       =   1'b1;
-				state        <=  (Done)? CHECK_EMPTY: WAIT_DONE;
+			   state        <= (!Done)? CHECK_EMPTY : WAIT_UNDONE;
 			  end
 			CHECK_EMPTY: begin
 				hold         =   1'b1;       

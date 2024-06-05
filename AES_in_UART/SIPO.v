@@ -1,6 +1,7 @@
 module SIPO (
     input clk,
     input reset,
+    input Wr,             
     input [7:0] serial_in,
     output reg [127:0] parallel_out,
     output reg full
@@ -14,7 +15,7 @@ module SIPO (
             count <= 4'd0;
             full <= 1'b0;
         end else begin
-            if (!full) begin
+            if (Wr && !full) begin
                 parallel_out <= {parallel_out[119:0], serial_in};
                 count <= count + 4'd1;
                 if (count == 4'd15) begin
