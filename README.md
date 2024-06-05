@@ -13,7 +13,7 @@ The repo contains an implementation of Advanced Encryption Standard 128-bit bloc
 
 
 # Tx State Machine 
-![image1](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Tx FSM.png)
+![image1](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Tx%20FSM.jpeg)
 
 
 | **State**      | **hold** | **EnTx** | **tx_start** | **PISO_reset** | **en_crc** | **PISO_load** | **EN_UDR** | **Next State**                           |
@@ -32,7 +32,7 @@ The repo contains an implementation of Advanced Encryption Standard 128-bit bloc
 
 .
 ## Complete Tx Core
-![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Tx.jpeg)
+![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Rx%20FSM.jpeg)
 
 ## Rx State Machine
 ![image1](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Rx FSM.png)
