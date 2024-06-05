@@ -2,8 +2,6 @@
 
 This project demonstrates secure communication using AES encryption over UART. It involves implementing the AES algorithm in Verilog, complemented by a CRC16 module for data validation, and an open-source UART core for serial data transmission. Data integrity is ensured by computing a CRC16 checksum for a 112-bit data block, appending it, and then encrypting the combined data. The encrypted data is converted from parallel to serial form, transmitted in 8-bit packets, received, converted back to parallel form, decrypted, and validated using the CRC16 checksum, ensuring secure and reliable data communication.
 
-##  Encryption Module
-![Takes 128Bit text input and generate cipher text of the same length](images/enryption.png)
 
 
 # Tx State Machine 
