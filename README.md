@@ -41,6 +41,11 @@ This project demonstrates secure communication using AES encryption over UART. I
 
 ## Complete Rx Core
 ![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/Rx.jpeg)
+## Source Files
+- `AES_in_UART/TOP_Tx.v`: transmitter top-level core
+- `AES_in_UART/TOP_Rx.v`: receiver top-level core
+- `AES_in_UART/core.v`  : test module to test the whole system 
+
 
 ## Results
 ![image](https://github.com/Muslim-314/AES_over_UART/blob/main/images/OUTPUT.png)
